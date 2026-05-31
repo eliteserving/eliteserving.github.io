@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Image Convertor</title>
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#0f0f0f;
+        color:white;
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+        max-width:900px;
+        background:#1b1b1b;
+        border-radius:18px;
+        padding:25px;
+        box-shadow:0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    .info{
+        text-align:center;
+        color:#999;
+        margin-bottom:20px;
+    }
+
+    .upload-box{
+        border:2px dashed #444;
+        border-radius:14px;
+        padding:40px;
+        text-align:center;
+        cursor:pointer;
+        transition:0.3s;
+        margin-bottom:20px;
+    }
+
+    .upload-box:hover{
+        border-color:#00ff99;
+        background:#131313;
+    }
+
+    input[type="file"]{
+        display:none;
+    }
+
+    .preview{
+        width:100%;
+        margin-top:20px;
+        display:none;
+        justify-content:center;
+    }
+
+    .preview img{
+        max-width:100%;
+        max-height:300px;
+        border-radius:12px;
+    }
+
+    textarea{
+        width:100%;
+        height:250px;
+        background:#111;
+        color:#00ff99;
+        border:1px solid #333;
+        border-radius:12px;
+        padding:15px;
+        resize:none;
+        margin-top:20px;
+        font-size:13px;
+    }
+
+    .stats{
+        margin-top:15px;
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .stat{
+        background:#111;
+        padding:12px 16px;
+        border-radius:10px;
+        flex:1;
+        min-width:150px;
+        text-align:center;
+    }
+
+    button{
+        width:100%;
+        margin-top:20px;
+        padding:15px;
+        border:none;
+        border-radius:12px;
+        background:#00aa66;
+        color:white;
+        font-size:16px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#00cc77;
+    }
+
+    .warning{
+        color:#ff5555;
+        margin-top:15px;
+        text-align:center;
+        display:none;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Image Converter</h1>
+
+        <br><br>
+
+        <label class="upload-box" for="fileInput">
+            Click To Upload Image
+        </label>
+
+        <input type="file" id="fileInput" accept="image/*">
+
+        <div class="preview" id="preview">
+            <img id="previewImg">
+        </div>
+
+        <textarea id="output" placeholder="Base64 output will appear here..." readonly></textarea>
+
+        <div class="stats">
+            <div class="stat">
+                Characters:
+                <span id="charCount">0</span>
+            </div>
+
+            <div class="stat">
+                Limit:
+                49,900
+            </div>
+        </div>
+
+        <div class="warning" id="warning">
+            Base64 exceeded 49,900 characters.<br>
+            Try using a smaller image.
+        </div>
+
+        <button id="copyBtn">
+            Copy Base64
+        </button>
+
+        <button style="background: brown;" id="clear">
+            Clear
+        </button>
+
+    </div>
+
+</body>
+<script>
+
+    const fileInput = document.getElementById("fileInput");
+    const output = document.getElementById("output");
+    const charCount = document.getElementById("charCount");
+    const warning = document.getElementById("warning");
+    const preview = document.getElementById("preview");
+    const previewImg = document.getElementById("previewImg");
+    const copyBtn = document.getElementById("copyBtn");
+    const ClearBtn = document.getElementById("clear");
+
+    const MAX_CHARS = 49900;
+
+    fileInput.addEventListener("change", () => {
+
+        const file = fileInput.files[0];
+
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function(e){
+
+            const base64 = e.target.result;
+
+            preview.style.display = "flex";
+            previewImg.src = base64;
+
+            charCount.innerText = base64.length;
+
+            if(base64.length > MAX_CHARS){
+
+                output.value = "";
+                warning.style.display = "block";
+
+            } else {
+
+                output.value = base64;
+                warning.style.display = "none";
+            }
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    copyBtn.addEventListener("click", async () => {
+
+        if(!output.value){
+            alert("No Base64 available.");
+            return;
+        }
+
+        try{
+
+            await navigator.clipboard.writeText(output.value);
+
+            copyBtn.innerText = "Copied!";
+
+            setTimeout(() => {
+                copyBtn.innerText = "Copy Base64";
+            }, 2000);
+
+        } catch(err){
+
+            alert("Failed to copy.");
+        }
+    });
+
+    ClearBtn.addEventListener("click", () => {
+
+        location.reload();
+
+    });
+
+</script>
+</html>
