@@ -1,0 +1,74 @@
+import {ADD,ANCHOR,AUDIO,BODIER,BREAK,COLOR,CONDITION,COPY,DEJSONIFICATION,DISPLAY,DIV,FETCH,GETINDEX,HEADER,HEADERFIVE,HEADERFOUR,HEADERSIX,HEADERTHREE,HEADERTWO,IFRAME,JSONADDER,JSONIFICATION,JSONREMOVER,LOCALCLEAR,LOCALDELETE,LOCALSTORE,PARAGRAPH,PROTECT,REDUX,ROUTE,SESSIONCLEAR,SESSIONDELETE,SESSIONSTORE,STOREINDEX,TEXTAREA,VIDEO,ZOOM} from "../LIBRARY/CONNECTION.js";
+
+const BUILDLINK="https://webserving.github.io/BUILD/";
+const PROJECTLOADER=(NAME)=>{
+    const DEV=localStorage.getItem("ENV");
+    switch (DEV) {
+        case "ANDROID":import(BUILDLINK+NAME+"/ANDROID/index.js");
+            break;
+        case "DESKTOP":import(BUILDLINK+NAME+"/DESKTOP/index.js");
+            break;
+        default:import(BUILDLINK+NAME+"/WEB/index.js");
+            break;
+    };
+    localStorage.setItem("Native",new Date());
+    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("NATIVE"));`;
+    localStorage.setItem("NATIVER",DATA);
+};
+const DEVPROJECTLOADER=()=>{
+    import("../DEVELOPMENT/index.js");
+    localStorage.setItem("Native",new Date());
+    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("NATIVE"));`;
+    localStorage.setItem("NATIVER",DATA);
+};
+const PROJECTCONNECTOR=()=>{
+    const TITLE = document.title;
+    switch (TITLE) {
+        case "EliteBuilder":DEVPROJECTLOADER();
+            break;
+        case "Elite_Robust_Ontology":PROJECTLOADER("MAIN");
+            break;
+        default:
+            break;
+    };
+};
+
+window.ADD = ADD;
+window.ANCHOR = ANCHOR;
+window.AUDIO = AUDIO;
+window.BODIER = BODIER;
+window.BREAK = BREAK;
+window.COLOR = COLOR;
+window.CONDITION = CONDITION;
+window.COPY = COPY;
+window.DEJSONIFICATION = DEJSONIFICATION;
+window.DISPLAY = DISPLAY;
+window.DIV = DIV;
+window.FETCH = FETCH;
+window.GETINDEX = GETINDEX;
+window.HEADER = HEADER;
+window.HEADERFIVE = HEADERFIVE;
+window.HEADERFOUR = HEADERFOUR;
+window.HEADERSIX = HEADERSIX;
+window.HEADERTHREE = HEADERTHREE;
+window.HEADERTWO = HEADERTWO;
+window.IFRAME = IFRAME;
+window.JSONADDER = JSONADDER;
+window.JSONIFICATION = JSONIFICATION;
+window.JSONREMOVER = JSONREMOVER;
+window.LOCALCLEAR = LOCALCLEAR;
+window.LOCALDELETE = LOCALDELETE;
+window.LOCALSTORE = LOCALSTORE;
+window.PARAGRAPH = PARAGRAPH;
+window.PROTECT = PROTECT;
+window.REDUX = REDUX;
+window.ROUTE = ROUTE;
+window.SESSIONCLEAR = SESSIONCLEAR;
+window.SESSIONDELETE = SESSIONDELETE;
+window.SESSIONSTORE = SESSIONSTORE;
+window.STOREINDEX = STOREINDEX;
+window.TEXTAREA = TEXTAREA;
+window.VIDEO = VIDEO;
+window.ZOOM = ZOOM;
+
+PROJECTCONNECTOR();
