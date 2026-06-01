@@ -20,7 +20,7 @@ const PROJECTLOADER=(NAME)=>{
 };
 const DEVPROJECTLOADER=()=>{
     import("../DEVELOPMENT/index.js");
-    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("NATIVE"));ROUTED(localStorage.getItem("AUTORUN"));`;
+    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("AUTORUN"));ROUTED(localStorage.getItem("NATIVE"));`;
     localStorage.setItem("NATIVER",DATA);
     const DATA2=`BODIED();`;
     localStorage.setItem("AUTORUN",DATA2);
