@@ -28,4 +28,3 @@ if (localStorage.getItem("Native")) {
         document.head.appendChild(script);
     };
 };
-
