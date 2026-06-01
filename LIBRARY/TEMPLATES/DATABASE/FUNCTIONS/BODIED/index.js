@@ -1,5 +1,5 @@
 export const BODIED=()=>{
-    PROTECT();
+    PROTECT();ZOOM();
     CLICK(BODIER,()=>{
         CHECK(!localStorage.getItem("Updates"),()=>{
             ONLINE(()=>{
