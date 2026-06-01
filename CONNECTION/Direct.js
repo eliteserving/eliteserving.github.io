@@ -99,11 +99,4 @@ const ZOOM = ${ZOOM};
 `;
 localStorage.setItem("CLOUDNATIVE",DATA);
 
-setTimeout(() => {
-    if(!localStorage.getItem("Updates")){
-        localStorage.setItem("Updates",new Date())
-        location.reload();
-    };
-}, 2000);
-
 PROJECTCONNECTOR();

@@ -16,19 +16,14 @@ const PROJECTLOADER=(NAME)=>{
     const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("AUTORUN"));ROUTED(localStorage.getItem("NATIVE"));`;
     localStorage.setItem("NATIVER",DATA);
     const DATA2=`BODIED();`;
-    localStorage.setItem("AUTORUN",DATA2)
-    if(!localStorage.getItem("Updates")){
-        location.reload();
-    };
+    localStorage.setItem("AUTORUN",DATA2);
 };
 const DEVPROJECTLOADER=()=>{
     import("../DEVELOPMENT/index.js");
-    localStorage.setItem("Native",new Date());
-    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("NATIVE"));`;
+    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("AUTORUN"));ROUTED(localStorage.getItem("NATIVE"));`;
     localStorage.setItem("NATIVER",DATA);
-    if(!localStorage.getItem("Updates")){
-        location.reload();
-    };
+    const DATA2=`BODIED();`;
+    localStorage.setItem("AUTORUN",DATA2);
 };
 const PROJECTCONNECTOR=()=>{
     switch (TITLE) {
