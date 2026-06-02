@@ -1,7 +1,7 @@
 export const FETCH=(LINK,DATA,CALLBACK)=>{
     ONLINE(()=>{
         fetch(LINK,{
-            mode:"cors",
+            mode:"no-cors",
             method:"POST"
         })
         .then(res =>res.json())
