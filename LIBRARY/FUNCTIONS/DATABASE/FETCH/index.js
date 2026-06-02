@@ -11,5 +11,3 @@ export const FETCH=(LINK,DATA,CALLBACK)=>{
         .catch(Error =>{console.log(Error)})
     });
 };
-
-//
