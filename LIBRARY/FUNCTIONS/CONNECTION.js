@@ -1,9 +1,11 @@
 import { ADD } from "./DATABASE/ADD/index.js";
 import { CHECK } from "./DATABASE/CHECK/index.js";
+import { CLEARCACHE } from "./DATABASE/CLEARCACHE/index.js";
 import { CONDITION } from "./DATABASE/CONDITION/index.js";
 import { COPY } from "./DATABASE/COPY/index.js";
 import { DEJSONIFICATION } from "./DATABASE/DEJSONIFICATION/index.js";
 import { DISPLAY } from "./DATABASE/DISPLAY/index.js";
+import { ELEMENTED } from "./DATABASE/ELEMENTED/index.js";
 import { FETCH } from "./DATABASE/FETCH/index.js";
 import { FUNCTIONED } from "./DATABASE/FUNCTIONED/index.js";
 import { GETINDEX } from "./DATABASE/GETINDEX/index.js";
@@ -19,7 +21,10 @@ import { ROUTE } from "./DATABASE/ROUTE/index.js";
 import { SESSIONCLEAR } from "./DATABASE/SESSIONCLEAR/index.js";
 import { SESSIONDELETE } from "./DATABASE/SESSIONDELETE/index.js";
 import { SESSIONSTORE } from "./DATABASE/SESSIONSTORE/index.js";
+import { STORECACHE } from "./DATABASE/STORECACHE/index.js";
 import { STOREINDEX } from "./DATABASE/STOREINDEX/index.js";
 import { ZOOM } from "./DATABASE/ZOOM/index.js";
+
+
 
 export{ADD,CHECK,CONDITION,COPY,DEJSONIFICATION,DISPLAY,FETCH,FUNCTIONED,GETINDEX,JSONADDER,JSONIFICATION,JSONREMOVER,LOCALCLEAR,LOCALDELETE,LOCALSTORE,PROTECT,REDUX,ROUTE,SESSIONCLEAR,SESSIONDELETE,SESSIONSTORE,STOREINDEX,ZOOM};

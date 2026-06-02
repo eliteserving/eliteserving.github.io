@@ -1,5 +1,4 @@
 export const ZOOM = () => {
-    
     window.addEventListener(
         "wheel",
         (e) => {
@@ -9,7 +8,6 @@ export const ZOOM = () => {
         },
         { passive: false }
     );
-
     window.addEventListener("keydown", (e) => {
         if (
             (e.ctrlKey || e.metaKey) &&
@@ -23,7 +21,6 @@ export const ZOOM = () => {
             e.preventDefault();
         }
     });
-
     document.addEventListener(
         "touchmove",
         (e) => {
@@ -33,7 +30,6 @@ export const ZOOM = () => {
         },
         { passive: false }
     );
-
     let lastTouchEnd = 0;
     document.addEventListener(
         "touchend",
@@ -46,7 +42,6 @@ export const ZOOM = () => {
         },
         false
     );
-
     ["gesturestart", "gesturechange", "gestureend"].forEach((event) => {
         document.addEventListener(
             event,
@@ -56,15 +51,11 @@ export const ZOOM = () => {
             { passive: false }
         );
     });
-
     let viewport = document.querySelector('meta[name="viewport"]');
-
     if (!viewport) {
         viewport = document.createElement("meta");
         viewport.name = "viewport";
         document.head.appendChild(viewport);
     }
-
-    viewport.content =
-        "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no";
+    viewport.content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no";
 };
