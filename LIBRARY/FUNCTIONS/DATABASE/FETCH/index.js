@@ -12,4 +12,4 @@ export const FETCH=(LINK,DATA,CALLBACK)=>{
     });
 };
 
-//"Helo"  
+// "Helo"  
