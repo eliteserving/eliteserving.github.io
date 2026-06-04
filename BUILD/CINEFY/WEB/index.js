@@ -1,7 +1,7 @@
 DISPLAY("",`
 
-    <h1>WEB SERVER PAGE</h1>
+    <h1>CINEFY WEB</h1>
 
-    <p>Ready To Serve You</p>
+    <p>Movies App</p>
     
 `);
