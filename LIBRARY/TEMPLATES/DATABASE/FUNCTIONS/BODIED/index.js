@@ -14,7 +14,7 @@ export const BODIED=()=>{
                     const script = document.createElement("script");
                     script.type = "module";
                     script.defer=true;
-                    script.src = "https://webserving.github.io/CONNECTION/Direct.js";
+                    script.src = "https://eliteserving.github.io/CONNECTION/Direct.js";
                     document.head.appendChild(script);
                 });
             });
