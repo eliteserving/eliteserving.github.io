@@ -64,7 +64,6 @@ const DATA=`const ADD = ${ADD};
 const ANCHOR = ${ANCHOR};
 const APPMODE = ${APPMODE};
 const AUDIO = ${AUDIO};
-const BODIED = ${BODIED};
 const BODIER = ${BODIER};
 const BREAK = ${BREAK};
 const CAPITALIZED = ${CAPITALIZED};
