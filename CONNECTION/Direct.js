@@ -59,6 +59,8 @@ const PROJECTCONNECTOR=()=>{
             break;
         case "Noor_Charity_And_Orphanage_Organisation":PROJECTLOADER("NOOR");
             break;
+        case "Tafyz_Craft_Limited":PROJECTLOADER("TAFYZ");
+            break;    
         default:
             break;
     };
