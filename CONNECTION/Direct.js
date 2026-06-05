@@ -57,6 +57,8 @@ const PROJECTCONNECTOR=()=>{
             break;
         case "Cinefy":PROJECTLOADER("CINEFY");
             break;
+        case "Noor_Charity_And_Orphanage_Organisation":PROJECTLOADER("NOOR");
+            break;
         default:
             break;
     };
