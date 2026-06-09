@@ -11,4 +11,3 @@ BLACKGRIDICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT
 }    
 
 export{BLACKGRIDICON}
-                    
