@@ -8,7 +8,7 @@ const MOBILEVIEW=()=>{
 
         });
 
-        HEADER(DATA,"NCOR",()=>{
+        HEADER(DATA,"NCOO",()=>{
 
         });
 
