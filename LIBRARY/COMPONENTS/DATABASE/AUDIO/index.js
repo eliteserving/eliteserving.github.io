@@ -2,7 +2,7 @@ export const AUDIO=(HOLDER,SOURCE,CALLBACk)=>{
 
     ELEMENTED(HOLDER,"audio",(DATA)=>{
 
-        SOURCED=(DATA,SOURCE);
+        SOURCED(DATA,SOURCE);
 
         CALLBACk(DATA);
 

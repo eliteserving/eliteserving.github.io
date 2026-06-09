@@ -2,7 +2,7 @@ export const IMAGE=(HOLDER,SOURCE,CALLBACk)=>{
 
     ELEMENTED(HOLDER,"img",(DATA)=>{
 
-        SOURCED=(DATA,SOURCE);
+        SOURCED(DATA,SOURCE);
 
         CALLBACk(DATA);
 
