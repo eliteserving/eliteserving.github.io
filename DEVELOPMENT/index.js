@@ -6,6 +6,6 @@ HEADER("","Enter Your Name",()=>{
 
 });
 
-IMAGE("",WHITEADDICON,()=>{
+ICONS("",WHITEHOMEICON,WHITEHOMEICON,()=>{
 
 })
