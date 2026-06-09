@@ -1,11 +1,11 @@
-BREAK("",()=>{
+const MOBILEVIEW=()=>{
+
     
-});
+};
 
-HEADER("","Enter Your Name",()=>{
+const DESKTOPVIEW=()=>{
 
-});
+    
+};
 
-ICONS("",WHITEHOMEICON,WHITEHOMEICON,()=>{
-
-})
+VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
