@@ -6,9 +6,17 @@ const MOBILEVIEW=()=>{
 
         ICONS(DATA,BLACKMENUICON,WHITEMENUICON,()=>{
 
-        })
+        });
 
         HEADER(DATA,"NCOR",()=>{
+
+        });
+
+        ICONS(DATA,BLACKUSERICON,WHITEUSERICON,()=>{
+
+        });
+
+        ICONS(DATA,WHITESHOPPINGCART,WHITESHOPPINGCART,()=>{
 
         });
 
