@@ -1,4 +1,4 @@
-export const DISPLAY=(HOLDER,SET)=>{
+export const DISPLAYED=(HOLDER,SET)=>{
 
     STYLED(HOLDER,"display",SET||"block");    
 
