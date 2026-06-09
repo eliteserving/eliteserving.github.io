@@ -4,6 +4,8 @@ export const HEADER=(HOLDER,TEXT,CALLBACk)=>{
 
         DISPLAY(DATA,TEXT||"Your Text");
 
+        MARGIN(DATA,"auto");
+
         CALLBACk(DATA);
 
     });

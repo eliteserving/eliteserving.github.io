@@ -4,6 +4,8 @@ export const HEADERTWO=(HOLDER,TEXT,CALLBACk)=>{
 
         DISPLAY(DATA,TEXT||"Your Text");
 
+        MARGIN(DATA,"");
+
         CALLBACk(DATA);
 
     });

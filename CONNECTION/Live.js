@@ -44,6 +44,7 @@ const PROJECTCONNECTOR=()=>{
             break;
     };
 };
+
 window.ADD = ADD;
 window.ANCHOR = ANCHOR;
 window.APPMODE = APPMODE;
