@@ -1,4 +1,4 @@
-const LINK="";
+const LINK="https://eliteserving.github.io/LIBRARY/DEMO/Data.json";
 
 const MOBILEVIEW=()=>{
 
@@ -26,41 +26,26 @@ const MOBILEVIEW=()=>{
 
     INLINEVIEW("",(DATA)=>{
 
-        FETCH()
+        FETCH(LINK,"",(Data)=>{
 
-        BACKGROUND(DATA,"#cdcdcd50");
+            REDUX(Data,(Info)=>{
 
-        DIV(DATA,(DATATED)=>{
+                DIV(DATA,(DATATED)=>{
 
-            WIDTH(DATATED,"80px");
-            HEIGHT(DATATED,"80%");
-            BORDERRADIUS(DATATED,"50px");
-            BACKGROUND(DATATED,"blue");
-            BORDER(DATATED,"white");
+                    WIDTH(DATATED,"80px");
+                    HEIGHT(DATATED,"80%");
+                    BORDERRADIUS(DATATED,"50px");
+                    BACKGROUND(DATATED,"blue");
+                    BORDER(DATATED,"white");
 
-        });
+                });
 
-        DIV(DATA,(DATATED)=>{
+            });
 
-            WIDTH(DATATED,"80px");
-            HEIGHT(DATATED,"80%");
-            BORDERRADIUS(DATATED,"50px");
-            BACKGROUND(DATATED,"blue");
-            
-        });
-
-         DIV(DATA,(DATATED)=>{
-
-            WIDTH(DATATED,"80px");
-            HEIGHT(DATATED,"80%");
-            BORDERRADIUS(DATATED,"50px");
-            BACKGROUND(DATATED,"blue");
-            
         });
 
     });
 
-  
 };
 
 const DESKTOPVIEW=()=>{
