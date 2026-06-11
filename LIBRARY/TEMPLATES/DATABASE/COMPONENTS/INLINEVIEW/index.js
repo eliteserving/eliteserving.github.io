@@ -1,4 +1,4 @@
-export const INLINEVIEW=(HOLDER,CALLBACk)=>{
+export const INLINEVIEW=(HOLDER,CALLBACK)=>{
 
     DIV(HOLDER,(DATA)=>{
 
@@ -8,7 +8,7 @@ export const INLINEVIEW=(HOLDER,CALLBACk)=>{
 
         DISPLAYED(DATA,"inline-flex");
 
-        CALLBACk(DATA);
+        CALLBACK(DATA);
 
     });
 
