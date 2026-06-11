@@ -98,7 +98,7 @@ const MOBILEVIEW=()=>{
     
                 COLOR(DATATID,"WHITE");
     
-            })
+            });
     
         });
     
@@ -148,10 +148,7 @@ const MOBILEVIEW=()=>{
     
         });
 
-    })
-
-    
-
+    });
 
 };
 
