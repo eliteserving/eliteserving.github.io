@@ -1,0 +1,6 @@
+import { CREATEDATABASE } from "./DATABASE/CREATEDATABASE/index.js";
+import { CREATETABLE } from "./DATABASE/CREATETABLE/index.js";
+import { GETDATA } from "./DATABASE/GETDATA/index.js";
+import { INSERTDATA } from "./DATABASE/INSERTDATA/index.js";
+import { UPDATEDATA } from "./DATABASE/UPDATEDATA/index.js";
+
