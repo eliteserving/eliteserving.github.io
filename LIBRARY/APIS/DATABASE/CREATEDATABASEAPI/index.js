@@ -1,7 +1,7 @@
 let CREATEDATABASEAPI;
 if (localStorage.getItem("Native")) {
-    CREATEDATABASEAPI = "'Hello'";
+    CREATEDATABASEAPI = "'https://script.google.com/macros/s/AKfycbzWS54lvCL19LzS95PdgafYYN2nI0byOtdnIAzJXWHoVUuXSs7ni1rlAn48hAFJDXaa/exec'";
 } else {
-    CREATEDATABASEAPI = "Hello";
+    CREATEDATABASEAPI = "https://script.google.com/macros/s/AKfycbzWS54lvCL19LzS95PdgafYYN2nI0byOtdnIAzJXWHoVUuXSs7ni1rlAn48hAFJDXaa/exec";
 };
 export { CREATEDATABASEAPI };

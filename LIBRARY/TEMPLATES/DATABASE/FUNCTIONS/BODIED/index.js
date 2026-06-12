@@ -1,6 +1,14 @@
 export const BODIED=()=>{
     PROTECT();ZOOM();WEBKIT();INSPECTION();
     CLICK(BODIER,()=>{
+        SCREENWIDTH((Data)=>{
+            CONDITION(Data === Number(localStorage.getItem("Screen")),()=>{
+                LOCALSTORE("Screen",Data);
+            },()=>{
+                LOCALSTORE("Screen",Data);
+                RELOAD();
+            });
+        });
         CHECK(!localStorage.getItem("Updates"),()=>{
             ONLINE(()=>{
                 const TITLE = document.title;

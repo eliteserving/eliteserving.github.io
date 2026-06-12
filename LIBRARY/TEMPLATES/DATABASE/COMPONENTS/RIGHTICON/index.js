@@ -1,0 +1,9 @@
+export const RIGHTICON=(HOLDER,LIGHT,DARK,CALLBACk)=>{
+
+    ICONS(HOLDER,LIGHT,DARK,(DATA)=>{
+
+        CALLBACk(DATA);
+
+    });
+
+};

@@ -1,7 +1,7 @@
 let GOOGLEDRIVETHUMBNAILAPI;
 if (localStorage.getItem("Native")) {
-    GOOGLEDRIVETHUMBNAILAPI = "'Hello'";
+    GOOGLEDRIVETHUMBNAILAPI = "'https://drive.google.com/thumbnail?id='";
 } else {
-    GOOGLEDRIVETHUMBNAILAPI = "Hello";
+    GOOGLEDRIVETHUMBNAILAPI = "https://drive.google.com/thumbnail?id=";
 };
 export { GOOGLEDRIVETHUMBNAILAPI };
