@@ -1,19 +1,23 @@
-export const CREATETABLE=()=>{
+export const CREATETABLE=(LINK,NAME,CALLBACK)=>{
     CAPITALIZED(NAME,(NAMEDATA)=>{
         const DATA={
-            "sheetName":NAMEDATA
+            "spreadsheetUrl":LINK,
+            "sheetName":NAMEDATA,
         };
         FETCH(CREATEDATABASEAPI,DATA,(Data)=>{
             CHECK(Data.error === false,()=>{
-                DATETODAY((TIME)=>{
-                    const HEADERS=["DATABASENAME","DATABASELINK","DATABASETABLES","DATE","ACCESS","ADMIN"];
-                    const INFO=[NAMEDATA,Data.spreadsheetUrl+"?usp=sharing",`"${NAMEDATA}"`,TIME,"Approved","Elite"];
-                    INSERTDATA(MAINCONNECTIONAPI,"DATABASES",HEADERS,INFO,(InsBack)=>{
-                        CHECK(Data.error === false,()=>{
-                            CALLBACK("Data Base Created Successfully");
+                GETDATA(MAINCONNECTIONAPI,"DATABASES",(Datated)=>{
+                    REDUX(Datated,(Element)=>{
+                        CHECK(Element.DATABASELINK === LINK,()=>{
+                            JSONADDER(Element.DATABASETABLES,[NAMEDATA],(TABLES)=>{
+                                const INFO=[Element.DATABASENAME,Element.DATABASELINK,TABLES,Element.DATE,Element.ACCESS,Element.ADMIN];
+                                UPDATEDATA(MAINCONNECTIONAPI,"DATABASES",Element.ID,INFO,()=>{
+                                    CALLBACK("Table Created Successfully");
+                                });
+                            });
                         });
                     });
-                });
+                });;
             });
         });
     });
