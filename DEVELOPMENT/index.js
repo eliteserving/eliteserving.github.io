@@ -2,7 +2,7 @@ const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzl
 
 const MOBILEVIEW=()=>{
 
-    CREATETABLE(MAINCONNECTIONAPI,"ARM",(DATA)=>{
+    CREATETABLE(MAINCONNECTIONAPI,"DARM",(DATA)=>{
 
         console.log(DATA)
 
