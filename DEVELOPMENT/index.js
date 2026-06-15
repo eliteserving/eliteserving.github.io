@@ -2,7 +2,9 @@ const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzl
 
 const MOBILEVIEW=()=>{
 
-    UPDATEDATA(MAINCONNECTIONAPI,"DATABASES","Hek","Info",(Data)=>{
+    const INF=["Test","Tet,jdj"]
+
+    UPDATEDATA(MAINCONNECTIONAPI,"DATABASES","Hek",INF,(Data)=>{
 
         console.log(Data);
 
