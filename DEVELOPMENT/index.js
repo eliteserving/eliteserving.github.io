@@ -4,11 +4,11 @@ const MOBILEVIEW=()=>{
 
     const INF=["Test","Tet,jdj"]
 
-    UPDATEDATA(MAINCONNECTIONAPI,"DATABASES","Hek",INF,(Data)=>{
+   CREATETABLE(LINK,"Clothe",(Data)=>{
 
-        console.log(Data);
+    console.log(Data);
 
-    })
+   });
 
     CLEAR("");
 

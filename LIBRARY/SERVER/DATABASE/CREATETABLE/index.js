@@ -4,7 +4,7 @@ export const CREATETABLE=(LINK,NAME,CALLBACK)=>{
             "spreadsheetUrl":LINK,
             "sheetName":NAMEDATA,
         };
-        FETCH(CREATEDATABASEAPI,DATA,(Data)=>{
+        FETCH(createt,DATA,(Data)=>{
             CHECK(Data.error === false,()=>{
                 GETDATA(MAINCONNECTIONAPI,"DATABASES",(Datated)=>{
                     REDUX(Datated,(Element)=>{
