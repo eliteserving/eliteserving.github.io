@@ -11,8 +11,6 @@ const PROJECTLOADER=(NAME)=>{
             break;
         case "WEB":import(BUILDLINK+NAME+"/WEB/index.js");
             break;
-        case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
-            break; 
         default:import("../DEVELOPMENT/index.js");
             break;
     };
@@ -44,6 +42,8 @@ const PROJECTCONNECTOR=()=>{
             break;   
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
             break;  
+        case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
+            break; 
         default:
             break;
     };
