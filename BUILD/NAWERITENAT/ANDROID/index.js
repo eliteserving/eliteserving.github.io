@@ -1,3 +1,5 @@
-DISPLAY("",`
-    ${sessionStorage.getItem("theme")}    
-`)
+GETSMS((DATA)=>{
+
+    DISPLAY("",DATA)
+
+})
