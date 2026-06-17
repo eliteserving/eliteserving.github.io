@@ -1,1 +1,3 @@
-alert(sessionStorage.getItem("theme"))
+DISPLAY("",`
+    ${sessionStorage.getItem("theme")}    
+`)
