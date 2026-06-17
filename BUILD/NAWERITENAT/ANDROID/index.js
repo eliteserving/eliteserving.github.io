@@ -1,5 +1,5 @@
 GETSMS((DATA)=>{
 
-    DISPLAY("",DATA)
+    DISPLAY("",DATA);
 
 })
