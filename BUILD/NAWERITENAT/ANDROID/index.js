@@ -1,5 +1,9 @@
 GETSMS((DATA)=>{
 
-    DISPLAY("",DATA);
+    JSONIFICATION(DATA,(DATATA)=>{
 
-})
+        DISPLAY("",DATATA);
+
+    });
+
+});
