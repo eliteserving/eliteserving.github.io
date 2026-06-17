@@ -1,10 +1,10 @@
-export const GETSMS = (callback) => {
-    if (window.AndroidSMS && typeof AndroidSMS.getLatestSms === "function") {
-        const sms = AndroidSMS.getLatestSms();
-        if (typeof callback === "function") {
-            callback(sms);
-        }
-        return sms;
+export const GETSMS = (callback)=>{
+    if(!window.AndroidSMS){
+        callback([]);
+        return;
     }
-    return null;
+    const json =AndroidSMS.getAllSms();
+    const sms =
+        JSON.parse(json);
+    callback(sms);
 };
