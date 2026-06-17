@@ -11,6 +11,8 @@ const PROJECTLOADER=(NAME)=>{
             break;
         case "WEB":import(BUILDLINK+NAME+"/WEB/index.js");
             break;
+        case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
+            break; 
         default:import("../DEVELOPMENT/index.js");
             break;
     };

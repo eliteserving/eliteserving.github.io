@@ -63,6 +63,8 @@ const PROJECTCONNECTOR=()=>{
             break;    
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
             break; 
+        case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
+            break; 
         default:
             break;
     };
