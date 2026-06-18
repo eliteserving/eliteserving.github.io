@@ -28,10 +28,27 @@ const MOBILEVIEW=()=>{
         CLEAR(DATA);
 
         GETSMS((DATATA)=>{
-            
+
             INLINEVIEW(DATA,(DATATAS)=>{
 
-                BACKGROUND(DATATAS,"orange");
+                WIDTH(DATATAS,"90%");
+                BORDERRADIUS(DATATAS,"5px");
+                BACKGROUND(DATATAS,"green");
+                MARGIN(DATATAS,"2%");
+
+                HEADER(DATATAS,DATATA.sender,(NAME)=>{
+
+                    POSITION(NAME,"absolute");
+
+                    MARGINTOP(NAME,"2%");
+
+                });
+
+                HEADER(DATATAS,DATATA.message,(NAME)=>{
+
+                    MARGINLEFT(NAME,"2%");
+                    
+                });
 
             });
 
