@@ -27,7 +27,7 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
-            DISPLAY(DATA,Data);
+            DISPLAY(DATA,DATATA);
 
         });
 
