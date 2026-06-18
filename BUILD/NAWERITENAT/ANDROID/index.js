@@ -117,6 +117,7 @@ const MOBILEVIEW=()=>{
     FOOTER("",(DATA)=>{
 
         BACKGROUND(DATA,"black");
+        HEIGHT(DATA,"100px");
 
         DISPLAY(DATA,`
 
@@ -150,18 +151,14 @@ const MOBILEVIEW=()=>{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                background-color: var(--nav-bg);
                 padding: 10px 0;
                 position: fixed;
                 bottom: 0;
                 width: 100%;
                 z-index: 1000;
-                box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-                border-top: 1px solid rgba(255,255,255,0.1);
             }
             .bottom-nav-item { 
-                text-align: center; 
-                color: #94a3b8; 
+                text-align: center;  
                 cursor: pointer; 
                 transition: color 0.3s;
                 flex: 1;
