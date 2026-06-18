@@ -25,7 +25,7 @@ const MOBILEVIEW=()=>{
                 HEIGHT(DATED,"20%");
                 MARGIN(DATED,"2%");
                 BORDERRADIUS(DATED,"5px");
-                BACKGROUND(DATED,"#fef6f6fc")
+                BACKGROUND(DATED,"#fef6f6fc");
 
                 DISPLAY(DATED,`
 
@@ -102,6 +102,12 @@ const MOBILEVIEW=()=>{
 
                 document.head.appendChild(styletag);
 
+                CLICK(DATED,()=>{
+
+                    ROUTE("",FULLMESSAGE,MOBILEVIEW);
+
+                });
+
             });
 
         });
@@ -115,15 +121,15 @@ const MOBILEVIEW=()=>{
         DISPLAY(DATA,`
 
         <nav class="bottom-nav">
-                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                <a style="text-decoration:none;"  class="bottom-nav-item">
                     <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
                     <span class="bottomnavText">All</span>
                 </a>
-                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                <a style="text-decoration:none;"  class="bottom-nav-item">
                     <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
                     <span class="bottomnavText">Synced</span>
                 </a>
-                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                <a style="text-decoration:none;" class="bottom-nav-item">
                     <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
                     <span class="bottomnavText">Pending</span>
                 </a>
@@ -169,6 +175,18 @@ const MOBILEVIEW=()=>{
         document.head.appendChild(styletag);
 
     });
+
+};
+
+const FULLMESSAGE=()=>{
+
+    BACKGROUND(BODIER,"white");
+
+    CLEAR("");
+
+    HEAD("",()=>{
+
+    })
 
 };
 
