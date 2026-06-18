@@ -43,7 +43,7 @@ const MOBILEVIEW=()=>{
     
         });
 
-        HEADER(DATA,"Synced",()=>{
+        HEADER(DATA,"Sync",()=>{
     
         });
 
