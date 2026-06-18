@@ -18,5 +18,11 @@
         "sender":"MTNMobMoney",
         "message":"You Have Recieved",
         "date":"178176041"
+    },
+    {
+        "sender":"MTNMobMoney",
+        "message":"{date=1779185872137, sender=MTNMobMoney, message=You have received UGX 10000 from Airtel Money on 2026-05-19 13:17:43. fee:0. Reason: JOEL KAMUGISHA , 0703358741. New balance: UGX 10001. ID: 40808342274. Dial *165# or use the MoMo app to pay, borrow, invest and more.}",
+        "date":""
     }
+
 ]
