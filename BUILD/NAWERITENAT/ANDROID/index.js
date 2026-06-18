@@ -25,11 +25,30 @@ const MOBILEVIEW=()=>{
         HEIGHT(DATA,"auto");
         BOTTOM(DATA,"50px");
 
+        CLEAR(DATA);
+
         GETSMS((DATATA)=>{
 
-            JSONIFICATION(DATATA,(Data)=>{
+            INLINEVIEW(DATA,(DATATAS)=>{
 
-                DISPLAY(DATA,Data);
+                WIDTH(DATATAS,"90%");
+                BORDERRADIUS(DATATAS,"5px");
+                BACKGROUND(DATATAS,"green");
+                MARGIN(DATATAS,"2%");
+
+                HEADER(DATATAS,DATATA.sender,(NAME)=>{
+
+                    POSITION(NAME,"absolute");
+
+                    MARGINTOP(NAME,"2%");
+
+                });
+
+                HEADER(DATATAS,DATATA.message,(NAME)=>{
+
+                    MARGINLEFT(NAME,"2%");
+                    
+                });
 
             });
 
