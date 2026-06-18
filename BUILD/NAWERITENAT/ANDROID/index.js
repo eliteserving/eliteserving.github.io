@@ -27,7 +27,15 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
-            DISPLAY(DATA,DATATA);
+            JSONIFICATION(DATATA,(Data)=>{
+
+                REDUX(Data,(Daata)=>{
+
+                    DISPLAY(DATA,Daata);
+                
+                });
+
+            });
 
         });
 
