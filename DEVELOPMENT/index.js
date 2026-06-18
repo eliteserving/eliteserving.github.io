@@ -3,12 +3,6 @@ const MOBILEVIEW=()=>{
     CLEAR("");
 
     HEAD("",(DATA)=>{
-
-        POSITION(DATA,"absolute");
-
-        LEFT(DATA,"");
-
-        BACKGROUND(DATA,"red");
     
         ICONS(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
     
@@ -24,8 +18,22 @@ const MOBILEVIEW=()=>{
     
     });
 
+    FOOTER("",(DATA)=>{
 
-  
+        HEADER(DATA,"All",()=>{
+    
+        });
+
+        HEADER(DATA,"Unsynced",()=>{
+    
+        });
+
+        HEADER(DATA,"Synced",()=>{
+    
+        });
+
+    });
+
 };
 
 const DESKTOPVIEW=()=>{
