@@ -1,62 +1,30 @@
-const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
-
 const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    VIEWS("",(HOLDER)=>{
+    HEAD("",(DATA)=>{
 
-        HEIGHT(HOLDER,"");
+        POSITION(DATA,"absolute");
 
-        HEAD(HOLDER,(DATA)=>{
+        LEFT(DATA,"");
+
+        BACKGROUND(DATA,"red");
     
-            ICONS(DATA,BLACKMENUICON,WHITEMENUICON,()=>{
-    
-            });
-    
-            HEADER(DATA,"ShylanSiraj Fashion Hub",()=>{
-    
-            });
-    
-            ICONS(DATA,WHITESHOPPINGCART,WHITESHOPPINGCART,()=>{
-    
-            });
+        ICONS(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
     
         });
-
-        INLINEVIEW(HOLDER,(DATA)=>{
-
-            HEIGHT(DATA,"50px");
-
-            BUTTON(DATA,"ALL",(DATATED)=>{
-
-                MARGIN(DATATED,"");
-
-                WIDTH(DATATED,"50px");
-
-                HEIGHT(DATATED,"32px");
-            
-            });
-
-            INLINEVIEW(DATA,(DATITED)=>{
-
-                BACKGROUND(DATITED,"red");
-
-                WIDTH(DATITED,"70%");
-
-            });
-
+    
+        HEADER(DATA,"Fiskon",()=>{
+    
         });
-
-        VIEWS(HOLDER,(DATA)=>{
-
-            HEIGHT(DATA,"");
-
-            BACKGROUND(DATA,"Blue");
-
+    
+        ICONS(DATA,WHITESHOPPINGCART,WHITEUSERICON,()=>{
+    
         });
     
     });
+
+
   
 };
 
