@@ -13,5 +13,10 @@
         "sender":"+25679268746",
         "message":"Test",
         "date":"178176041"
+    },
+    {
+        "sender":"MTNMobMoney",
+        "message":"You Have Recieved",
+        "date":"178176041"
     }
 ]

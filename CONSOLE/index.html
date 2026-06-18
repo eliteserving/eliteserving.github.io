@@ -11,3 +11,57 @@
     
 </body>
 </html>
+
+
+
+  
+  <nav class="bottom-nav">
+    <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+        <span class="material-icons bottomNavIcon">mail</span>
+        <span class="bottomnavText">Request</span>
+    </a>
+       <div class="bottom-nav-item" id="triggerMenu">
+        <span class="material-icons bottomNavIcon">movie</span>
+        <span class="bottomnavText">Movies</span>
+    </div>
+    <a style="text-decoration:none;" href="index.php" class="bottom-nav-item">
+        <span class="material-icons bottomNavIcon">home</span>
+        <span class="bottomnavText">Home</span>
+    </a>
+ 
+    <div class="bottom-nav-item" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <span class="material-icons bottomNavIcon">search</span>
+        <span class="bottomnavText">Search</span>
+    </div>
+        <a style="text-decoration:none;" href="login.php" class="bottom-nav-item">
+        <span class="material-icons bottomNavIcon">login</span>
+        <span class="bottomnavText">Sign In</span>
+    </a>
+</nav>
+
+<style>
+        /* Bottom Navigation */
+    .bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--nav-bg);
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .bottom-nav-item { 
+        text-align: center; 
+        color: #94a3b8; 
+        cursor: pointer; 
+        transition: color 0.3s;
+        flex: 1;
+    }
+    .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+    .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+    .bottomnavText { font-size: 12px; font-weight: 500; }
+    </style>

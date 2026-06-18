@@ -2,28 +2,14 @@ const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    HEAD("",(DATA)=>{
-    
-        LEFTICON(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
-    
-        });
-    
-        HEADER(DATA,"Fiskon",()=>{
-    
-        });
-    
-        RIGHTICON(DATA,WHITESHOPPINGCART,WHITEUSERICON,()=>{
-    
-        });
-    
-    });
-
     VIEWS("",(DATA)=>{
 
+        BACKGROUND(DATA,"white");
+
         POSITION(DATA,"absolute");
-        TOP(DATA,"50px");
+        TOP(DATA,"0px");
         HEIGHT(DATA,"auto");
-        BOTTOM(DATA,"50px");
+        BOTTOM(DATA,"100px");
 
         CLEAR(DATA);
 
@@ -58,31 +44,6 @@ const MOBILEVIEW=()=>{
 
                 });
 
-                INLINEVIEW(DATED,(DATEDS)=>{
-
-                    BACKGROUND(DATEDS,"gray");
-                    HEIGHT(DATEDS,"70px");
-
-                    BUTTON(DATEDS,"Sync",(DT)=>{
-
-                        WIDTH(DT,"45%");
-                        MARGIN(DT,"2%");
-                        BACKGROUND(DT,"brown");
-                        COLOR(DT,"white");
-
-                    });
-
-                    BUTTON(DATEDS,"Status",(DT)=>{
-
-                        WIDTH(DT,"45%");
-                        MARGIN(DT,"2%");
-                        BACKGROUND(DT,"orange");
-                        COLOR(DT,"white");
-
-                    });
-
-                });
-
             });
 
         });
@@ -91,17 +52,66 @@ const MOBILEVIEW=()=>{
 
     FOOTER("",(DATA)=>{
 
-        HEADER(DATA,"All",()=>{
-    
-        });
+        BACKGROUND(DATA,"black");
 
-        HEADER(DATA,"UnResolved",()=>{
-    
-        });
+        DISPLAY(DATA,`
 
-        HEADER(DATA,"Sync",()=>{
+        <nav class="bottom-nav">
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
+                    <span class="bottomnavText">All</span>
+                </a>
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
+                    <span class="bottomnavText">Synced</span>
+                </a>
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
+                    <span class="bottomnavText">Pending</span>
+                </a>
+                
+            </nav>
+            
+            
+        `);
+
+        const styletag=document.createElement('style');
+        styletag.textContent=`
+
+            .Icon{
+                width:30px;
+                height:30px;
+            }
+            
+            .bottom-nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: var(--nav-bg);
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 1000;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            .bottom-nav-item { 
+                text-align: center; 
+                color: #94a3b8; 
+                cursor: pointer; 
+                transition: color 0.3s;
+                flex: 1;
+            }
+            .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+            .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+            .bottomnavText { font-size: 12px; font-weight: 500; }
+
+        `;
+
+        document.head.appendChild(styletag);
+
     
-        });
 
     });
 
