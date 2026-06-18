@@ -27,11 +27,7 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
-            JSONIIFICATION(DATATA,(Data)=>{
-       
-                DISPLAY(DATA,Data);
-
-            });
+            DISPLAY(DATA,Data);
 
         });
 
