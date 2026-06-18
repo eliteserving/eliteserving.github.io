@@ -59,7 +59,12 @@ const MOBILEVIEW=()=>{
     
                     document.head.appendChild(styletag);
 
-            
+                });
+
+                REPEATER(3600,()=>{
+
+                    OURMONEY();
+
                 });
 
 
@@ -79,14 +84,6 @@ const MOBILEVIEW=()=>{
                     CLEAR(DATA);
             
                     GETSMS((DATATA)=>{
-            
-                        /*
-            
-                        FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
-                            LOCALSTORE("MESSAGES",[DATA.keywords]);
-                        });
-            
-                        */
             
                         VIEWS(DATA,(DATED)=>{
             
@@ -273,15 +270,7 @@ const MOBILEVIEW=()=>{
             CLEAR(DATA);
     
             GETSMS((DATATA)=>{
-    
-                /*
-    
-                FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
-                    LOCALSTORE("MESSAGES",[DATA.keywords]);
-                });
-    
-                */
-    
+        
                 VIEWS(DATA,(DATED)=>{
     
                     WIDTH(DATED,"95%");
@@ -923,6 +912,57 @@ const LOGINUPDATE=()=>{
 
     });
     
+};
+
+const OURMONEY=()=>{
+
+    DEJSONIFICATION(localStorage.getItem("User"),(Data)=>{
+
+        async function checkSubscription() {
+            
+            try {
+                const formData = new FormData();
+                formData.append("email", Data.data.email);
+
+                const res = await fetch(
+                "https://rentals.naweriindustries.com/endpoints/check-subscription.php",
+                { method: "POST", body: formData }
+                );
+
+                const data = await res.json();
+
+                if (data.status === "success") {
+
+                const sub = data.subscription_status;
+
+                if (sub === "active") {
+
+                    JSONIFICATION(data,(ME)=>{
+
+                        LOCALSTORE("User",ME);
+
+                        RELOAD();
+
+                    });
+                    
+                } else {
+
+                    console.log(Error,data.message)
+                }
+
+                } else {
+                    console.log(Error,data.message)
+                }
+
+            } catch (err) {
+               console.log(Error,err.message);
+            }
+        }
+
+        checkSubscription() 
+
+    });
+
 };
 
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
