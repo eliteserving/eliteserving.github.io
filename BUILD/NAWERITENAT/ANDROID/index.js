@@ -29,25 +29,58 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
-            INLINEVIEW(DATA,(DATATAS)=>{
+            VIEWS(DATA,(DATED)=>{
 
-                WIDTH(DATATAS,"90%");
-                BORDERRADIUS(DATATAS,"5px");
-                BACKGROUND(DATATAS,"green");
-                MARGIN(DATATAS,"2%");
+                BACKGROUND(DATED,"forestgreen");
+                WIDTH(DATED,"95%");
+                HEIGHT(DATED,"auto");
+                MARGIN(DATED,"2%");
+                BORDERRADIUS(DATED,"5px");
 
-                HEADER(DATATAS,DATATA.sender,(NAME)=>{
+                HEAD(DATED,(DATAS)=>{
 
-                    POSITION(NAME,"absolute");
+                    POSITION(DATAS,"relative");
+                    BACKGROUND(DATAS,"teal");
 
-                    MARGINTOP(NAME,"2%");
+                    HEADER(DATAS,DATATA.sender,()=>{
+    
+                    });
 
                 });
 
-                HEADER(DATATAS,DATATA.message,(NAME)=>{
+                INLINEVIEW(DATED,(DATEDS)=>{
 
-                    MARGINLEFT(NAME,"2%");
-                    
+                    HEADER(DATEDS,DATATA.message,(MESSAGE)=>{
+
+                        MARGINLEFT(MESSAGE,"2%");
+                        
+                    });
+
+                });
+
+                INLINEVIEW(DATED,(DATEDS)=>{
+
+                    BACKGROUND(DATEDS,"gray");
+                    HEIGHT(DATEDS,"70px");
+
+                    BUTTON(DATEDS,"Sync",(DT)=>{
+
+                        WIDTH(DT,"45%");
+                        MARGIN(DT,"2%");
+                        BACKGROUND(DT,"brown");
+                        COLOR(DT,"white");
+
+                    });
+
+                    BUTTON(DATEDS,"Status",(DT)=>{
+
+                        WIDTH(DT,"45%");
+                        MARGIN(DT,"2%");
+                        BACKGROUND(DT,"orange");
+                        COLOR(DT,"white");
+
+                    });
+
                 });
 
             });
