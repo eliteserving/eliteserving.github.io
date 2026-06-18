@@ -305,68 +305,158 @@ const FULLMESSAGE=()=>{
 
 const USERACCOUNT=()=>{
 
-        BACKGROUND(BODIER,"white");
-
     CLEAR("");
 
-        VIEWS("",(DATA)=>{
+    CONDITION(localStorage.getItem("User"),()=>{
 
-        BACKGROUND(DATA,"white");
-        COLOR(DATA,"black");
-        POSITION(DATA,"absolute");
-        TOP(DATA,"0px");
-        HEIGHT(DATA,"auto");
-        BOTTOM(DATA,"100px");
+        BACKGROUND(BODIER,"white");
 
-        CLEAR(DATA);
+        COLOR(BODIER,"black");
 
-        DISPLAY(DATA,`
 
-            <div class="RawMessageHolder">
+        VIEWS("",(DATATA)=>{
 
-                <br><br>
+            BACKGROUND(DATATA,"white");
+            COLOR(DATATA,"black");
+            POSITION(DATATA,"absolute");
+            TOP(DATATA,"0px");
+            HEIGHT(DATATA,"auto");
+            BOTTOM(DATATA,"100px");
 
-                <h1>Use The Same Email at <br><br> <a href="https://www.rentals.naweriindustries.com">Fiskon Rentals System</a> </h1>
+            COLOR(DATATA,"black");
 
-                <br><br>
+            DEJSONIFICATION(localStorage.getItem("User"),(Data)=>{
 
-                <input class="Email" type="email" placeholder="Enter Email to Login"/>
-
-                <br><br>
-
-                <button class="ConnectAccount">Connect Account</button>
-            
-            </div>
-            
-        `);
-
-        const styletag=document.createElement('style');
-
-        styletag.textContent=`
-
-            .Email{
-                border:1px solid forestgreen;
-                padding:2%;
-                border-radius:5px;
-                width:80%;
-                height:32px;
-                color:green;
-            }
-
-            .ConnectAccount{
-                width:80%;
-                height:50px;
-                background:forestgreen;
-                padding:2%;
-                color:white;
-                border-radius:20px;
-            }
+                DISPLAY(DATATA,`
+        
+                    <div class="RawMessageHolder">
+        
+                        <br><br>
+        
+                        <h1>To Update User Email At <br><br> <a href="https://www.rentals.naweriindustries.com">Fiskon Rentals System</a> </h1>
+        
+                        <br><br>
+        
+                        <p  class="Error"></p>
+        
+                        <br><br>
+        
+                        <input class="Email" value="${Data.data.email}"  type="email" placeholder="Enter Email to Login"/>
+        
+                        <br><br><br>
+        
+                        <button class="ConnectAccount" onclick="LOGIN()">Update Connection</button>
                     
-        `;
+                    </div>
+                    
+                `);
+        
+                const styletag=document.createElement('style');
+        
+                styletag.textContent=`
+        
+                    .Email{
+                        border:1px solid forestgreen;
+                        padding:2%;
+                        border-radius:5px;
+                        width:80%;
+                        height:32px;
+                        color:green;
+                    }
+        
+                    .ConnectAccount{
+                        width:80%;
+                        height:50px;
+                        background:forestgreen;
+                        padding:2%;
+                        color:white;
+                        border-radius:20px;
+                    }
+                    
+                    .Error{
+                        color:red;
+                        display:block;
+                    }
+                            
+                `;
+        
+                document.head.appendChild(styletag);
 
-        document.head.appendChild(styletag);
+            });
 
-    });
+        });
+
+    },()=>{
+
+        VIEWS("",(DATA)=>{
+    
+            BACKGROUND(DATA,"white");
+            COLOR(DATA,"black");
+            POSITION(DATA,"absolute");
+            TOP(DATA,"0px");
+            HEIGHT(DATA,"auto");
+            BOTTOM(DATA,"100px");
+    
+            CLEAR(DATA);
+    
+            DISPLAY(DATA,`
+    
+                <div class="RawMessageHolder">
+    
+                    <br><br>
+    
+                    <h1>Use The Same Email at <br><br> <a href="https://www.rentals.naweriindustries.com">Fiskon Rentals System</a> </h1>
+    
+                    <br><br>
+    
+                    <p  class="Error"></p>
+    
+                    <br><br>
+    
+                    <input class="Email"  type="email" placeholder="Enter Email to Login"/>
+    
+                    <br><br><br>
+    
+                    <button class="ConnectAccount" onclick="LOGIN()">Connect Account</button>
+                
+                </div>
+                
+            `);
+    
+            const styletag=document.createElement('style');
+    
+            styletag.textContent=`
+    
+                .Email{
+                    border:1px solid forestgreen;
+                    padding:2%;
+                    border-radius:5px;
+                    width:80%;
+                    height:32px;
+                    color:green;
+                }
+    
+                .ConnectAccount{
+                    width:80%;
+                    height:50px;
+                    background:forestgreen;
+                    padding:2%;
+                    color:white;
+                    border-radius:20px;
+                }
+                
+                .Error{
+                    color:red;
+                    display:block;
+                }
+                        
+            `;
+    
+            document.head.appendChild(styletag);
+    
+        });
+    })
+
 
     FOOTER("",(DATA)=>{
 
@@ -441,6 +531,71 @@ const DESKTOPVIEW=()=>{
     CLEAR("");
 
     HEADER("","NCOO",()=>{
+
+    });
+    
+};
+
+const LOGIN=()=>{
+
+    const Email=document.querySelector(".Email");
+
+    const Error=document.querySelector(".Error");
+
+    CONDITION(Email.value,()=>{
+
+        DISPLAY(Error,"Please Wait...");
+
+        async function checkSubscription() {
+            const email = document.querySelector(".Email").value.trim();
+            
+            DISPLAY(Error,"Checking Database...");
+
+            try {
+                const formData = new FormData();
+                formData.append("email", email);
+
+                const res = await fetch(
+                "https://rentals.naweriindustries.com/endpoints/check-subscription.php",
+                { method: "POST", body: formData }
+                );
+
+                const data = await res.json();
+
+                if (data.status === "success") {
+
+                const sub = data.subscription_status;
+
+                if (sub === "active") {
+
+                    JSONIFICATION(data,(ME)=>{
+
+                        LOCALSTORE("User",ME);
+
+                        RELOAD();
+
+                    });
+                    
+                } else {
+
+                    DISPLAY(Error,data.message)
+                }
+
+                } else {
+                    DISPLAY(Error,data.message)
+                }
+
+            } catch (err) {
+               DISPLAY(Error,err.message);
+            }
+
+        }
+
+        checkSubscription() 
+    
+    },()=>{
+
+        DISPLAY(Error,"Enter User Email");
 
     });
     
