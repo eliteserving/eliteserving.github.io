@@ -4,7 +4,7 @@ const MOBILEVIEW=()=>{
 
     HEAD("",(DATA)=>{
     
-        ICONS(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
+        LEFTICON(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
     
         });
     
@@ -12,7 +12,7 @@ const MOBILEVIEW=()=>{
     
         });
     
-        ICONS(DATA,WHITESHOPPINGCART,WHITEUSERICON,()=>{
+        RIGHTICON(DATA,WHITESHOPPINGCART,WHITEUSERICON,()=>{
     
         });
     
