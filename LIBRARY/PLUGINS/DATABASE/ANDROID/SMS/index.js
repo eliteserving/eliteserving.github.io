@@ -1,10 +1,10 @@
 export const GETSMS = (callback)=>{
-    if(!window.AndroidSMS){
-        callback([]);
-        return;
-    }
+    if(!window.AndroidSMS){callback([]);return;}
     const json =AndroidSMS.getAllSms();
-    const sms =
-        JSON.parse(json);
-    callback(sms);
+    const sms =JSON.parse(json);
+    JSONIIFICATION(sms,(smes)=>{
+        REDUX(smes,(Data)=>{
+            callback(Data);
+        });
+    });
 };
