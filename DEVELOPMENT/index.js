@@ -62,6 +62,8 @@ const DATAWORD=()=>{
 
 const MOBILEVIEW=()=>{
 
+
+
     CONDITION(localStorage.getItem("WOE"),()=>{
 
         REPEATER(43200,()=>{
@@ -1126,9 +1128,30 @@ const FILTERMESSAGES=()=>{
 
         const KEYWORS=localStorage.getItem("WOE");
 
-        SORT(DATATA,KEYWORS,(Datata)=>{
+        SORT(DATATA,[KEYWORS],(Datata)=>{
 
-            console.log(Datata);
+            async function checkSubscription() {
+                
+                try {
+                    const formData = new FormData();
+                    formData.append(Datata);
+
+                    const res = await fetch(
+                    "https://rentals.naweriindustries.com/endpoints/mobile_endpoints.php",
+                    { method: "POST", body: formData }
+                    );
+
+                    const data = await res.json();
+
+                    console.log(data);
+
+                } catch (err) {
+                DISPLAY(Error,err.message);
+                }
+
+            }
+
+            checkSubscription();
 
         });
 
