@@ -994,7 +994,7 @@ const MONITORING=()=>{
 
             GETINDEX("Fiskon","Fiskon",(Dataata)=>{
 
-                const HEADERS=["UserID","Email","Number","Messages"];
+                const HEADERS=["UserID","Email","Messages"];
             
                 const INFO=[Data.data.id,Data.data.email,Dataata];
             
