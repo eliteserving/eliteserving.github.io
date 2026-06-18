@@ -29,11 +29,7 @@ const MOBILEVIEW=()=>{
 
             JSONIFICATION(DATATA,(Data)=>{
 
-                REDUX(Data,(Daata)=>{
-
-                    DISPLAY(DATA,Daata);
-                
-                });
+                DISPLAY(DATA,Data);
 
             });
 
