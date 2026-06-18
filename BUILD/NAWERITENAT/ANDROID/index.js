@@ -1,192 +1,454 @@
 const MOBILEVIEW=()=>{
 
-    CLEAR("");
+    CONDITION(localStorage.getItem("User"),()=>{
 
-    VIEWS("",(DATA)=>{
+        DEJSONIFICATION(localStorage.getItem("User"),(Data)=>{
 
-        BACKGROUND(DATA,"white");
-        COLOR(DATA,"black");
-        POSITION(DATA,"absolute");
-        TOP(DATA,"0px");
-        HEIGHT(DATA,"auto");
-        BOTTOM(DATA,"100px");
+            CONDITION(Data.subscription_status === "expired",()=>{
 
-        CLEAR(DATA);
+                CLEAR("");
 
-        GETSMS((DATATA)=>{
+                VIEWS("",(DATA)=>{
+            
+                    BACKGROUND(DATA,"white");
+                    COLOR(DATA,"black");
+                    POSITION(DATA,"absolute");
+                    TOP(DATA,"0px");
+                    HEIGHT(DATA,"");
+            
+                    CLEAR(DATA);
 
-            /*
+                    DISPLAY(DATA,`
 
-            FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
-                LOCALSTORE("MESSAGES",[DATA.keywords]);
-            });
+                        <br><br><br><br>
 
-            */
+                        <h1 style="color:forestgreen;font-size:23px;">ATTENTION!</h1>
 
-            VIEWS(DATA,(DATED)=>{
+                        <br><br>
 
-                WIDTH(DATED,"95%");
-                HEIGHT(DATED,"20%");
-                MARGIN(DATED,"2%");
-                BORDERRADIUS(DATED,"5px");
-                BACKGROUND(DATED,"#fef6f6fc");
+                        <h2>Dear User</h2>
 
-                DISPLAY(DATED,`
+                        <br><br>
 
-                    <div class="Holder">
+                        <p>Your Subscription For Fiskon Rentals Management System  Was Due On: <br><br> <b style="color:red;">${Data.data.expiry_date}</b>.</p>
+
+                        <br>
+
+                        <p >To Renew User Subscription Please Contact Admin Below:</p>
+
+                        <br>
                         
-                        <img  class="Icons" src="${BLACKUSERICON}"/>
-                    
-                    </div>
+                        <a href="https://rentals.naweriindustries.com"><button class="ConnectAccount" >Contact Support</button></a>
 
-                    <div class="DataHolder">
+                    `);
 
-                        <h1 class="Name">${DATATA.sender}</h1>
-
-                        <div class="MessagePreview">
-
-                            <p class="MessageDemo">${DATATA.message}</p>
+                    const styletag=document.createElement('style');
+    
+                    styletag.textContent=`
                         
-                        </div>
+                        .ConnectAccount{
+                            width:80%;
+                            height:50px;
+                            background:forestgreen;
+                            padding:2%;
+                            color:white;
+                            border-radius:20px;
+                        }
 
-                        <p class="TimeHolder">${DATATA.date}</p>
-                    
-                    </div>
+                    `;
+    
+                    document.head.appendChild(styletag);
 
-                `);
+            
+                });
 
-                const styletag=document.createElement('style');
 
-                styletag.textContent=`
+            },()=>{
 
-                    .Holder{
-                        position:absolute;
-                        width:100px;
-                        height:105px;
-                        margin:1%;
-                    }
-
-                    .Icons{
-                        margin-top:5%;
-                        width:80px;
-                        height:80px;
-                    }
-
-                    .DataHolder{
-                        width:63%;
-                        height:100px;
-                        margin-left:35%;
-                        margin-top:2%;
-                    }
-                    
-                    .Name{
-                        text-align:left;
-                        margin-left:5%;
-                    }
-                    
-                    .MessagePreview{
-                        width:90%;
-                        height:50px;
-                    }
-                    
-                    .MessageDemo{
-                        overflow:hidden;
-                        font-size:18px;
-                        white-space:nowrap;
-                        width:80%;
-                        text-overflow:ellipsis;
-                        margin-top:2%;
-                    }
-                    
-                    .TimeHolder{
-                        font-size:18px;
-                    }
-                    
-                `;
-
-                document.head.appendChild(styletag);
-
-                CLICK(DATED,()=>{
-
-                    SESSIONSTORE("Message",DATATA.message);
-
-                    ROUTE("",FULLMESSAGE,"MOBILEVIEW");
-
+                CLEAR("");
+    
+                VIEWS("",(DATA)=>{
+            
+                    BACKGROUND(DATA,"white");
+                    COLOR(DATA,"black");
+                    POSITION(DATA,"absolute");
+                    TOP(DATA,"0px");
+                    HEIGHT(DATA,"auto");
+                    BOTTOM(DATA,"100px");
+            
+                    CLEAR(DATA);
+            
+                    GETSMS((DATATA)=>{
+            
+                        /*
+            
+                        FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
+                            LOCALSTORE("MESSAGES",[DATA.keywords]);
+                        });
+            
+                        */
+            
+                        VIEWS(DATA,(DATED)=>{
+            
+                            WIDTH(DATED,"95%");
+                            HEIGHT(DATED,"20%");
+                            MARGIN(DATED,"2%");
+                            BORDERRADIUS(DATED,"5px");
+                            BACKGROUND(DATED,"#fef6f6fc");
+            
+                            DISPLAY(DATED,`
+            
+                                <div class="Holder">
+                                    
+                                    <img  class="Icons" src="${BLACKUSERICON}"/>
+                                
+                                </div>
+            
+                                <div class="DataHolder">
+            
+                                    <h1 class="Name">${DATATA.sender}</h1>
+            
+                                    <div class="MessagePreview">
+            
+                                        <p class="MessageDemo">${DATATA.message}</p>
+                                    
+                                    </div>
+            
+                                    <p class="TimeHolder">${DATATA.date}</p>
+                                
+                                </div>
+            
+                            `);
+            
+                            const styletag=document.createElement('style');
+            
+                            styletag.textContent=`
+            
+                                .Holder{
+                                    position:absolute;
+                                    width:100px;
+                                    height:105px;
+                                    margin:1%;
+                                }
+            
+                                .Icons{
+                                    margin-top:5%;
+                                    width:80px;
+                                    height:80px;
+                                }
+            
+                                .DataHolder{
+                                    width:63%;
+                                    height:100px;
+                                    margin-left:35%;
+                                    margin-top:2%;
+                                }
+                                
+                                .Name{
+                                    text-align:left;
+                                    margin-left:5%;
+                                }
+                                
+                                .MessagePreview{
+                                    width:90%;
+                                    height:50px;
+                                }
+                                
+                                .MessageDemo{
+                                    overflow:hidden;
+                                    font-size:18px;
+                                    white-space:nowrap;
+                                    width:80%;
+                                    text-overflow:ellipsis;
+                                    margin-top:2%;
+                                }
+                                
+                                .TimeHolder{
+                                    font-size:18px;
+                                }
+                                
+                            `;
+            
+                            document.head.appendChild(styletag);
+            
+                            CLICK(DATED,()=>{
+            
+                                SESSIONSTORE("Message",DATATA.message);
+            
+                                ROUTE("",FULLMESSAGE,"MOBILEVIEW");
+            
+                            });
+            
+                        });
+            
+                    });
+            
+                });
+            
+                FOOTER("",(DATA)=>{
+            
+                    BACKGROUND(DATA,"black");
+                    COLOR(DATA,"white");
+                    HEIGHT(DATA,"100px");
+            
+                    DISPLAY(DATA,`
+            
+                    <nav class="bottom-nav">
+            
+                            <a style="text-decoration:none;" onclick="RELOAD()"  class="bottom-nav-item">
+                                <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
+                                <span class="bottomnavText">All</span>
+                            </a>
+            
+                            <a style="text-decoration:none;"  class="bottom-nav-item">
+                                <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
+                                <span class="bottomnavText">Synced</span>
+                            </a>
+            
+                            <a style="text-decoration:none;" class="bottom-nav-item">
+                                <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
+                                <span class="bottomnavText">Pending</span>
+                            </a>
+            
+                            <a style="text-decoration:none;" onclick="USERACCOUNT()" class="bottom-nav-item">
+                                <span class="bottomNavIcon"><img class="Icon" src="${WHITEUSERICON}"></span>
+                                <span class="bottomnavText">Profile</span>
+                            </a>
+                            
+                        </nav>
+                        
+                    `);
+            
+                    const styletag=document.createElement('style');
+                    styletag.textContent=`
+            
+                        .Icon{
+                            width:30px;
+                            height:30px;
+                        }
+                        
+                        .bottom-nav {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            padding: 10px 0;
+                            position: fixed;
+                            bottom: 0;
+                            width: 100%;
+                            z-index: 1000;
+                        }
+                        .bottom-nav-item { 
+                            text-align: center;  
+                            cursor: pointer; 
+                            transition: color 0.3s;
+                            flex: 1;
+                        }
+                        .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+                        .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+                        .bottomnavText { font-size: 12px; font-weight: 500; }
+            
+                    `;
+            
+                    document.head.appendChild(styletag);
+            
                 });
 
             });
 
+        })
+
+    },()=>{
+
+        CLEAR("");
+    
+        VIEWS("",(DATA)=>{
+    
+            BACKGROUND(DATA,"white");
+            COLOR(DATA,"black");
+            POSITION(DATA,"absolute");
+            TOP(DATA,"0px");
+            HEIGHT(DATA,"auto");
+            BOTTOM(DATA,"100px");
+    
+            CLEAR(DATA);
+    
+            GETSMS((DATATA)=>{
+    
+                /*
+    
+                FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
+                    LOCALSTORE("MESSAGES",[DATA.keywords]);
+                });
+    
+                */
+    
+                VIEWS(DATA,(DATED)=>{
+    
+                    WIDTH(DATED,"95%");
+                    HEIGHT(DATED,"20%");
+                    MARGIN(DATED,"2%");
+                    BORDERRADIUS(DATED,"5px");
+                    BACKGROUND(DATED,"#fef6f6fc");
+    
+                    DISPLAY(DATED,`
+    
+                        <div class="Holder">
+                            
+                            <img  class="Icons" src="${BLACKUSERICON}"/>
+                        
+                        </div>
+    
+                        <div class="DataHolder">
+    
+                            <h1 class="Name">${DATATA.sender}</h1>
+    
+                            <div class="MessagePreview">
+    
+                                <p class="MessageDemo">${DATATA.message}</p>
+                            
+                            </div>
+    
+                            <p class="TimeHolder">${DATATA.date}</p>
+                        
+                        </div>
+    
+                    `);
+    
+                    const styletag=document.createElement('style');
+    
+                    styletag.textContent=`
+    
+                        .Holder{
+                            position:absolute;
+                            width:100px;
+                            height:105px;
+                            margin:1%;
+                        }
+    
+                        .Icons{
+                            margin-top:5%;
+                            width:80px;
+                            height:80px;
+                        }
+    
+                        .DataHolder{
+                            width:63%;
+                            height:100px;
+                            margin-left:35%;
+                            margin-top:2%;
+                        }
+                        
+                        .Name{
+                            text-align:left;
+                            margin-left:5%;
+                        }
+                        
+                        .MessagePreview{
+                            width:90%;
+                            height:50px;
+                        }
+                        
+                        .MessageDemo{
+                            overflow:hidden;
+                            font-size:18px;
+                            white-space:nowrap;
+                            width:80%;
+                            text-overflow:ellipsis;
+                            margin-top:2%;
+                        }
+                        
+                        .TimeHolder{
+                            font-size:18px;
+                        }
+                        
+                    `;
+    
+                    document.head.appendChild(styletag);
+    
+                    CLICK(DATED,()=>{
+    
+                        SESSIONSTORE("Message",DATATA.message);
+    
+                        ROUTE("",FULLMESSAGE,"MOBILEVIEW");
+    
+                    });
+    
+                });
+    
+            });
+    
+        });
+    
+        FOOTER("",(DATA)=>{
+    
+            BACKGROUND(DATA,"black");
+            COLOR(DATA,"white");
+            HEIGHT(DATA,"100px");
+    
+            DISPLAY(DATA,`
+    
+            <nav class="bottom-nav">
+    
+                    <a style="text-decoration:none;" onclick="RELOAD()"  class="bottom-nav-item">
+                        <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
+                        <span class="bottomnavText">All</span>
+                    </a>
+    
+                    <a style="text-decoration:none;"  class="bottom-nav-item">
+                        <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
+                        <span class="bottomnavText">Synced</span>
+                    </a>
+    
+                    <a style="text-decoration:none;" class="bottom-nav-item">
+                        <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
+                        <span class="bottomnavText">Pending</span>
+                    </a>
+    
+                    <a style="text-decoration:none;" onclick="USERACCOUNT()" class="bottom-nav-item">
+                        <span class="bottomNavIcon"><img class="Icon" src="${WHITEUSERICON}"></span>
+                        <span class="bottomnavText">Profile</span>
+                    </a>
+                    
+                </nav>
+                
+            `);
+    
+            const styletag=document.createElement('style');
+            styletag.textContent=`
+    
+                .Icon{
+                    width:30px;
+                    height:30px;
+                }
+                
+                .bottom-nav {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 10px 0;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    z-index: 1000;
+                }
+                .bottom-nav-item { 
+                    text-align: center;  
+                    cursor: pointer; 
+                    transition: color 0.3s;
+                    flex: 1;
+                }
+                .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+                .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+                .bottomnavText { font-size: 12px; font-weight: 500; }
+    
+            `;
+    
+            document.head.appendChild(styletag);
+    
         });
 
-    });
+    })
 
-    FOOTER("",(DATA)=>{
-
-        BACKGROUND(DATA,"black");
-        COLOR(DATA,"white");
-        HEIGHT(DATA,"100px");
-
-        DISPLAY(DATA,`
-
-        <nav class="bottom-nav">
-
-                <a style="text-decoration:none;"  class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
-                    <span class="bottomnavText">All</span>
-                </a>
-
-                <a style="text-decoration:none;"  class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
-                    <span class="bottomnavText">Synced</span>
-                </a>
-
-                <a style="text-decoration:none;" class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
-                    <span class="bottomnavText">Pending</span>
-                </a>
-
-                <a style="text-decoration:none;" onclick="USERACCOUNT()" class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEUSERICON}"></span>
-                    <span class="bottomnavText">Profile</span>
-                </a>
-                
-            </nav>
-            
-        `);
-
-        const styletag=document.createElement('style');
-        styletag.textContent=`
-
-            .Icon{
-                width:30px;
-                height:30px;
-            }
-            
-            .bottom-nav {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                z-index: 1000;
-            }
-            .bottom-nav-item { 
-                text-align: center;  
-                cursor: pointer; 
-                transition: color 0.3s;
-                flex: 1;
-            }
-            .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
-            .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
-            .bottomnavText { font-size: 12px; font-weight: 500; }
-
-        `;
-
-        document.head.appendChild(styletag);
-
-    });
 
 };
 
@@ -312,7 +574,6 @@ const USERACCOUNT=()=>{
         BACKGROUND(BODIER,"white");
 
         COLOR(BODIER,"black");
-
 
         VIEWS("",(DATATA)=>{
 
@@ -471,13 +732,9 @@ const USERACCOUNT=()=>{
                     <span class="bottomNavIcon"><img   class="Icon" src="${WHITEBACKICON}"></span>
                     <span class="bottomnavText">Home</span>
                 </a>
-                <a style="text-decoration:none;"  class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
-                    <span class="bottomnavText">Synced</span>
-                </a>
                 <a style="text-decoration:none;" class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
-                    <span class="bottomnavText">Pending</span>
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEINTERNETICON}"></span>
+                    <span class="bottomnavText">Contact Us</span>
                 </a>
                 
             </nav>
@@ -612,7 +869,7 @@ const LOGINUPDATE=()=>{
         DISPLAY(Error,"Please Wait...");
 
         async function checkSubscription() {
-            const email = document.querySelector(".Email").value.trim();
+            const email = document.querySelector(".Emailer").value.trim();
             
             DISPLAY(Error,"Checking Database...");
 
@@ -631,7 +888,7 @@ const LOGINUPDATE=()=>{
 
                 const sub = data.subscription_status;
 
-                if (sub === "active") {
+                if (sub === "active"||"expired") {
 
                     LOCALDELETE("User");
 
