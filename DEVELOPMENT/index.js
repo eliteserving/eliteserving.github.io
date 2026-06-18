@@ -106,7 +106,7 @@ const MOBILEVIEW=()=>{
 
                     SESSIONSTORE("Message",DATATA.message);
 
-                    ROUTE("",FULLMESSAGE,MOBILEVIEW);
+                    ROUTE("",FULLMESSAGE,"MOBILEVIEW");
 
                 });
 
@@ -119,6 +119,7 @@ const MOBILEVIEW=()=>{
     FOOTER("",(DATA)=>{
 
         BACKGROUND(DATA,"black");
+        COLOR(DATA,"white");
         HEIGHT(DATA,"100px");
 
         DISPLAY(DATA,`
@@ -232,12 +233,13 @@ const FULLMESSAGE=()=>{
 
         BACKGROUND(DATA,"black");
         HEIGHT(DATA,"100px");
+        COLOR(DATA,"white");
 
         DISPLAY(DATA,`
 
         <nav class="bottom-nav">
-                <a style="text-decoration:none;" href="./index.html"  class="bottom-nav-item">
-                    <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
+                <a style="text-decoration:none;" onclick="back()" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img   class="Icon" src="${WHITEHOMEICON}"></span>
                     <span class="bottomnavText">All</span>
                 </a>
                 <a style="text-decoration:none;"  class="bottom-nav-item">
@@ -286,6 +288,12 @@ const FULLMESSAGE=()=>{
         document.head.appendChild(styletag);
 
     });
+
+};
+
+const back=()=>{
+
+    MOBILEVIEW();
 
 };
 
