@@ -88,98 +88,102 @@ const MOBILEVIEW=()=>{
                     CLEAR(DATA);
             
                     GETSMS((DATATA)=>{
-            
-                        VIEWS(DATA,(DATED)=>{
-            
-                            WIDTH(DATED,"95%");
-                            HEIGHT(DATED,"20%");
-                            MARGIN(DATED,"2%");
-                            BORDERRADIUS(DATED,"5px");
-                            BACKGROUND(DATED,"#fef6f6fc");
-            
-                            DISPLAY(DATED,`
-            
-                                <div class="Holder">
-                                    
-                                    <img  class="Icons" src="${BLACKUSERICON}"/>
-                                
-                                </div>
-            
-                                <div class="DataHolder">
-            
-                                    <h1 class="Name">${DATATA.sender}</h1>
-            
-                                    <div class="MessagePreview">
-            
-                                        <p class="MessageDemo">${DATATA.message}</p>
+
+                        CHECK(DATATA.sender === "MTNMobMoney",()=>{
+
+                            VIEWS(DATA,(DATED)=>{
+                
+                                WIDTH(DATED,"95%");
+                                HEIGHT(DATED,"20%");
+                                MARGIN(DATED,"2%");
+                                BORDERRADIUS(DATED,"5px");
+                                BACKGROUND(DATED,"#fef6f6fc");
+                
+                                DISPLAY(DATED,`
+                
+                                    <div class="Holder">
+                                        
+                                        <img  class="Icons" src="${BLACKUSERICON}"/>
                                     
                                     </div>
-            
-                                    <p class="TimeHolder">${DATATA.date}</p>
-                                
-                                </div>
-            
-                            `);
-            
-                            const styletag=document.createElement('style');
-            
-                            styletag.textContent=`
-            
-                                .Holder{
-                                    position:absolute;
-                                    width:100px;
-                                    height:105px;
-                                    margin:1%;
-                                }
-            
-                                .Icons{
-                                    margin-top:5%;
-                                    width:80px;
-                                    height:80px;
-                                }
-            
-                                .DataHolder{
-                                    width:63%;
-                                    height:100px;
-                                    margin-left:35%;
-                                    margin-top:2%;
-                                }
-                                
-                                .Name{
-                                    text-align:left;
-                                    margin-left:5%;
-                                }
-                                
-                                .MessagePreview{
-                                    width:90%;
-                                    height:50px;
-                                }
-                                
-                                .MessageDemo{
-                                    overflow:hidden;
-                                    font-size:18px;
-                                    white-space:nowrap;
-                                    width:80%;
-                                    text-overflow:ellipsis;
-                                    margin-top:2%;
-                                }
-                                
-                                .TimeHolder{
-                                    font-size:18px;
-                                }
-                                
-                            `;
-            
-                            document.head.appendChild(styletag);
-            
-                            CLICK(DATED,()=>{
-            
-                                SESSIONSTORE("Message",DATATA.message);
-            
-                                ROUTE("",FULLMESSAGE,"MOBILEVIEW");
-            
+                
+                                    <div class="DataHolder">
+                
+                                        <h1 class="Name">${DATATA.sender}</h1>
+                
+                                        <div class="MessagePreview">
+                
+                                            <p class="MessageDemo">${DATATA.message}</p>
+                                        
+                                        </div>
+                
+                                        <p class="TimeHolder">${DATATA.date}</p>
+                                    
+                                    </div>
+                
+                                `);
+                
+                                const styletag=document.createElement('style');
+                
+                                styletag.textContent=`
+                
+                                    .Holder{
+                                        position:absolute;
+                                        width:100px;
+                                        height:105px;
+                                        margin:1%;
+                                    }
+                
+                                    .Icons{
+                                        margin-top:5%;
+                                        width:80px;
+                                        height:80px;
+                                    }
+                
+                                    .DataHolder{
+                                        width:63%;
+                                        height:100px;
+                                        margin-left:35%;
+                                        margin-top:2%;
+                                    }
+                                    
+                                    .Name{
+                                        text-align:left;
+                                        margin-left:5%;
+                                    }
+                                    
+                                    .MessagePreview{
+                                        width:90%;
+                                        height:50px;
+                                    }
+                                    
+                                    .MessageDemo{
+                                        overflow:hidden;
+                                        font-size:18px;
+                                        white-space:nowrap;
+                                        width:80%;
+                                        text-overflow:ellipsis;
+                                        margin-top:2%;
+                                    }
+                                    
+                                    .TimeHolder{
+                                        font-size:18px;
+                                    }
+                                    
+                                `;
+                
+                                document.head.appendChild(styletag);
+                
+                                CLICK(DATED,()=>{
+                
+                                    SESSIONSTORE("Message",DATATA.message);
+                
+                                    ROUTE("",FULLMESSAGE,"MOBILEVIEW");
+                
+                                });
+                
                             });
-            
+
                         });
             
                     });
@@ -274,100 +278,104 @@ const MOBILEVIEW=()=>{
             CLEAR(DATA);
     
             GETSMS((DATATA)=>{
+
+                CHECK(DATATA.sender === "MTNMobMoney",()=>{
+
+                    VIEWS(DATA,(DATED)=>{
         
-                VIEWS(DATA,(DATED)=>{
-    
-                    WIDTH(DATED,"95%");
-                    HEIGHT(DATED,"20%");
-                    MARGIN(DATED,"2%");
-                    BORDERRADIUS(DATED,"5px");
-                    BACKGROUND(DATED,"#fef6f6fc");
-    
-                    DISPLAY(DATED,`
-    
-                        <div class="Holder">
-                            
-                            <img  class="Icons" src="${BLACKUSERICON}"/>
-                        
-                        </div>
-    
-                        <div class="DataHolder">
-    
-                            <h1 class="Name">${DATATA.sender}</h1>
-    
-                            <div class="MessagePreview">
-    
-                                <p class="MessageDemo">${DATATA.message}</p>
+                        WIDTH(DATED,"95%");
+                        HEIGHT(DATED,"20%");
+                        MARGIN(DATED,"2%");
+                        BORDERRADIUS(DATED,"5px");
+                        BACKGROUND(DATED,"#fef6f6fc");
+        
+                        DISPLAY(DATED,`
+        
+                            <div class="Holder">
+                                
+                                <img  class="Icons" src="${BLACKUSERICON}"/>
                             
                             </div>
-    
-                            <p class="TimeHolder">${DATATA.date}</p>
-                        
-                        </div>
-    
-                    `);
-    
-                    const styletag=document.createElement('style');
-    
-                    styletag.textContent=`
-    
-                        .Holder{
-                            position:absolute;
-                            width:100px;
-                            height:105px;
-                            margin:1%;
-                        }
-    
-                        .Icons{
-                            margin-top:5%;
-                            width:80px;
-                            height:80px;
-                        }
-    
-                        .DataHolder{
-                            width:63%;
-                            height:100px;
-                            margin-left:35%;
-                            margin-top:2%;
-                        }
-                        
-                        .Name{
-                            text-align:left;
-                            margin-left:5%;
-                        }
-                        
-                        .MessagePreview{
-                            width:90%;
-                            height:50px;
-                        }
-                        
-                        .MessageDemo{
-                            overflow:hidden;
-                            font-size:18px;
-                            white-space:nowrap;
-                            width:80%;
-                            text-overflow:ellipsis;
-                            margin-top:2%;
-                        }
-                        
-                        .TimeHolder{
-                            font-size:18px;
-                        }
-                        
-                    `;
-    
-                    document.head.appendChild(styletag);
-    
-                    CLICK(DATED,()=>{
-    
-                        SESSIONSTORE("Message",DATATA.message);
-    
-                        ROUTE("",FULLMESSAGE,"MOBILEVIEW");
-    
+        
+                            <div class="DataHolder">
+        
+                                <h1 class="Name">${DATATA.sender}</h1>
+        
+                                <div class="MessagePreview">
+        
+                                    <p class="MessageDemo">${DATATA.message}</p>
+                                
+                                </div>
+        
+                                <p class="TimeHolder">${DATATA.date}</p>
+                            
+                            </div>
+        
+                        `);
+        
+                        const styletag=document.createElement('style');
+        
+                        styletag.textContent=`
+        
+                            .Holder{
+                                position:absolute;
+                                width:100px;
+                                height:105px;
+                                margin:1%;
+                            }
+        
+                            .Icons{
+                                margin-top:5%;
+                                width:80px;
+                                height:80px;
+                            }
+        
+                            .DataHolder{
+                                width:63%;
+                                height:100px;
+                                margin-left:35%;
+                                margin-top:2%;
+                            }
+                            
+                            .Name{
+                                text-align:left;
+                                margin-left:5%;
+                            }
+                            
+                            .MessagePreview{
+                                width:90%;
+                                height:50px;
+                            }
+                            
+                            .MessageDemo{
+                                overflow:hidden;
+                                font-size:18px;
+                                white-space:nowrap;
+                                width:80%;
+                                text-overflow:ellipsis;
+                                margin-top:2%;
+                            }
+                            
+                            .TimeHolder{
+                                font-size:18px;
+                            }
+                            
+                        `;
+        
+                        document.head.appendChild(styletag);
+        
+                        CLICK(DATED,()=>{
+        
+                            SESSIONSTORE("Message",DATATA.message);
+        
+                            ROUTE("",FULLMESSAGE,"MOBILEVIEW");
+        
+                        });
+        
                     });
-    
+
                 });
-    
+        
             });
     
         });
