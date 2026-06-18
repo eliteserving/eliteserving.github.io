@@ -39,7 +39,7 @@ const MOBILEVIEW=()=>{
     
         });
 
-        HEADER(DATA,"Unsynced",()=>{
+        HEADER(DATA,"UnResolved",()=>{
     
         });
 
