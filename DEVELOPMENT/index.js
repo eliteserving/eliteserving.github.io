@@ -5,7 +5,7 @@ const MOBILEVIEW=()=>{
     VIEWS("",(DATA)=>{
 
         BACKGROUND(DATA,"white");
-
+        COLOR(DATA,"black");
         POSITION(DATA,"absolute");
         TOP(DATA,"0px");
         HEIGHT(DATA,"auto");
@@ -15,34 +15,92 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
+            FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
+                LOCALSTORE("MESSAGES",[DATA.keywords]);
+            });
+
             VIEWS(DATA,(DATED)=>{
 
-                BACKGROUND(DATED,"forestgreen");
                 WIDTH(DATED,"95%");
-                HEIGHT(DATED,"auto");
+                HEIGHT(DATED,"20%");
                 MARGIN(DATED,"2%");
                 BORDERRADIUS(DATED,"5px");
+                BACKGROUND(DATED,"#fef6f6fc")
 
-                HEAD(DATED,(DATAS)=>{
+                DISPLAY(DATED,`
 
-                    POSITION(DATAS,"relative");
-                    BACKGROUND(DATAS,"teal");
-
-                    HEADER(DATAS,DATATA.sender,()=>{
-    
-                    });
-
-                });
-
-                INLINEVIEW(DATED,(DATEDS)=>{
-
-                    HEADER(DATEDS,DATATA.message,(MESSAGE)=>{
-
-                        MARGINLEFT(MESSAGE,"2%");
+                    <div class="Holder">
                         
-                    });
+                        <img  class="Icons" src="${BLACKUSERICON}"/>
+                    
+                    </div>
 
-                });
+                    <div class="DataHolder">
+
+                        <h1 class="Name">${DATATA.sender}</h1>
+
+                        <div class="MessagePreview">
+
+                            <p class="MessageDemo">${DATATA.message}</p>
+                        
+                        </div>
+
+                        <p class="TimeHolder">${DATATA.date}</p>
+                    
+                    </div>
+
+                `);
+
+                const styletag=document.createElement('style');
+
+                styletag.textContent=`
+
+                    .Holder{
+                        position:absolute;
+                        width:100px;
+                        height:105px;
+                        margin:1%;
+                    }
+
+                    .Icons{
+                        margin-top:5%;
+                        width:80px;
+                        height:80px;
+                    }
+
+                    .DataHolder{
+                        width:63%;
+                        height:100px;
+                        margin-left:35%;
+                        margin-top:2%;
+                    }
+                    
+                    .Name{
+                        text-align:left;
+                        margin-left:5%;
+                    }
+                    
+                    .MessagePreview{
+                        width:90%;
+                        height:50px;
+                    }
+                    
+                    .MessageDemo{
+                        overflow:hidden;
+                        font-size:18px;
+                        white-space:nowrap;
+                        width:80%;
+                        text-overflow:ellipsis;
+                        margin-top:2%;
+                    }
+                    
+                    .TimeHolder{
+                        font-size:18px;
+                    }
+                    
+                `;
+
+                document.head.appendChild(styletag);
 
             });
 
@@ -71,7 +129,6 @@ const MOBILEVIEW=()=>{
                 </a>
                 
             </nav>
-            
             
         `);
 
@@ -110,8 +167,6 @@ const MOBILEVIEW=()=>{
         `;
 
         document.head.appendChild(styletag);
-
-    
 
     });
 

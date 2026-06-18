@@ -2,86 +2,105 @@ const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    HEAD("",(DATA)=>{
-    
-        LEFTICON(DATA,BLACKMENUICON,WHITESEARCHICON,()=>{
-    
-        });
-    
-        HEADER(DATA,"Fiskon",()=>{
-    
-        });
-    
-        RIGHTICON(DATA,WHITESHOPPINGCART,WHITEUSERICON,()=>{
-    
-        });
-    
-    });
-
     VIEWS("",(DATA)=>{
 
+        BACKGROUND(DATA,"white");
+        COLOR(DATA,"black");
         POSITION(DATA,"absolute");
-        TOP(DATA,"50px");
+        TOP(DATA,"0px");
         HEIGHT(DATA,"auto");
-        BOTTOM(DATA,"50px");
+        BOTTOM(DATA,"100px");
 
         CLEAR(DATA);
 
         GETSMS((DATATA)=>{
 
+            FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
+                LOCALSTORE("MESSAGES",[DATA.keywords]);
+            });
+
             VIEWS(DATA,(DATED)=>{
 
-                BACKGROUND(DATED,"forestgreen");
                 WIDTH(DATED,"95%");
-                HEIGHT(DATED,"auto");
+                HEIGHT(DATED,"20%");
                 MARGIN(DATED,"2%");
                 BORDERRADIUS(DATED,"5px");
+                BACKGROUND(DATED,"#fef6f6fc")
 
-                HEAD(DATED,(DATAS)=>{
+                DISPLAY(DATED,`
 
-                    POSITION(DATAS,"relative");
-                    BACKGROUND(DATAS,"teal");
-
-                    HEADER(DATAS,DATATA.sender,()=>{
-    
-                    });
-
-                });
-
-                INLINEVIEW(DATED,(DATEDS)=>{
-
-                    HEADER(DATEDS,DATATA.message,(MESSAGE)=>{
-
-                        MARGINLEFT(MESSAGE,"2%");
+                    <div class="Holder">
                         
-                    });
+                        <img  class="Icons" src="${BLACKUSERICON}"/>
+                    
+                    </div>
 
-                });
+                    <div class="DataHolder">
 
-                INLINEVIEW(DATED,(DATEDS)=>{
+                        <h1 class="Name">${DATATA.sender}</h1>
 
-                    BACKGROUND(DATEDS,"gray");
-                    HEIGHT(DATEDS,"70px");
+                        <div class="MessagePreview">
 
-                    BUTTON(DATEDS,"Sync",(DT)=>{
+                            <p class="MessageDemo">${DATATA.message}</p>
+                        
+                        </div>
 
-                        WIDTH(DT,"45%");
-                        MARGIN(DT,"2%");
-                        BACKGROUND(DT,"brown");
-                        COLOR(DT,"white");
+                        <p class="TimeHolder">${DATATA.date}</p>
+                    
+                    </div>
 
-                    });
+                `);
 
-                    BUTTON(DATEDS,"Status",(DT)=>{
+                const styletag=document.createElement('style');
 
-                        WIDTH(DT,"45%");
-                        MARGIN(DT,"2%");
-                        BACKGROUND(DT,"orange");
-                        COLOR(DT,"white");
+                styletag.textContent=`
 
-                    });
+                    .Holder{
+                        position:absolute;
+                        width:100px;
+                        height:105px;
+                        margin:1%;
+                    }
 
-                });
+                    .Icons{
+                        margin-top:5%;
+                        width:80px;
+                        height:80px;
+                    }
+
+                    .DataHolder{
+                        width:63%;
+                        height:100px;
+                        margin-left:35%;
+                        margin-top:2%;
+                    }
+                    
+                    .Name{
+                        text-align:left;
+                        margin-left:5%;
+                    }
+                    
+                    .MessagePreview{
+                        width:90%;
+                        height:50px;
+                    }
+                    
+                    .MessageDemo{
+                        overflow:hidden;
+                        font-size:18px;
+                        white-space:nowrap;
+                        width:80%;
+                        text-overflow:ellipsis;
+                        margin-top:2%;
+                    }
+                    
+                    .TimeHolder{
+                        font-size:18px;
+                    }
+                    
+                `;
+
+                document.head.appendChild(styletag);
 
             });
 
@@ -91,17 +110,63 @@ const MOBILEVIEW=()=>{
 
     FOOTER("",(DATA)=>{
 
-        HEADER(DATA,"All",()=>{
-    
-        });
+        BACKGROUND(DATA,"black");
 
-        HEADER(DATA,"UnResolved",()=>{
-    
-        });
+        DISPLAY(DATA,`
 
-        HEADER(DATA,"Sync",()=>{
-    
-        });
+        <nav class="bottom-nav">
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITELIBRARYICON}"></span>
+                    <span class="bottomnavText">All</span>
+                </a>
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
+                    <span class="bottomnavText">Synced</span>
+                </a>
+                <a style="text-decoration:none;" href="about-us.php" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
+                    <span class="bottomnavText">Pending</span>
+                </a>
+                
+            </nav>
+            
+        `);
+
+        const styletag=document.createElement('style');
+        styletag.textContent=`
+
+            .Icon{
+                width:30px;
+                height:30px;
+            }
+            
+            .bottom-nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: var(--nav-bg);
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 1000;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            .bottom-nav-item { 
+                text-align: center; 
+                color: #94a3b8; 
+                cursor: pointer; 
+                transition: color 0.3s;
+                flex: 1;
+            }
+            .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+            .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+            .bottomnavText { font-size: 12px; font-weight: 500; }
+
+        `;
+
+        document.head.appendChild(styletag);
 
     });
 
