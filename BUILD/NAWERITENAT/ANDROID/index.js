@@ -145,7 +145,7 @@ const MOBILEVIEW=()=>{
                     <span class="bottomnavText">Pending</span>
                 </a>
 
-                <a style="text-decoration:none;" class="bottom-nav-item">
+                <a style="text-decoration:none;" onclick="USERACCOUNT()" class="bottom-nav-item">
                     <span class="bottomNavIcon"><img class="Icon" src="${WHITEUSERICON}"></span>
                     <span class="bottomnavText">Profile</span>
                 </a>
@@ -252,7 +252,134 @@ const FULLMESSAGE=()=>{
         <nav class="bottom-nav">
                 <a style="text-decoration:none;" onclick="back()" class="bottom-nav-item">
                     <span class="bottomNavIcon"><img   class="Icon" src="${WHITEHOMEICON}"></span>
-                    <span class="bottomnavText">All</span>
+                    <span class="bottomnavText">Home</span>
+                </a>
+                <a style="text-decoration:none;"  class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
+                    <span class="bottomnavText">Synced</span>
+                </a>
+                <a style="text-decoration:none;" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img class="Icon" src="${WHITERETRYICON}"></span>
+                    <span class="bottomnavText">Pending</span>
+                </a>
+                
+            </nav>
+            
+        `);
+
+        const styletag=document.createElement('style');
+        styletag.textContent=`
+
+            .Icon{
+                width:30px;
+                height:30px;
+            }
+            
+            .bottom-nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            .bottom-nav-item { 
+                text-align: center;  
+                cursor: pointer; 
+                transition: color 0.3s;
+                flex: 1;
+            }
+            .bottom-nav-item:hover, .bottom-nav-item.active { color: var(--primary-color); }
+            .bottomNavIcon { font-size: 28px; display: block; margin-bottom: 4px; }
+            .bottomnavText { font-size: 12px; font-weight: 500; }
+
+        `;
+
+        document.head.appendChild(styletag);
+
+    });
+
+};
+
+const USERACCOUNT=()=>{
+
+        BACKGROUND(BODIER,"white");
+
+    CLEAR("");
+
+        VIEWS("",(DATA)=>{
+
+        BACKGROUND(DATA,"white");
+        COLOR(DATA,"black");
+        POSITION(DATA,"absolute");
+        TOP(DATA,"0px");
+        HEIGHT(DATA,"auto");
+        BOTTOM(DATA,"100px");
+
+        CLEAR(DATA);
+
+        DISPLAY(DATA,`
+
+            <div class="RawMessageHolder">
+
+                <br><br>
+
+                <h1>Use The Same Email at <br><br> <a href="https://www.rentals.naweriindustries.com">Fiskon Rentals System</a> </h1>
+
+                <br><br>
+
+                <input class="Email" type="email" placeholder="Enter Email to Login"/>
+
+                <br><br>
+
+                <button class="ConnectAccount">Connect Account</button>
+            
+            </div>
+            
+        `);
+
+        const styletag=document.createElement('style');
+
+        styletag.textContent=`
+
+            .Email{
+                border:1px solid forestgreen;
+                padding:2%;
+                border-radius:5px;
+                width:80%;
+                height:32px;
+                color:green;
+            }
+
+            .ConnectAccount{
+                width:80%;
+                height:50px;
+                background:forestgreen;
+                padding:2%;
+                color:white;
+                border-radius:20px;
+            }
+                    
+        `;
+
+        document.head.appendChild(styletag);
+
+    });
+
+    FOOTER("",(DATA)=>{
+
+        BACKGROUND(DATA,"black");
+        HEIGHT(DATA,"100px");
+        COLOR(DATA,"white");
+
+        DISPLAY(DATA,`
+
+        <nav class="bottom-nav">
+                <a style="text-decoration:none;" onclick="back()" class="bottom-nav-item">
+                    <span class="bottomNavIcon"><img   class="Icon" src="${WHITEBACKICON}"></span>
+                    <span class="bottomnavText">Home</span>
                 </a>
                 <a style="text-decoration:none;"  class="bottom-nav-item">
                     <span class="bottomNavIcon"><img class="Icon" src="${WHITEDEVICEICON}"></span>
