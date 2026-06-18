@@ -341,11 +341,11 @@ const USERACCOUNT=()=>{
         
                         <br><br>
         
-                        <input class="Email" value="${Data.data.email}"  type="email" placeholder="Enter Email to Login"/>
+                        <input class="Emailer" placeholder="${Data.data.email}"  type="email" />
         
                         <br><br><br>
         
-                        <button class="ConnectAccount" onclick="LOGIN()">Update Connection</button>
+                        <button class="ConnectAccount" onclick="LOGINUPDATE()">Update Connection</button>
                     
                     </div>
                     
@@ -355,7 +355,7 @@ const USERACCOUNT=()=>{
         
                 styletag.textContent=`
         
-                    .Email{
+                    .Emailer{
                         border:1px solid forestgreen;
                         padding:2%;
                         border-radius:5px;
@@ -567,6 +567,73 @@ const LOGIN=()=>{
                 const sub = data.subscription_status;
 
                 if (sub === "active") {
+
+                    JSONIFICATION(data,(ME)=>{
+
+                        LOCALSTORE("User",ME);
+
+                        RELOAD();
+
+                    });
+                    
+                } else {
+
+                    DISPLAY(Error,data.message)
+                }
+
+                } else {
+                    DISPLAY(Error,data.message)
+                }
+
+            } catch (err) {
+               DISPLAY(Error,err.message);
+            }
+
+        }
+
+        checkSubscription() 
+    
+    },()=>{
+
+        DISPLAY(Error,"Enter User Email");
+
+    });
+    
+};
+
+const LOGINUPDATE=()=>{
+
+    const Email=document.querySelector(".Emailer");
+
+    const Error=document.querySelector(".Error");
+
+    CONDITION(Email.value,()=>{
+
+        DISPLAY(Error,"Please Wait...");
+
+        async function checkSubscription() {
+            const email = document.querySelector(".Email").value.trim();
+            
+            DISPLAY(Error,"Checking Database...");
+
+            try {
+                const formData = new FormData();
+                formData.append("email", email);
+
+                const res = await fetch(
+                "https://rentals.naweriindustries.com/endpoints/check-subscription.php",
+                { method: "POST", body: formData }
+                );
+
+                const data = await res.json();
+
+                if (data.status === "success") {
+
+                const sub = data.subscription_status;
+
+                if (sub === "active") {
+
+                    LOCALDELETE("User");
 
                     JSONIFICATION(data,(ME)=>{
 
