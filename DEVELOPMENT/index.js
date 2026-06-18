@@ -25,11 +25,13 @@ const MOBILEVIEW=()=>{
         HEIGHT(DATA,"auto");
         BOTTOM(DATA,"50px");
 
+        CLEAR(DATA);
+
         GETSMS((DATATA)=>{
+            
+            INLINEVIEW(DATA,(DATATAS)=>{
 
-            JSONIFICATION(DATATA,(Data)=>{
-
-                DISPLAY(DATA,Data);
+                BACKGROUND(DATATAS,"orange");
 
             });
 
