@@ -15,9 +15,13 @@ const MOBILEVIEW=()=>{
 
         GETSMS((DATATA)=>{
 
+            /*
+
             FETCH("https://rentals.naweriindustries.com/endpoints/triggers.php","",(DATA)=>{
                 LOCALSTORE("MESSAGES",[DATA.keywords]);
             });
+
+            */
 
             VIEWS(DATA,(DATED)=>{
 
