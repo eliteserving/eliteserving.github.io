@@ -1,7 +1,7 @@
 let PAYTOTAAPI;
 if (localStorage.getItem("Native")) {
-    PAYTOTAAPI = "'https://script.google.com/macros/s/AKfycbz6oR6HzIgJjpH37czfhy1pOfkAPJgzVYKpFf2z7cfuCh8Ohva8HZ8qEtq6oVDLouNB/exec'";
+    PAYTOTAAPI = "'https://script.google.com/macros/s/AKfycbwxIUwkkXgPoj6xng1SI1h420S63hLCZ3eSoBPIoGSeOuiAy-rm8AWVvdpVYAbYbqiY/exec'";
 } else {
-    PAYTOTAAPI = "https://script.google.com/macros/s/AKfycbz6oR6HzIgJjpH37czfhy1pOfkAPJgzVYKpFf2z7cfuCh8Ohva8HZ8qEtq6oVDLouNB/exec";
+    PAYTOTAAPI = "https://script.google.com/macros/s/AKfycbwxIUwkkXgPoj6xng1SI1h420S63hLCZ3eSoBPIoGSeOuiAy-rm8AWVvdpVYAbYbqiY/exec";
 };
 export { PAYTOTAAPI };

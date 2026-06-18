@@ -4,7 +4,7 @@ export const UPDATEDATA=(LINK,NAME,ID,INFO,CALLBACK)=>{
             "action":"update",
             "spreadsheetUrl":LINK,
             "sheetName":NAMEDATA,
-            "id":ID,
+            "ID":ID,
             "Data":INFO
         };
         FETCH(UPDATEDATAAPI,DATA,(Data)=>{

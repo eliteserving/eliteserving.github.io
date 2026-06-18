@@ -1,5 +1,5 @@
 export const MARGINBOTTOM=(HOLDER,AMOUNT)=>{
 
-    STYLED(HOLDER,"margin-bottom",AMOUNT||"auto");
+    STYLED(HOLDER,"margin-bottom",AMOUNT||"1%");
 
 };

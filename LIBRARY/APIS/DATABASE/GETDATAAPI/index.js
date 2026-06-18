@@ -1,7 +1,7 @@
 let GETDATAAPI;
 if (localStorage.getItem("Native")) {
-    GETDATAAPI = "'https://script.google.com/macros/s/AKfycbw2SnSjvhx5NxNDrl3Cmw1E0uANC2TSH6FcLLeAnVz3u0xgRUp26FuS3iYjtx74vgBh/exec'";
+    GETDATAAPI = "'https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec'";
 } else {
-    GETDATAAPI = "https://script.google.com/macros/s/AKfycbw2SnSjvhx5NxNDrl3Cmw1E0uANC2TSH6FcLLeAnVz3u0xgRUp26FuS3iYjtx74vgBh/exec";
+    GETDATAAPI = "https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 };
 export { GETDATAAPI };
