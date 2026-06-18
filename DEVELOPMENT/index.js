@@ -1,5 +1,52 @@
 const DATABASELINK="https://docs.google.com/spreadsheets/d/1F0zeWU7jPF6bjIX30WcVegxl84ECRPaCRKczqNizjiA/edit?usp=sharing";
 
+const SORT = (Data, CallBack) => {
+    const message = Data.message || "";
+
+    const keywords = {
+        received: /you have received/i,
+        deposited: /you have deposited/i,
+        sent: /you have sent/i,
+        withdrawn: /you have withdrawn/i,
+        payment: /payment/i
+    };
+
+    let category = null;
+
+    for (const [key, regex] of Object.entries(keywords)) {
+        if (regex.test(message)) {
+            category = key;
+            break;
+        }
+    }
+
+    const transactionDate =
+        message.match(/\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}/)?.[0] || null;
+
+    const result = {
+        category,
+        sender: Data.sender,
+
+        // SMS timestamp from Android/device
+        smsTimestamp: Data.date,
+
+        // Date found inside the transaction message
+        date: transactionDate,
+
+        message,
+
+        amount: message.match(/UGX\s+([\d,]+)/i)?.[1] || null,
+
+        transactionId:
+            message.match(/ID:\s*([A-Z0-9]+)/i)?.[1] || null,
+
+        phoneNumber:
+            message.match(/\b(0\d{9}|256\d{9})\b/)?.[0] || null
+    };
+
+    CallBack(result);
+};
+
 const MOBILEVIEW=()=>{
 
     CONDITION(localStorage.getItem("User"),()=>{
@@ -278,100 +325,106 @@ const MOBILEVIEW=()=>{
             CLEAR(DATA);
     
             GETSMS((DATATA)=>{
+                
+                SORT(DATATA,(Datata)=>{
 
-                CHECK(DATATA.sender === "MTNMobMoney",()=>{
+                    CHECK(Datata.phoneNumber,()=>{
 
-                    VIEWS(DATA,(DATED)=>{
-        
-                        WIDTH(DATED,"95%");
-                        HEIGHT(DATED,"20%");
-                        MARGIN(DATED,"2%");
-                        BORDERRADIUS(DATED,"5px");
-                        BACKGROUND(DATED,"#fef6f6fc");
-        
-                        DISPLAY(DATED,`
-        
-                            <div class="Holder">
-                                
-                                <img  class="Icons" src="${BLACKUSERICON}"/>
-                            
-                            </div>
-        
-                            <div class="DataHolder">
-        
-                                <h1 class="Name">${DATATA.sender}</h1>
-        
-                                <div class="MessagePreview">
-        
-                                    <p class="MessageDemo">${DATATA.message}</p>
-                                
-                                </div>
-        
-                                <p class="TimeHolder">${DATATA.date}</p>
-                            
-                            </div>
-        
-                        `);
-        
-                        const styletag=document.createElement('style');
-        
-                        styletag.textContent=`
-        
-                            .Holder{
-                                position:absolute;
-                                width:100px;
-                                height:105px;
-                                margin:1%;
-                            }
-        
-                            .Icons{
-                                margin-top:5%;
-                                width:80px;
-                                height:80px;
-                            }
-        
-                            .DataHolder{
-                                width:63%;
-                                height:100px;
-                                margin-left:35%;
-                                margin-top:2%;
-                            }
-                            
-                            .Name{
-                                text-align:left;
-                                margin-left:5%;
-                            }
-                            
-                            .MessagePreview{
-                                width:90%;
-                                height:50px;
-                            }
-                            
-                            .MessageDemo{
-                                overflow:hidden;
-                                font-size:18px;
-                                white-space:nowrap;
-                                width:80%;
-                                text-overflow:ellipsis;
-                                margin-top:2%;
-                            }
-                            
-                            .TimeHolder{
-                                font-size:18px;
-                            }
-                            
-                        `;
-        
-                        document.head.appendChild(styletag);
-        
-                        CLICK(DATED,()=>{
-        
-                            SESSIONSTORE("Message",DATATA.message);
-        
-                            ROUTE("",FULLMESSAGE,"MOBILEVIEW");
-        
-                        });
-        
+                        VIEWS(DATA,(DATED)=>{
+                
+                                WIDTH(DATED,"95%");
+                                HEIGHT(DATED,"20%");
+                                MARGIN(DATED,"2%");
+                                BORDERRADIUS(DATED,"5px");
+                                BACKGROUND(DATED,"#fef6f6fc");
+                
+                                DISPLAY(DATED,`
+                
+                                    <div class="Holder">
+                                        
+                                        <img  class="Icons" src="${BLACKUSERICON}"/>
+                                    
+                                    </div>
+                
+                                    <div class="DataHolder">
+                
+                                        <h1 class="Name">${Datata.phoneNumber}</h1>
+                
+                                        <div class="MessagePreview">
+                
+                                            <p class="MessageDemo">${Datata.message}</p>
+                                        
+                                        </div>
+                
+                                        <p class="TimeHolder">${Datata.date}</p>
+                                    
+                                    </div>
+                
+                                `);
+                
+                                const styletag=document.createElement('style');
+                
+                                styletag.textContent=`
+                
+                                    .Holder{
+                                        position:absolute;
+                                        width:100px;
+                                        height:105px;
+                                        margin:1%;
+                                    }
+                
+                                    .Icons{
+                                        margin-top:5%;
+                                        width:80px;
+                                        height:80px;
+                                    }
+                
+                                    .DataHolder{
+                                        width:63%;
+                                        height:100px;
+                                        margin-left:35%;
+                                        margin-top:2%;
+                                    }
+                                    
+                                    .Name{
+                                        text-align:left;
+                                        margin-left:5%;
+                                    }
+                                    
+                                    .MessagePreview{
+                                        width:90%;
+                                        height:50px;
+                                    }
+                                    
+                                    .MessageDemo{
+                                        overflow:hidden;
+                                        font-size:18px;
+                                        white-space:nowrap;
+                                        width:80%;
+                                        text-overflow:ellipsis;
+                                        margin-top:2%;
+                                    }
+                                    
+                                    .TimeHolder{
+                                        font-size:18px;
+                                    }
+                                    
+                                `;
+                
+                                document.head.appendChild(styletag);
+                
+                                CLICK(DATED,()=>{
+                
+                                    SESSIONSTORE("Message",DATATA.message);
+                
+                                    ROUTE("",FULLMESSAGE,"MOBILEVIEW");
+                
+                                });
+                
+                            });
+
+                        console.log(Datata);
+
                     });
 
                 });
