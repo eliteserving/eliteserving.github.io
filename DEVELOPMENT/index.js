@@ -4,14 +4,11 @@ const MOBILEVIEW=()=>{
 
         BACKGROUND(DATA,"red");
 
-        LEFTICON(DATA,)
-
         HEADER(DATA,"Elite RObust Ontology",()=>{
 
         });
 
-    })
-
+    });
 
 };
 

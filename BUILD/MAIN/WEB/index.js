@@ -1,7 +1,23 @@
-DISPLAY("",`
+const MOBILEVIEW=()=>{
 
-    <h1>WEB SERVER PAGE</h1>
+    HEAD("",(DATA)=>{
 
-    <p>Ready To Serve You</p>
-    
-`);
+        BACKGROUND(DATA,"red");
+
+        HEADER(DATA,"Elite RObust Ontology",()=>{
+
+        });
+
+    });
+
+};
+
+const DESKTOPVIEW=()=>{
+
+    HEADER("","DESKTOP",()=>{
+
+    });
+
+};
+
+VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
