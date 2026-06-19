@@ -1,5 +1,7 @@
 const MOBILEVIEW=()=>{
 
+    CLEAR("");
+
     HEAD("",(HOLDER)=>{
 
         LEFTICON(HOLDER,ELITELOGO,ELITELOGO,(DATA)=>{
@@ -23,6 +25,8 @@ const MOBILEVIEW=()=>{
 };
 
 const DESKTOPVIEW=()=>{
+
+    CLEAR("");
 
     HEADER("","DESKTOP",()=>{
 
