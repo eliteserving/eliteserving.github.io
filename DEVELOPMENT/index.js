@@ -4,6 +4,7 @@ const MOBILEVIEW=()=>{
 
         LEFTICON(HOLDER,ELITELOGO,ELITELOGO,(DATA)=>{
 
+            BORDERRADIUS(DATA,"100%");
             WIDTH(DATA,"40px");
             HEIGHT(DATA,"40px");
 
