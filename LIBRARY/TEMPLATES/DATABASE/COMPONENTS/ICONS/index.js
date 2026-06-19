@@ -2,7 +2,7 @@ export const ICONS=(HOLDER,LIGHT,DARK,CALLBACk)=>{
 
     CONDITION(sessionStorage.getItem("theme") === "dark",()=>{
 
-        IMAGE(HOLDER,DARK,(DATA)=>{
+        IMAGE(HOLDER,LIGHT,(DATA)=>{
 
             WIDTH(DATA,"20px");
             
