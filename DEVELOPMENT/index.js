@@ -1,8 +1,17 @@
 const MOBILEVIEW=()=>{
 
-    HEADER("","MOBILE",()=>{
+    HEAD("",(DATA)=>{
 
-    });
+        BACKGROUND(DATA,"red");
+
+        LEFTICON(DATA,)
+
+        HEADER(DATA,"Elite RObust Ontology",()=>{
+
+        });
+
+    })
+
 
 };
 

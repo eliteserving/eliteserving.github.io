@@ -1,257 +1,333 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Image Convertor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Converter</title>
+
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:Arial, sans-serif;
-    }
+body{
+    background:#0f0f0f;
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
 
-    body{
-        background:#0f0f0f;
-        color:white;
-        min-height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        padding:20px;
-    }
+.container{
+    width:100%;
+    max-width:900px;
+    background:#1b1b1b;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
 
-    .container{
-        width:100%;
-        max-width:900px;
-        background:#1b1b1b;
-        border-radius:18px;
-        padding:25px;
-        box-shadow:0 0 20px rgba(0,0,0,0.5);
-    }
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
 
-    h1{
-        text-align:center;
-        margin-bottom:10px;
-    }
+.upload-box{
+    border:2px dashed #444;
+    border-radius:14px;
+    padding:40px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    margin-bottom:20px;
+}
 
-    .info{
-        text-align:center;
-        color:#999;
-        margin-bottom:20px;
-    }
+.upload-box:hover{
+    border-color:#00ff99;
+    background:#131313;
+}
 
-    .upload-box{
-        border:2px dashed #444;
-        border-radius:14px;
-        padding:40px;
-        text-align:center;
-        cursor:pointer;
-        transition:0.3s;
-        margin-bottom:20px;
-    }
+input[type="file"]{
+    display:none;
+}
 
-    .upload-box:hover{
-        border-color:#00ff99;
-        background:#131313;
-    }
+.preview{
+    width:100%;
+    margin-top:20px;
+    display:none;
+    justify-content:center;
+}
 
-    input[type="file"]{
-        display:none;
-    }
+.preview img{
+    max-width:100%;
+    max-height:300px;
+    border-radius:12px;
+}
 
-    .preview{
-        width:100%;
-        margin-top:20px;
-        display:none;
-        justify-content:center;
-    }
+textarea{
+    width:100%;
+    height:250px;
+    background:#111;
+    color:#00ff99;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:15px;
+    resize:none;
+    margin-top:20px;
+    font-size:13px;
+}
 
-    .preview img{
-        max-width:100%;
-        max-height:300px;
-        border-radius:12px;
-    }
+.stats{
+    margin-top:15px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
 
-    textarea{
-        width:100%;
-        height:250px;
-        background:#111;
-        color:#00ff99;
-        border:1px solid #333;
-        border-radius:12px;
-        padding:15px;
-        resize:none;
-        margin-top:20px;
-        font-size:13px;
-    }
+.stat{
+    background:#111;
+    padding:12px 16px;
+    border-radius:10px;
+    flex:1;
+    min-width:150px;
+    text-align:center;
+}
 
-    .stats{
-        margin-top:15px;
-        display:flex;
-        justify-content:space-between;
-        flex-wrap:wrap;
-        gap:10px;
-    }
+button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-    .stat{
-        background:#111;
-        padding:12px 16px;
-        border-radius:10px;
-        flex:1;
-        min-width:150px;
-        text-align:center;
-    }
+#copyBtn{
+    background:#00aa66;
+}
 
-    button{
-        width:100%;
-        margin-top:20px;
-        padding:15px;
-        border:none;
-        border-radius:12px;
-        background:#00aa66;
-        color:white;
-        font-size:16px;
-        cursor:pointer;
-        transition:0.3s;
-    }
+#copyBtn:hover{
+    background:#00cc77;
+}
 
-    button:hover{
-        background:#00cc77;
-    }
+#clear{
+    background:brown;
+}
 
-    .warning{
-        color:#ff5555;
-        margin-top:15px;
-        text-align:center;
-        display:none;
-    }
+#clear:hover{
+    background:#a52a2a;
+}
 
+.warning{
+    color:#ff5555;
+    margin-top:15px;
+    text-align:center;
+    display:none;
+}
 </style>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Image Converter</h1>
+    <h1>Image Converter</h1>
 
-        <br><br>
+    <br><br>
 
-        <label class="upload-box" for="fileInput">
-            Click To Upload Image
-        </label>
+    <label class="upload-box" for="fileInput">
+        Click To Upload Image
+    </label>
 
-        <input type="file" id="fileInput" accept="image/*">
+    <input type="file" id="fileInput" accept="image/*">
 
-        <div class="preview" id="preview">
-            <img id="previewImg">
-        </div>
-
-        <textarea id="output" placeholder="Base64 output will appear here..." readonly></textarea>
-
-        <div class="stats">
-            <div class="stat">
-                Characters:
-                <span id="charCount">0</span>
-            </div>
-
-            <div class="stat">
-                Limit:
-                49,900
-            </div>
-        </div>
-
-        <div class="warning" id="warning">
-            Base64 exceeded 49,900 characters.<br>
-            Try using a smaller image.
-        </div>
-
-        <button id="copyBtn">
-            Copy Base64
-        </button>
-
-        <button style="background: brown;" id="clear">
-            Clear
-        </button>
-
+    <div class="preview" id="preview">
+        <img id="previewImg" alt="Preview">
     </div>
 
-</body>
+    <textarea
+        id="output"
+        placeholder="Base64 output will appear here..."
+        readonly
+    ></textarea>
+
+    <div class="stats">
+        <div class="stat">
+            Characters:
+            <span id="charCount">0</span>
+        </div>
+
+        <div class="stat">
+            Limit:
+            50,000
+        </div>
+    </div>
+
+    <div class="warning" id="warning">
+        Unable to compress image below 50,000 characters.
+    </div>
+
+    <button id="copyBtn">Copy Base64</button>
+
+    <button id="clear">Clear</button>
+
+</div>
+
 <script>
 
-    const fileInput = document.getElementById("fileInput");
-    const output = document.getElementById("output");
-    const charCount = document.getElementById("charCount");
-    const warning = document.getElementById("warning");
-    const preview = document.getElementById("preview");
-    const previewImg = document.getElementById("previewImg");
-    const copyBtn = document.getElementById("copyBtn");
-    const ClearBtn = document.getElementById("clear");
+const fileInput = document.getElementById("fileInput");
+const output = document.getElementById("output");
+const charCount = document.getElementById("charCount");
+const warning = document.getElementById("warning");
+const preview = document.getElementById("preview");
+const previewImg = document.getElementById("previewImg");
+const copyBtn = document.getElementById("copyBtn");
+const clearBtn = document.getElementById("clear");
 
-    const MAX_CHARS = 49900;
+const MAX_CHARS = 50000;
 
-    fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", () => {
 
-        const file = fileInput.files[0];
+    const file = fileInput.files[0];
+    if (!file) return;
 
-        if (!file) return;
+    const reader = new FileReader();
 
-        const reader = new FileReader();
+    reader.onload = e => {
 
-        reader.onload = function(e){
+        const img = new Image();
 
-            const base64 = e.target.result;
+        img.onload = () => {
 
-            preview.style.display = "flex";
-            previewImg.src = base64;
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
 
-            charCount.innerText = base64.length;
+            let scale = 1;
+            let quality = 0.9;
+            let base64 = "";
 
-            if(base64.length > MAX_CHARS){
+            function compress() {
 
-                output.value = "";
-                warning.style.display = "block";
+                canvas.width = Math.max(
+                    1,
+                    Math.floor(img.width * scale)
+                );
 
-            } else {
+                canvas.height = Math.max(
+                    1,
+                    Math.floor(img.height * scale)
+                );
+
+                ctx.clearRect(
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height
+                );
+
+                ctx.drawImage(
+                    img,
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height
+                );
+
+                base64 = canvas.toDataURL(
+                    "image/jpeg",
+                    quality
+                );
+
+                if (base64.length > MAX_CHARS) {
+
+                    if (quality > 0.2) {
+
+                        quality -= 0.05;
+
+                    } else {
+
+                        quality = 0.9;
+                        scale *= 0.85;
+
+                    }
+
+                    if (scale < 0.05) {
+
+                        warning.style.display = "block";
+                        output.value = "";
+                        charCount.innerText = "0";
+                        return;
+
+                    }
+
+                    compress();
+                    return;
+                }
+
+                preview.style.display = "flex";
+                previewImg.src = base64;
 
                 output.value = base64;
+                charCount.innerText = base64.length;
+
                 warning.style.display = "none";
             }
+
+            compress();
         };
 
-        reader.readAsDataURL(file);
-    });
+        img.src = e.target.result;
+    };
 
-    copyBtn.addEventListener("click", async () => {
+    reader.readAsDataURL(file);
+});
 
-        if(!output.value){
-            alert("No Base64 available.");
-            return;
-        }
+copyBtn.addEventListener("click", async () => {
 
-        try{
+    if (!output.value) {
+        alert("No Base64 available.");
+        return;
+    }
 
-            await navigator.clipboard.writeText(output.value);
+    try {
 
-            copyBtn.innerText = "Copied!";
+        await navigator.clipboard.writeText(output.value);
 
-            setTimeout(() => {
-                copyBtn.innerText = "Copy Base64";
-            }, 2000);
+        copyBtn.innerText = "Copied!";
 
-        } catch(err){
+        setTimeout(() => {
+            copyBtn.innerText = "Copy Base64";
+        }, 2000);
 
-            alert("Failed to copy.");
-        }
-    });
+    } catch {
 
-    ClearBtn.addEventListener("click", () => {
+        alert("Failed to copy.");
+    }
+});
 
-        location.reload();
+clearBtn.addEventListener("click", () => {
 
-    });
+    fileInput.value = "";
+    output.value = "";
+    charCount.innerText = "0";
+
+    preview.style.display = "none";
+    previewImg.src = "";
+
+    warning.style.display = "none";
+});
 
 </script>
+
+</body>
 </html>
+```
