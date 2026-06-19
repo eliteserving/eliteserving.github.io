@@ -1,10 +1,19 @@
 const MOBILEVIEW=()=>{
 
-    HEAD("",(DATA)=>{
+    HEAD("",(HOLDER)=>{
 
-        BACKGROUND(DATA,"red");
+        LEFTICON(HOLDER,ELITELOGO,ELITELOGO,(DATA)=>{
 
-        HEADER(DATA,"Elite RObust Ontology",()=>{
+            WIDTH(DATA,"40px");
+            HEIGHT(DATA,"40px");
+
+        });
+
+        HEADER(HOLDER,"Elite RObust Ontology",()=>{
+
+        });
+
+        LEFTICON(HOLDER,BLACKMENUICON,WHITEMENUICON,(DATA)=>{
 
         });
 
