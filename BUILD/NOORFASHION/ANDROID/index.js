@@ -1,65 +1,51 @@
-
-
 const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
 
 const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    VIEWS("",(HOLDER)=>{
+    ROUTE(" ",SPLASHSCREEN,"MOBILEVIEW");
 
-        HEIGHT(HOLDER,"");
+};
 
-        HEAD(HOLDER,(DATA)=>{
-    
-            ICONS(DATA,BLACKMENUICON,WHITEMENUICON,()=>{
-    
-            });
-    
-            HEADER(DATA,"ShylanSiraj Fashion Hub",()=>{
-    
-            });
-    
-            ICONS(DATA,WHITESHOPPINGCART,WHITESHOPPINGCART,()=>{
-    
-            });
-    
-        });
+const SPLASHSCREEN=()=>{
 
-        INLINEVIEW(HOLDER,(DATA)=>{
+    HEADER("","SHYLAN AND SIRAJ",(DATA)=>{
 
-            HEIGHT(DATA,"50px");
+        MARGINTOP(DATA,"50%");
+        STYLED(DATA,"font-size","30px");
 
-            BUTTON(DATA,"ALL",(DATATED)=>{
-
-                MARGIN(DATATED,"");
-
-                WIDTH(DATATED,"50px");
-
-                HEIGHT(DATATED,"32px");
-            
-            });
-
-            INLINEVIEW(DATA,(DATITED)=>{
-
-                BACKGROUND(DATITED,"red");
-
-                WIDTH(DATITED,"70%");
-
-            });
-
-        });
-
-        VIEWS(HOLDER,(DATA)=>{
-
-            HEIGHT(DATA,"");
-
-            BACKGROUND(DATA,"Blue");
-
-        });
-    
     });
-  
+
+    HEADER("","FASHIONZ",(DATA)=>{
+
+        MARGINTOP(DATA,"2%");
+        STYLED(DATA,"font-size","23px");
+        COLOR(DATA,"forestgreen");
+
+    });
+
+    BUTTON("","Shop",(DATA)=>{
+
+        POSITION(DATA,"absolute");
+        LEFT(DATA,"10%");
+        WIDTH(DATA,"80%");
+        BOTTOM(DATA,"150px");
+        BACKGROUND(DATA,"forestgreen");
+        COLOR(DATA,"white");
+
+    });
+
+    HEADER("","Yash Group Of Companies",(DATA)=>{
+
+        WIDTH(DATA,"80%");
+        POSITION(DATA,"absolute");
+        BOTTOM(DATA,"30px");
+        LEFT(DATA,"12%")
+        STYLED(DATA,"font-size","16px");
+
+    });
+
 };
 
 const DESKTOPVIEW=()=>{

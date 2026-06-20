@@ -1,24 +1,48 @@
+const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
+
 const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    HEAD("",(HOLDER)=>{
+    ROUTE(" ",SPLASHSCREEN,"MOBILEVIEW");
 
-        LEFTICON(HOLDER,ELITELOGO,ELITELOGO,(DATA)=>{
+};
 
-            BORDERRADIUS(DATA,"100%");
-            WIDTH(DATA,"40px");
-            HEIGHT(DATA,"40px");
+const SPLASHSCREEN=()=>{
 
-        });
+    HEADER("","SHYLAN AND SIRAJ",(DATA)=>{
 
-        HEADER(HOLDER,"Elite RObust Ontology",()=>{
+        MARGINTOP(DATA,"50%");
+        STYLED(DATA,"font-size","30px");
 
-        });
+    });
 
-        LEFTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,(DATA)=>{
+    HEADER("","FASHIONZ",(DATA)=>{
 
-        });
+        MARGINTOP(DATA,"2%");
+        STYLED(DATA,"font-size","23px");
+        COLOR(DATA,"forestgreen");
+
+    });
+
+    BUTTON("","Shop",(DATA)=>{
+
+        POSITION(DATA,"absolute");
+        LEFT(DATA,"10%");
+        WIDTH(DATA,"80%");
+        BOTTOM(DATA,"150px");
+        BACKGROUND(DATA,"forestgreen");
+        COLOR(DATA,"white");
+
+    });
+
+    HEADER("","Yash Group Of Companies",(DATA)=>{
+
+        WIDTH(DATA,"80%");
+        POSITION(DATA,"absolute");
+        BOTTOM(DATA,"30px");
+        LEFT(DATA,"12%")
+        STYLED(DATA,"font-size","16px");
 
     });
 
@@ -28,10 +52,10 @@ const DESKTOPVIEW=()=>{
 
     CLEAR("");
 
-    HEADER("","DESKTOP",()=>{
+    HEADER("","NCOO",()=>{
 
     });
-
+    
 };
 
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});

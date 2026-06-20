@@ -5,6 +5,7 @@ import { BOTTOM } from "./DATABASE/BOTTOM/index.js";
 import { COLOR } from "./DATABASE/COLOR/index.js";
 import { DISPLAYED } from "./DATABASE/DISPLAY/index.js";
 import { FLEXSHRINK } from "./DATABASE/FLEXSHRINK/index.js";
+import { FONTSIZE } from "./DATABASE/FONTSIZE/index.js";
 import { HEIGHT } from "./DATABASE/HEIGHT/index.js";
 import { LEFT } from "./DATABASE/LEFT/index.js";
 import { MARGIN } from "./DATABASE/MARGIN/index.js";
@@ -16,6 +17,8 @@ import { RIGHT } from "./DATABASE/RIGHT/index.js";
 import { TEXTALIGN } from "./DATABASE/TEXTALIGN/index.js";
 import { TOP } from "./DATABASE/TOP/index.js";
 import { WIDTH } from "./DATABASE/WIDTH/index.js";
+
+FONTSIZE
 
 
 export{BACKGROUND,BORDER,BORDERRADIUS,BOTTOM,COLOR,DISPLAYED,FLEXSHRINK,HEIGHT,LEFT,MARGIN,OUTLINE,OVERFLOW,PADDING,POSITION,RIGHT,TEXTALIGN,TOP,WIDTH};
