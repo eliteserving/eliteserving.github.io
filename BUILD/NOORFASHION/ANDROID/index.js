@@ -67,7 +67,7 @@ const SPLASHSCREEN=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
-    CLEAR();
+    CLEAR("");
 
     HEADER("","HOMEPAGE",()=>{
 
@@ -76,14 +76,6 @@ const MOBILEHOMEPAGE=()=>{
     FOOTER("",(DATA)=>{
 
         ICONS(DATA,WHITEGRIDICON,BLACKGRIDICON,()=>{
-
-        });
-
-        ICONS(DATA,WHITESHOPPINGCART,BLACKLOCATIONICON,()=>{
-
-        });
-
-        ICONS(DATA,WHITEUSERICON,BLACKUSERICON,()=>{
 
         });
 
