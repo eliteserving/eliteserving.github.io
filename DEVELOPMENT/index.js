@@ -4,7 +4,15 @@ const MOBILEVIEW=()=>{
 
     CLEAR("");
 
-    ROUTE(" ",SPLASHSCREEN,"MOBILEVIEW");
+    CONDITION(localStorage.getItem("Welcome"),()=>{
+
+        ROUTE(" ",MOBILEHOMEPAGE,"MOBILEVIEW");
+
+    },()=>{
+
+        ROUTE(" ",SPLASHSCREEN,"MOBILEVIEW");
+
+    });
 
 };
 
@@ -34,6 +42,14 @@ const SPLASHSCREEN=()=>{
         BACKGROUND(DATA,"forestgreen");
         COLOR(DATA,"white");
 
+        CLICK(DATA,()=>{
+
+            LOCALSTORE("Welcome","True");
+
+            ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
+
+        });
+
     });
 
     HEADER("","Yash Group Of Companies",(DATA)=>{
@@ -43,6 +59,16 @@ const SPLASHSCREEN=()=>{
         BOTTOM(DATA,"30px");
         LEFT(DATA,"12%")
         STYLED(DATA,"font-size","16px");
+
+    });
+
+};
+
+const MOBILEHOMEPAGE=()=>{
+
+    CLEAR();
+
+    HEADER("","HOMEPAGE",()=>{
 
     });
 
