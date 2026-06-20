@@ -73,6 +73,22 @@ const MOBILEHOMEPAGE=()=>{
 
     });
 
+    FOOTER("",(DATA)=>{
+
+        ICONS(DATA,WHITEGRIDICON,BLACKGRIDICON,()=>{
+
+        });
+
+        ICONS(DATA,WHITESHOPPINGCART,BLACKLOCATIONICON,()=>{
+
+        });
+
+        ICONS(DATA,WHITEUSERICON,BLACKUSERICON,()=>{
+
+        });
+
+    });
+
 };
 
 const DESKTOPVIEW=()=>{
