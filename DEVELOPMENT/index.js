@@ -33,13 +33,13 @@ const SPLASHSCREEN=()=>{
 
     });
 
-    BUTTON("","Shop",(DATA)=>{
+    BUTTON("","Shop Now",(DATA)=>{
 
         POSITION(DATA,"absolute");
         LEFT(DATA,"10%");
         WIDTH(DATA,"80%");
         BOTTOM(DATA,"150px");
-        BACKGROUND(DATA,"forestgreen");
+        BACKGROUND(DATA,"purple");
         COLOR(DATA,"white");
 
         CLICK(DATA,()=>{
