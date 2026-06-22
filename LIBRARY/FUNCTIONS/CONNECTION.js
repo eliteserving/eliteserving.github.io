@@ -36,6 +36,7 @@ import { LOCALDELETE } from "./DATABASE/LOCALDELETE/index.js";
 import { LOCALGET } from "./DATABASE/LOCALGET/index.js";
 import { LOCALSTORE } from "./DATABASE/LOCALSTORE/index.js";
 import { LOCATOR } from "./DATABASE/LOCATOR/index.js";
+import { LOWWERIZED } from "./DATABASE/LOWWERIZED/index.js";
 import { MONTHSTIME } from "./DATABASE/MONTHSTIME/index.js";
 import { OPERATINGSYSTEM } from "./DATABASE/OPERATINGSYSTEM/index.js";
 import { PARTISION } from "./DATABASE/PARTISION/index.js";
