@@ -1,5 +1,8 @@
 import { ADD } from "./DATABASE/ADD/index.js";
 import { APPMODER } from "./DATABASE/APPMODE/index.js";
+import { CACHE } from "./DATABASE/CACHE/index.js";
+import { CACHEDELETE } from "./DATABASE/CACHEDELETE/index.js";
+import { CACHEGET } from "./DATABASE/CACHEGET/index.js";
 import { CAPITALIZED } from "./DATABASE/CAPITALIZED/index.js";
 import { CHECK } from "./DATABASE/CHECK/index.js";
 import { CLEARCACHE } from "./DATABASE/CLEARCACHE/index.js";
@@ -21,6 +24,7 @@ import { FUNCTIONED } from "./DATABASE/FUNCTIONED/index.js";
 import { GETINDEX } from "./DATABASE/GETINDEX/index.js";
 import { GROUP } from "./DATABASE/GROUP/index.js";
 import { HIDER } from "./DATABASE/HIDER/index.js";
+import { INDEXDELETE } from "./DATABASE/INDEXDELETE/index.js";
 import { INJECTCSS } from "./DATABASE/INJECTCSS/index.js";
 import { INSPECTION } from "./DATABASE/INSPECT/index.js";
 import { JSONADDER } from "./DATABASE/JSONADDER/index.js";
