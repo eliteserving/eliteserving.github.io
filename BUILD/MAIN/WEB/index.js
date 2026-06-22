@@ -12,7 +12,7 @@ const MOBILEVIEW=()=>{
 
         });
 
-        HEADER(HOLDER,"Elite RObust Ontology",()=>{
+        HEADER(HOLDER,"Elite Robust Ontology",()=>{
 
         });
 
