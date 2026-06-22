@@ -1,9 +1,17 @@
-export const HEADERVIEWSPAGE=()=>{
+export const HEADERVIEWSPAGE=(CALLBACK,CALLBACK)=>{
 
     CLEAR("");
 
-    HEAD("",()=>{});
+    HEAD("",(HOLDER)=>{
 
-    
+        CALLBACK(HOLDER);
+
+    });
+
+    VIEWS("",(HOLDER)=>{
+
+        CALLBACKED(HOLDER);
+
+    });
 
 };
