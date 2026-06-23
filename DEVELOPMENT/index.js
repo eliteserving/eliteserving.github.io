@@ -67,19 +67,15 @@ const SPLASHSCREEN=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
-    CLEAR("");
+    FOOTERVIEWSPAGE((DATA)=>{
 
-    HEADER("","HOMEPAGE",()=>{
-
-    });
-
-    FOOTER("",(DATA)=>{
-
-        ICONS(DATA,WHITEGRIDICON,BLACKGRIDICON,()=>{
+        HEADER(DATA,"HomePage",()=>{
 
         });
 
-    });
+    },(DATA)=>{
+
+    })
 
 };
 
