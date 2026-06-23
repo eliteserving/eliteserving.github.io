@@ -67,18 +67,31 @@ const SPLASHSCREEN=()=>{
 
 const MOBILEHOMEPAGE=()=>{
 
-    CLEAR("");
+    FOOTERVIEWSPAGE((DATA)=>{
 
-    HEADER("","HOMEPAGE",()=>{
-
-    });
-
-    FOOTER("",(DATA)=>{
-
-        ICONS(DATA,WHITEGRIDICON,BLACKGRIDICON,()=>{
+        HEADER(DATA,"HomePage",()=>{
 
         });
 
+    },(HOLDER)=>{
+
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEUSERICON,BLACKUSERICON,"Profile",(DATA)=>{
+
+        });
+
+        
     });
 
 };

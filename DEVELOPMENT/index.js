@@ -73,9 +73,26 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
-    },(DATA)=>{
+    },(HOLDER)=>{
 
-    })
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEHOMEICON,BLACKPHONEICON,"Home",(DATA)=>{
+
+        });
+
+        ICONTEXT(HOLDER,WHITEUSERICON,BLACKUSERICON,"Profile",(DATA)=>{
+
+        });
+
+        
+    });
 
 };
 
