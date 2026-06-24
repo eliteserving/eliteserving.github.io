@@ -4,10 +4,6 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     FOOTERVIEWSPAGE((HOLDER)=>{
 
-        HEADER(HOLDER,"HomePage",()=>{
-
-        });
-
     },(HOLDER)=>{
 
         ICONTEXT(HOLDER,BLACKGRIDICON,WHITEGRIDICON,"All",(DATA)=>{
