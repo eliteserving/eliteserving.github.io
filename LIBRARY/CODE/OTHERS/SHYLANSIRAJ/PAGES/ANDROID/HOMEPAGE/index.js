@@ -1,3 +1,5 @@
+const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
+
 export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     FOOTERVIEWSPAGE((HOLDER)=>{
@@ -17,6 +19,12 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
         });
 
         ICONTEXT(HOLDER,BLACKUSERICON,WHITEUSERICON,"Profile",(DATA)=>{
+
+            CLICK(DATA,()=>{
+
+                ROUTE(" ",SHYLANSIRAJANDROIDPROFILEPAGE,"SHYLANSIRAJANDROIDHOMEPAGE");
+
+            });
 
         });
         

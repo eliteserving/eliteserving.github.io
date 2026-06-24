@@ -18,7 +18,7 @@ export const SHYLANSIRAJANDROIDSPLASHSCREEN=()=>{
         STYLED(DATA,"font-size","25px");
         CLICK(DATA,()=>{
             LOCALSTORE("Welcome","True");
-            ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,"MOBILEVIEW");
+            ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,"SHYLANSIRAJANDROIDHOMEPAGE");
         });
     });
     HEADER("","Yash Group Of Companies",(DATA)=>{
