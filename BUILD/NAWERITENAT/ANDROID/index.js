@@ -1,6 +1,6 @@
 const DATABASELINK="https://docs.google.com/spreadsheets/d/1F0zeWU7jPF6bjIX30WcVegxl84ECRPaCRKczqNizjiA/edit?usp=sharing";
 
-const SORT = (Data, Words, CallBack) => {
+const SORTED = (Data, Words, CallBack) => {
     try {
         const originalMessage = Data?.message || "";
         const message = originalMessage.toLowerCase();
@@ -61,8 +61,6 @@ const DATAWORD=()=>{
 };
 
 const MOBILEVIEW=()=>{
-
-
 
     CONDITION(localStorage.getItem("WOE"),()=>{
 
@@ -361,7 +359,7 @@ const MOBILEVIEW=()=>{
 
                 const KEYWORS=localStorage.getItem("WOE");
 
-                SORT(DATATA,[KEYWORS],(Datata)=>{
+                SORTED(DATATA,[KEYWORS],(Datata)=>{
     
                         CHECK(Datata.phoneNumber,()=>{
     
@@ -1128,7 +1126,7 @@ const FILTERMESSAGES=()=>{
 
         const KEYWORS=localStorage.getItem("WOE");
 
-        SORT(DATATA,[KEYWORS],(Datata)=>{
+        SORTED(DATATA,[KEYWORS],(Datata)=>{
 
             async function checkSubscription() {
                 
