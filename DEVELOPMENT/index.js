@@ -12,19 +12,14 @@ const MOBILEVIEW=()=>{
 };
 
 const SPLASHSCREEN=()=>{
-
     IMAGE("",SPLASHSCREENLOGO,(DATA)=>{
-
         POSITION(DATA,"fixed");
         LEFT(DATA,"0");
         TOP(DATA,"0");
         WIDTH(DATA,"100%");
         HEIGHT(DATA,"100%");
-
     });
-
     BUTTON("","Shop Now",(DATA)=>{
-
         POSITION(DATA,"absolute");
         LEFT(DATA,"0");
         WIDTH(DATA,"80%");
@@ -33,19 +28,12 @@ const SPLASHSCREEN=()=>{
         BACKGROUND(DATA,"teal");
         COLOR(DATA,"orange");
         STYLED(DATA,"font-size","25px");
-
         CLICK(DATA,()=>{
-
             LOCALSTORE("Welcome","True");
-
             ROUTE("",MOBILEHOMEPAGE,"MOBILEHOMEPAGE");
-
         });
-
     });
-
     HEADER("","Yash Group Of Companies",(DATA)=>{
-
         WIDTH(DATA,"80%");
         HEIGHT(DATA,"8%");
         MARGINTOP(DATA,"3%");
@@ -53,9 +41,7 @@ const SPLASHSCREEN=()=>{
         BOTTOM(DATA,"30px");
         LEFT(DATA,"12%")
         STYLED(DATA,"font-size","16px");
-
     });
-    
 };
 
 const MOBILEHOMEPAGE=()=>{

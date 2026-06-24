@@ -1,0 +1,13 @@
+export const SHYLANSIRAJANDROIDPROFILEPAGE=()=>{
+
+    HEADERVIEWSPAGE((HOLDER)=>{
+
+        LEFTICON(HOLDER,BLACKBACKICON,WHITEBACKICON,()=>{
+
+        });
+
+    },(HOLDER)=>{
+
+    });
+
+};
