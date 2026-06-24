@@ -12,7 +12,7 @@ export const ALLSHYLANSIRAJPAGE=()=>{
 
         });
 
-        HEADER(HOLDER,"Saved Items",(DATA)=>{
+        HEADER(HOLDER,"Catergory",(DATA)=>{
 
             MARGINRIGHT(DATA,"1%");
 
