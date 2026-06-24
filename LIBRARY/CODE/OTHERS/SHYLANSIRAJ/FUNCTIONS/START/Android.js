@@ -1,7 +1,7 @@
 export const SHYLANSIRAJANDROIDSTARTPAGE=()=>{
     CONDITION(localStorage.getItem("Welcome"),()=>{
-        ROUTE(" ",MOBILEHOMEPAGE,"MOBILEVIEW");
+        ROUTE("",MOBILEVIEW,"MOBILEVIEW");
     },()=>{
-        ROUTE(" ",SPLASHSCREEN,"MOBILEVIEW");
+        ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,"MOBILEVIEW");
     });
 };

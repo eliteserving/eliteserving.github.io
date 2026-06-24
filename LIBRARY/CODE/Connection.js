@@ -1,6 +1,8 @@
+import { FEATURESPROJECT } from "./OTHERS/PROJECT/Connection.js";
+
+
 export const FEATURES=()=>{
     const TITLE = document.title;
-    const BUILDLINK="https://eliteserving.github.io/LIBRARY/CODE/OTHERS/";
     switch (TITLE) {
         case "Elite_Robust_Ontology":import(BUILDLINK+"MAIN"+"/Connection.js");
             break;
@@ -14,7 +16,7 @@ export const FEATURES=()=>{
             break;
         case "NaweriTenat":import(BUILDLINK+"NAWERITENAT"+"/Connection.js");
             break;
-        default:import("./OTHERS/PROJECT/Connection.js");
+        default:FEATURESPROJECT();
             break;
     };  
 };
