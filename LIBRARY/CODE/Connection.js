@@ -1,4 +1,5 @@
 import { FEATURESPROJECT } from "./OTHERS/PROJECT/Connection.js";
+import { SHYLANSIRAJPROJECT } from "./OTHERS/SHYLANSIRAJ/Connection.js";
 
 
 export const FEATURES=()=>{
@@ -12,7 +13,7 @@ export const FEATURES=()=>{
             break;
         case "Tafyz_Craft_Limited":import(BUILDLINK+"TAFYZ"+"/Connection.js");
             break;
-        case "ShyLanSirajFashionHub":import(BUILDLINK+"SHYLANSIRAJ"+"/Connection.js");
+        case "ShyLanSirajFashionHub":SHYLANSIRAJPROJECT();
             break;
         case "NaweriTenat":import(BUILDLINK+"NAWERITENAT"+"/Connection.js");
             break;
