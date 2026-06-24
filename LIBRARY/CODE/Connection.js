@@ -6,7 +6,6 @@ import { FEATURESPROJECT } from "./OTHERS/PROJECT/Connection.js";
 import { SHYLANSIRAJPROJECT } from "./OTHERS/SHYLANSIRAJ/Connection.js";
 import { TAFYZPROJECT } from "./OTHERS/TAFYZ/Connection.js";
 
-
 export const FEATURES=()=>{
     const TITLE = document.title;
     switch (TITLE) {
