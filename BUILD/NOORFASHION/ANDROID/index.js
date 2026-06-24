@@ -75,7 +75,7 @@ const MOBILEHOMEPAGE=()=>{
 
     },(HOLDER)=>{
 
-        ICONTEXT(HOLDER,WHITEGRIDICON,BLACKGRIDICON,"All",(DATA)=>{
+        ICONTEXT(HOLDER,BLACKGRIDICON,WHITEGRIDICON,"All",(DATA)=>{
 
         });
 
@@ -83,7 +83,7 @@ const MOBILEHOMEPAGE=()=>{
 
         });
 
-        ICONTEXT(HOLDER,WHITEUSERICON,BLACKUSERICON,"Profile",(DATA)=>{
+        ICONTEXT(HOLDER,BLACKUSERICON,WHITEUSERICON,"Profile",(DATA)=>{
 
         });
         
