@@ -1,30 +1,21 @@
-
 export const ICONTEXT=(HOLDER,LIGHTICON,DARKICON,WORD,CALLBACK)=>{
-
     VIEWS(HOLDER,(DATA)=>{
-
         WIDTH(DATA,"auto");
-
-        HEIGHT(DATA,"");
-
+        HEIGHT(DATA,"50px");
         ICONS(DATA,LIGHTICON,DARKICON,(DATAICON)=>{
-
             MARGINTOP(DATAICON,"1%");
-
         });
-
-        HEADER(DATA,WORD||"Text",(DATATEXT)=>{
-
-            WIDTH(DATATEXT,"90%");
-
-            MARGIN(DATATEXT,"2%");
-
-            PADDING(DATATEXT,"2%");
-
+        VIEWS(DATA,(DATATA)=>{
+            DISPLAYED(DATATA,"inline-flex");
+            WIDTH(DATATA,"");
+            HEIGHT(DATATA,"30px");
+            HEADER(DATATA,WORD||"Text",(DATATEXT)=>{
+                LEFT(DATATA,"0");
+                WIDTH(DATATEXT,"90%");
+                MARGIN(DATATEXT,"2%");
+                PADDING(DATATEXT,"2%");
+            });
         });
-
         CALLBACK(DATA);
-
     });
-
 };
