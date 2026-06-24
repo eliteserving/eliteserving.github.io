@@ -12,6 +12,12 @@ export const SHYLANSIRAJANDROIDPROFILEPAGE=()=>{
 
         });
 
+        HEADER(HOLDER,"Profile",(DATA)=>{
+
+            MARGINRIGHT(DATA,"1%");
+
+        });
+
     },(HOLDER)=>{
 
     });
