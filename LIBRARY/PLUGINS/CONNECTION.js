@@ -1,5 +1,5 @@
+import { CALLS } from "./DATABASE/ANDROID/CALLS/index.js";
 import { GETSMS } from "./DATABASE/ANDROID/SMS/index.js";
 
-export{
-    GETSMS
-}
+
+export{CALLS,GETSMS};
