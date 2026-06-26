@@ -6,6 +6,22 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     },(HOLDER)=>{
 
+        ICONTEXT(HOLDER,BLACKGRIDICON,WHITEHOMEICON,"All",(DATA)=>{
+
+            FILEPICKER(DATA,(Data)=>{
+
+               
+
+                UPLOADFILE(Data.Name,Data.data,"",(ResData)=>{
+
+                    console.log(ResData)
+
+                });
+
+            });
+
+        });
+
         ICONTEXT(HOLDER,BLACKGRIDICON,WHITEGRIDICON,"All",(DATA)=>{
 
             CLICK(DATA,()=>{
