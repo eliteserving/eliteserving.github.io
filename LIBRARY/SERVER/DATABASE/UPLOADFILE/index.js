@@ -6,12 +6,11 @@ export const UPLOADFILE=(NAME,BASEFILE,TYPE,CALLBACK)=>{
         file: BASEFILE
     };
     FETCH(GOOGLEDRIVEAPI,DATA,(Data)=>{
-        console.log(Data)
         const HEADERS=["DATABASENAME","DATABASELINK","DATE","ACCESS","ADMIN"];
         const INFO=[Data.fileId,Data.fileUrl,new Date(),"Approved","Elite"];
         INSERTDATA(MAINCONNECTIONAPI,"UPLOADS",HEADERS,INFO,(InsBack)=>{
-            CHECK(Data.error === false,()=>{
-                CALLBACK("File Uploaded Successfully");
+            CHECK(InsBack.error === false,()=>{
+                CALLBACK(Data);
             });
         });
     });
