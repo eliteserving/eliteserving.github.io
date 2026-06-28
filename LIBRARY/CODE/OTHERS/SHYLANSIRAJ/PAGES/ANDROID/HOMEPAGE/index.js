@@ -8,6 +8,8 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
         });
 
+        /*
+
         GETDATA(LINK,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
 
             REDUX(DATA,(Element)=>{
@@ -17,6 +19,8 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
             });
 
         });
+
+        */
 
     },(HOLDER)=>{
 
