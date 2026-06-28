@@ -1,26 +1,24 @@
-const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
-
 export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
+
+    const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
 
     FOOTERVIEWSPAGE((HOLDER)=>{
 
-    },(HOLDER)=>{
+        HEADER(HOLDER,"PLease Wait",()=>{
 
-        ICONTEXT(HOLDER,BLACKGRIDICON,WHITEHOMEICON,"All",(DATA)=>{
+        });
 
-            FILEPICKER(DATA,(Data)=>{
+        GETDATA(LINK,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
 
-               
+            REDUX(DATA,(Element)=>{
 
-                UPLOADFILE(Data.Name,Data.data,"",(ResData)=>{
-
-                    console.log(ResData)
-
-                });
+                console.log(Element);
 
             });
 
         });
+
+    },(HOLDER)=>{
 
         ICONTEXT(HOLDER,BLACKGRIDICON,WHITEGRIDICON,"All",(DATA)=>{
 
