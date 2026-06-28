@@ -68,6 +68,8 @@ const PROJECTCONNECTOR=()=>{
             break; 
         case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
             break; 
+        case "EliteManager":PROJECTLOADER("MANAGER");
+            break; 
         default:
             break;
     };
