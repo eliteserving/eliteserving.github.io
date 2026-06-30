@@ -1,5 +1,5 @@
 DISPLAY("",`
 
-    ${sessionStorage.getItem("theme")}
+    <h1>Main Server</h1>
     
 `)
