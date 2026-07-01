@@ -1,5 +1,3 @@
-import { WIDTH } from "../../../../../../CONNECTION";
-
 export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
@@ -14,13 +12,9 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
     
                 REDUX(DATA,(Element)=>{
 
-                    console.log(Element)
-
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
-                        IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,(IMG)=>{
-
-                            ABSOLUTE(IMG);
+                        IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,()=>{
 
                         });
 
