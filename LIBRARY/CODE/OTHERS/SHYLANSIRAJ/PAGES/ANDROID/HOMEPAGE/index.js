@@ -20,11 +20,9 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
                         IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,(IMG)=>{
 
-                            WIDTH(IMG,"");
+                            ABSOLUTE(IMG);
 
                         });
-
-                        BACKGROUND(HOLDEE,"blue");
 
                     });
     

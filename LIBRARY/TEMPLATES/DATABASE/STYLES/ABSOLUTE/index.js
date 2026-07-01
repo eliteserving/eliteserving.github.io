@@ -1,3 +1,5 @@
-export const ABSOLUTE=()=>{
+export const ABSOLUTE=(HOLDER)=>{
+
+    STYLED(HOLDER,"position","absolute");
 
 };
