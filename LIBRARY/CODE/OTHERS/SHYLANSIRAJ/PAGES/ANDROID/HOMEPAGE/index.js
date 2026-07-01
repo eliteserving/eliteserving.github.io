@@ -12,7 +12,7 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
     
                 REDUX(DATA,(Element)=>{
 
-                    VIEWS(HOLDER,(HOLDEE)=>{
+                    TABLEVIEW(HOLDER,(HOLDEE)=>{
 
                         BACKGROUND(HOLDEE,"blue");
 
