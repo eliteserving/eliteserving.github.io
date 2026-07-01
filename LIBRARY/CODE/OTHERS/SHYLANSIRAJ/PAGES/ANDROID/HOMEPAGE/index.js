@@ -6,21 +6,23 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
         HEADER(HOLDER,"PLease Wait",()=>{
 
-        });
+            GETDATA(LINK,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
 
-        /*
+                CLEAR(HOLDER);
+    
+                REDUX(DATA,(Element)=>{
 
-        GETDATA(LINK,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
+                    VIEWS(HOLDER,(HOLDEE)=>{
 
-            REDUX(DATA,(Element)=>{
+                        BACKGROUND(HOLDEE,"blue");
 
-                console.log(Element);
-
+                    });
+    
+                });
+    
             });
 
         });
-
-        */
 
     },(HOLDER)=>{
 
