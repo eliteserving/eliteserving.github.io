@@ -1,12 +1,10 @@
 export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
-    const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
-
     FOOTERVIEWSPAGE((HOLDER)=>{
 
         HEADER(HOLDER,"PLease Wait",()=>{
 
-            GETDATA(LINK,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
+            GETDATA(SHYRAJDATABASEMAINAPI,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
 
                 CLEAR(HOLDER);
     
