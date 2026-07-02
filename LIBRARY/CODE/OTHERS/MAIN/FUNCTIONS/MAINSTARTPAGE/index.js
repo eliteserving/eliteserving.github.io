@@ -1,7 +1,6 @@
-
 export const WEBMAINSTARTPAGE=()=>{
 
-
+    VIEW(()=>{WEBMOBILEMAINHOMEPAGE();},()=>{DESKTOPVIEW()});
 
 
 };
