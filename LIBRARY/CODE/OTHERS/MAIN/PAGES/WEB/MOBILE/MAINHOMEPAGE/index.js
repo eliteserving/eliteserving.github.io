@@ -14,7 +14,11 @@ export const WEBMOBILEMAINHOMEPAGE=()=>{
 
         });
 
-    },(DATA)=>{
+    },(HOLDER)=>{
+
+        HEADER(HOLDER,"Welcome",()=>{
+
+        });
 
     });
     
