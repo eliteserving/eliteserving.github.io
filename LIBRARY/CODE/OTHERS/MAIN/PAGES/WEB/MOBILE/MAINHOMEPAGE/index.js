@@ -9,7 +9,7 @@ export const WEBMOBILEMAINHOMEPAGE=()=>{
     const CSSDATA=`
 
         .Titles{
-            color:red;
+            color:green;
         }
     
     `;
