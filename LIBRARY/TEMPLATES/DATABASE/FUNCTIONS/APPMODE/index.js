@@ -1,3 +1,5 @@
-export const APPMODE=()=>{
+export const APPMODE=(MODE)=>{
+
+    sessionStorage.setItem("theme",MODE)
 
 };
