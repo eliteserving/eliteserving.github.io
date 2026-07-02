@@ -10,7 +10,7 @@ const MOBILEVIEW=()=>{
 
   LINKTRACKER(LOADDATA,()=>{
 
-    SHYLANSIRAJANDROIDSTARTPAGE();
+    WEBMAINSTARTPAGE();
 
   });
    
@@ -18,11 +18,19 @@ const MOBILEVIEW=()=>{
 
 const DESKTOPVIEW=()=>{
 
-    CLEAR("");
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  }
 
-    HEADER("","NCOO",()=>{
+  LINKTRACKER(LOADDATA,()=>{
 
-    });
+    WEBMAINSTARTPAGE();
+
+  });
     
 };
 
