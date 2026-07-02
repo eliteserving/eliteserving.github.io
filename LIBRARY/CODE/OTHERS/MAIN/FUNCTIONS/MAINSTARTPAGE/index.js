@@ -1,3 +1,7 @@
-export const MAINSTARTPAGE=()=>{
+
+export const WEBMAINSTARTPAGE=()=>{
+
+
+
 
 };
