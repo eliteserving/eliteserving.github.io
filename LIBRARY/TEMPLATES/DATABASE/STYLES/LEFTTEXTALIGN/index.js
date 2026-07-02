@@ -1,3 +1,5 @@
-export const LEFTTEXTALIGN=()=>{
+export const LEFTTEXTALIGN=(HOLDER)=>{
+
+    TEXTALIGN(HOLDER,"left");
 
 };

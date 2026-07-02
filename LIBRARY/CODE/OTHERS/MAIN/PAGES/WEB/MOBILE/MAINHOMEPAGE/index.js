@@ -1,7 +1,5 @@
 export const WEBMOBILEMAINHOMEPAGE=()=>{
 
-    APPMODE("dark");
-
     HEADERVIEWSPAGE((HOLDER)=>{
 
         LEFTICON(HOLDER,ELITEROBUSTONTOLOGYLOGO,ELITEROBUSTONTOLOGYLOGO,()=>{
@@ -18,7 +16,17 @@ export const WEBMOBILEMAINHOMEPAGE=()=>{
 
     },(HOLDER)=>{
 
+        BREAK(HOLDER,()=>{});
+
         HEADER(HOLDER,"Welcome",()=>{
+
+        });
+
+        BREAK(HOLDER,()=>{});
+
+        const EliteMessage="Elite Robust Ontology is a Software Development Located In Mbale,Uganda.";
+
+        LEFTTEXT(HOLDER,EliteMessage,()=>{
 
         });
 
