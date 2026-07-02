@@ -1,19 +1,21 @@
 export const WEBMOBILEMAINHOMEPAGE=()=>{
 
-    DISPLAY("",`
+    HEADERVIEWSPAGE((HOLDER)=>{
 
-        <h1 class="Titles">Home Page</h1>
-        
-    `);
+        LEFTICON(HOLDER,ELITEROBUSTONTOLOGYLOGO,ELITEROBUSTONTOLOGYLOGO,()=>{
 
-    const CSSDATA=`
+        });
 
-        .Titles{
-            color:green;
-        }
+        HEADER(HOLDER,"Elite Robust Ontology",()=>{
+
+        });
+
+        RIGHTICON(HOLDER,BLACKMENUICON,WHITEMENUICON,()=>{
+
+        });
+
+    },(DATA)=>{
+
+    });
     
-    `;
-
-    INJECTCSS(CSSDATA);
-
 };
