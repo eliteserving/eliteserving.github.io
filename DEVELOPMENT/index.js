@@ -1,7 +1,19 @@
 const MOBILEVIEW=()=>{
 
-  SHYLANSIRAJANDROIDSTARTPAGE();
-    
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  }
+
+  LINKTRACKER(LOADDATA,()=>{
+
+    SHYLANSIRAJANDROIDSTARTPAGE();
+
+  });
+   
 };
 
 const DESKTOPVIEW=()=>{
