@@ -1,5 +1,7 @@
 const MOBILEVIEW=()=>{
 
+    CLEAR("");
+
     // DRIVER UPDATES
 
    SHYLANSIRAJWEBHOMEPAGE();
