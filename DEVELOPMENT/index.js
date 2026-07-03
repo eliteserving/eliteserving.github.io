@@ -1,36 +1,16 @@
 const MOBILEVIEW=()=>{
 
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  }
-
-  LINKTRACKER(LOADDATA,()=>{
-
-    WEBMAINSTARTPAGE();
-
-  });
-   
+  SHYLANSIRAJWEBHOMEPAGE();
+    
 };
 
 const DESKTOPVIEW=()=>{
 
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  }
+  CLEAR("");
 
-  LINKTRACKER(LOADDATA,()=>{
+    HEADER("","NCOO",()=>{
 
-    WEBMAINSTARTPAGE();
-
-  });
+    });
     
 };
 

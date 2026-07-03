@@ -215,7 +215,7 @@ export const SHYLANSIRAJWEBHOMEPAGE=()=>{
                                     console.log(ResBack)
                                     const HEADERS=["NAME","FILELINK","AMOUNT","DETAILS","IMAGEONE","IMAGETWO","IMAGETHREE","IMAGEFOUR","DATE","ACCESS","ADMIN"];
                                     const INFO=[sessionStorage.getItem("Name"),ResBack.fileId,sessionStorage.getItem("Price"),sessionStorage.getItem("Details"),"","","","",new Date(),"Approved","Elite"];
-                                    INSERTDATA(LINE,"SHYLANSIRAJFASHIONHUB",HEADERS,INFO,(InsBack)=>{
+                                    INSERTDATA(SHYRAJDATABASEMAINAPI,"SHYLANSIRAJFASHIONHUB",HEADERS,INFO,(InsBack)=>{
                                         CHECK(InsBack.error === false,()=>{
                                             HEADER("","Product Added Successfully",()=>{
 
