@@ -12,6 +12,8 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
+                        BACKGROUND(HOLDEE,GRAY+"50");
+
                         VIEWS(HOLDEE,(DATA)=>{
 
                             HEIGHT(DATA,"50px");
@@ -21,8 +23,6 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
                             LEFTTEXT(DATA, "UGX : "+Element.AMOUNT);
 
                         });
-
-                        BACKGROUND(HOLDEE,GRAY+"50");
 
                         IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,(IMG)=>{
 
