@@ -10,7 +10,19 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
     
                 REDUX(DATA,(Element)=>{
 
+                    console.log(Element);
+
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
+
+                        VIEWS(HOLDEE,(DATA)=>{
+
+                            HEIGHT(DATA,"50px");
+
+                            BREAK(DATA,()=>{})
+
+                            LEFTTEXT(DATA, "UGX : "+Element.AMOUNT);
+
+                        });
 
                         BACKGROUND(HOLDEE,GRAY+"50");
 
