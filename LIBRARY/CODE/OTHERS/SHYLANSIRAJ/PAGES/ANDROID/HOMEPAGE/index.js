@@ -10,8 +10,6 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
     
                 REDUX(DATA,(Element)=>{
 
-                    console.log(Element);
-
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
                         VIEWS(HOLDEE,(DATA)=>{
