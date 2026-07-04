@@ -8,9 +8,9 @@ const DESKTOPVIEW=()=>{
 
   CLEAR("");
 
-    HEADER("","NCOO",()=>{
+  HEADER("","NCOO",()=>{
 
-    });
+  });
     
 };
 
