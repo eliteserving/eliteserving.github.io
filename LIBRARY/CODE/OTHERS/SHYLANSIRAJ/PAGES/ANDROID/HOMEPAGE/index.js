@@ -12,7 +12,19 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
-                        IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,()=>{
+                        BACKGROUND(HOLDEE,GRAY+"50");
+
+                        IMAGE(HOLDEE,GOOGLEDRIVETHUMBNAILAPI+Element.FILELINK||SHYLANSIRAJLOGO,(IMG)=>{
+
+                            HEIGHT(IMG,"200px");
+
+                        });
+
+                        VIEWS(HOLDEE,(DATA)=>{
+
+                            HEIGHT(DATA,"50px");
+
+                            LEFTTEXT(DATA,Element.NAME);
 
                         });
 
