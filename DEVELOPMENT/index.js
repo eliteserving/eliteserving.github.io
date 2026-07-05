@@ -1,27 +1,18 @@
 const MOBILEVIEW=()=>{
 
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  };
+  CLEAR("");
 
-  LINKTRACKER(LOADDATA,()=>{
+  DISPLAY("",`
 
-    SHYLANSIRAJANDROIDSTARTPAGE();
-
-  });
+    <h1>Test</h1>
     
+  `);
+  
 };
 
 const DESKTOPVIEW=()=>{
 
-  CLEAR("");
 
-  HEADER("","NCOO",()=>{});
-    
 };
 
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});

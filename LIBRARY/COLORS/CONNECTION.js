@@ -1,3 +1,4 @@
+import { BLACK } from "./DATABASE/BLACK/index.js";
 import { BLUE } from "./DATABASE/BLUE/index.js";
 import { BROWN } from "./DATABASE/BROWN/index.js";
 import { CYAN } from "./DATABASE/CYAN/index.js";
@@ -15,4 +16,4 @@ import { RED } from "./DATABASE/RED/index.js";
 import { TEAL } from "./DATABASE/TEAL/index.js";
 import { YELLOW } from "./DATABASE/YELLOW/index.js";
 
-export{BLUE,BROWN,CYAN,GRAY,GREEN,LIME,MAGENTA,MAROON,NAVY,OLIVE,ORANGE,PINK,PURPLE,RED,TEAL,YELLOW};
+export{BLACK,BLUE,BROWN,CYAN,GRAY,GREEN,LIME,MAGENTA,MAROON,NAVY,OLIVE,ORANGE,PINK,PURPLE,RED,TEAL,YELLOW};

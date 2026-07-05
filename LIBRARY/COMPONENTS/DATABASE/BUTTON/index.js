@@ -1,10 +1,16 @@
 export const BUTTON=(HOLDER,TEXT,CALLBACk)=>{
     ELEMENTED(HOLDER,"button",(DATA)=>{
-        WIDTH(DATA,"90%");
+        MARGIN(DATA,"");
+        WIDTH(DATA,"auto");
         HEIGHT(DATA,"50px");
         BORDERRADIUS(DATA,"5px");
         OUTLINE(DATA);
         DISPLAY(DATA,TEXT||"Click");
         CALLBACk(DATA);
+        CONDITION(sessionStorage.getItem("theme") === "dark",()=>{
+            COLOR(DATA,"white");
+        },()=>{
+            COLOR(DATA,"black");
+        });
     });
 };

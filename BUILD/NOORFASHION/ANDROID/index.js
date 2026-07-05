@@ -1,18 +1,36 @@
-const LINK="https://docs.google.com/spreadsheets/d/1D7Km39gogTyE1i991NJ9E0jxYBzlhga2vuDpHv4rNk8/edit?usp=sharing";
-
 const MOBILEVIEW=()=>{
 
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
+
+  LINKTRACKER(LOADDATA,()=>{
+
     SHYLANSIRAJANDROIDSTARTPAGE();
+
+  });
     
 };
 
 const DESKTOPVIEW=()=>{
 
-    CLEAR("");
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
 
-    HEADER("","NCOO",()=>{
+  LINKTRACKER(LOADDATA,()=>{
 
-    });
+    SHYLANSIRAJANDROIDSTARTPAGE();
+
+  });
     
 };
 
