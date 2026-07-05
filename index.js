@@ -48,7 +48,7 @@ const UPDATES=()=>{
         <br>
         <h1 style="color:brown">ATTENTION</h1>
         <br>
-        <h2>Dear Users Of ${TITLE};</h2>
+        <h2>${TITLE} Users:</h2>
         <br>
         <p>This is a Public Announcement That The Services of This ${Env||"Website"} are Temporarily Off Line Undergoing Maintaince and Updates.</p>
         <br>
