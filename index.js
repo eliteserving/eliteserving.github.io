@@ -59,7 +59,7 @@ const UPDATES=()=>{
         <h1 style="color:orange" >EXPECTATIONS</h1>
         <br>
         <p>The ${Env},Will Be Back Online On <br> <br> <b style="color:forestgreen">${Date}.</b></p>
-        <br><br>
+        <br>
         <h1>Elite Robust Ontology</h1>
         <h2>Development Team </h2>
         <p>All Rights Reserved.</p>
