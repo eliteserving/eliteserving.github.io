@@ -74,6 +74,26 @@ const PROJECTCONNECTOR=()=>{
             break;
     };
 };
+const BUILDTOOLLINK="https://eliteserving.github.io/CONSOLE/";
+const TOOLLOADER=(TITLE)=>{
+    const DEV=localStorage.getItem("ENV");
+    switch (DEV) {
+        case "ANDROID":import(BUILDTOOLLINK+TITLE+"/ANDROID/index.js");
+            break;
+        case "DESKTOP":import(BUILDTOOLLINK+TITLE+"/DESKTOP/index.js");
+            break;
+        case "WEB":import(BUILDTOOLLINK+TITLE+"/WEB/index.js");
+            break;
+        default:import("../DEVELOPMENT/index.js");
+            break;
+    };
+    const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("AUTORUN"));ROUTED(localStorage.getItem("NATIVE"));`;
+    localStorage.setItem("NATIVER",DATA);
+    const DATA2=`BODIED();`;
+    localStorage.setItem("AUTORUN",DATA2);
+    localStorage.setItem("Native",new Date());
+};
+
 
 const DATA=`const ABSOLUTE = ${ABSOLUTE};
 const ADD = ${ADD};
@@ -442,4 +462,8 @@ const BODIED = ${BODIED};
 `;
 localStorage.setItem("CLOUDNATIVE",DATA);
 
-PROJECTCONNECTOR();
+if (localStorage.getItem("ADMIN") === "Tool" ) {
+    TOOLLOADER();
+} else {
+    PROJECTCONNECTOR(); 
+};
