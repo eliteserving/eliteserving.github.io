@@ -46,20 +46,26 @@ const UPDATES=()=>{
     const Body=document.querySelector("body");
     Body.innerHTML=`
         <br>
-        <h1>ATTENTION</h1>
+        <h1 style="color:brown">ATTENTION</h1>
         <br>
         <h2>Dear Users Of ${TITLE};</h2>
         <br>
         <p>This is a Public Announcement That The Services of This ${Env||"Website"} are Temporarily Off Line Undergoing Maintaince and Updates.</p>
         <br>
+        <h1 style="color:teal" >APOLOGIES</h1>
+        <br>
         <p>We are Sorry For Any Inconviences Caused.</p>
         <br>
-        <h1>Expectations</h1>
-        <p>The ${Env},Will Be Back Online On ${Date}.</p>
+        <h1 style="color:orange" >EXPECTATIONS</h1>
+        <br>
+        <p>The ${Env},Will Be Back Online On <br> <br> <b style="color:forestgreen">${Date}.</b></p>
         <br><br>
         <h1>Elite Robust Ontology</h1>
         <h2>Development Team </h2>
         <p>All Rights Reserved.</p>
+        <br>
+        <a href="mailto:eliterobustontology@gmail.com">Contact Us</a>
+        <br><br><br>
     `;
 };
 if (STATUS === "Active" ) {
