@@ -94,7 +94,6 @@ const TOOLLOADER=(TITLE)=>{
     localStorage.setItem("Native",new Date());
 };
 
-
 const DATA=`const ABSOLUTE = ${ABSOLUTE};
 const ADD = ${ADD};
 const ADESADATABASELINK = ${ADESADATABASELINK};
