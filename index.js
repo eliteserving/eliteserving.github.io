@@ -68,7 +68,7 @@ const UPDATES=()=>{
         <br><br><br>
     `;
 };
-if (STATUS === "Active" ) {
+if (STATUS) {
     RUNNER();
 } else {
     UPDATES();
