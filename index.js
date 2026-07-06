@@ -1,4 +1,4 @@
-const STATUS="Active";
+const STATUS="";
 const TITLE = document.title;
 const RUNNER=()=>{
     if (localStorage.getItem("Native")) {

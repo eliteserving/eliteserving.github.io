@@ -49,11 +49,14 @@ const PROJECTCONNECTOR=()=>{
             break; 
         case "EliteManager":PROJECTLOADER("MANAGER");
             break; 
+        case "Qel_Medistore_Limited":PROJECTLOADER("QEL");
+            break; 
         default:
             break;
     };
 };
 const BUILDTOOLLINK="https://eliteserving.github.io/CONSOLE/";
+
 const TOOLLOADER=(TITLE)=>{
     const DEV=localStorage.getItem("ENV");
     switch (DEV) {
