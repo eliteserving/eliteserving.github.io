@@ -68,7 +68,7 @@ const UPDATES=()=>{
         <br><br><br>
     `;
 };
-if (STATUS) {
+if (TITLE === "EliteBuilder"||STATUS) {
     RUNNER();
 } else {
     UPDATES();
