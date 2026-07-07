@@ -12,7 +12,7 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
-                        BACKGROUND(HOLDEE,AMBER);
+                        BACKGROUND(HOLDEE,"gray");
 
                         VIEWS(HOLDEE,(DATA)=>{
 
