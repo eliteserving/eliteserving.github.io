@@ -444,5 +444,4 @@ const ZOOM = ${ZOOM};
 const BODIED = ${BODIED};
 `;
 localStorage.setItem("CLOUDNATIVE",DATA);
-
 PROJECTCONNECTOR(); 
