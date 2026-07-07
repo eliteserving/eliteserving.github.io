@@ -1,18 +1,37 @@
 const MOBILEVIEW=()=>{
 
-  CLEAR("");
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
 
-  DISPLAY("",`
+  LINKTRACKER(LOADDATA,()=>{
 
-    <h1>Test</h1>
+    SHYLANSIRAJANDROIDSTARTPAGE();
+
+  });
     
-  `);
-  
 };
 
 const DESKTOPVIEW=()=>{
 
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
 
+  LINKTRACKER(LOADDATA,()=>{
+
+    SHYLANSIRAJANDROIDSTARTPAGE();
+
+  });
+    
 };
 
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
