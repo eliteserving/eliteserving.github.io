@@ -343,14 +343,6 @@ function PAYNOW(){
     }
 
 
-    const DATA={
-
-        "email":"",
-        "phone":phone,
-        "name":"Andrew",
-        "price":180000
-
-    };
 
 
     Button.disabled=true;
@@ -369,9 +361,7 @@ function PAYNOW(){
 
     })
 
-
     .then(res=>res.json())
-
 
     .then(Data=>{
 
@@ -391,7 +381,6 @@ function PAYNOW(){
 
     })
 
-
     .catch(Error=>{
 
 
@@ -406,8 +395,7 @@ function PAYNOW(){
 
     });
 
-
-}
+    }
 
 </script>
 
