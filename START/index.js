@@ -44,10 +44,28 @@ const FETCH=()=>{
 
     });
 
-    }
+}
+
+const CLOSE=()=>{
+
+    const SpecialPayments=document.querySelector(".SpecialPayments");
+
+    SpecialPayments.style.display="none";
+
+};
+
+const CLOSER=()=>{
+
+    const SpecialPayments=document.querySelector(".SpecialPayments");
+
+    SpecialPayments.style.display="block";
 
 };
 
 const PAYMENTPROFILE=()=>{
 
 };
+
+const ANDROIDPAYMENTS=()=>{
+
+}
