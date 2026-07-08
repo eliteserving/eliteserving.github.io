@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Color Variant Generator</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chroma-js@2.4.2/chroma.min.js"></script>
+
+<style>
+
+:root{
+    --bg:#f1f5f9;
+    --card:#ffffff;
+    --text:#111827;
+    --primary:#2563eb;
+}
+
+.dark{
+    --bg:#020617;
+    --card:#111827;
+    --text:#f8fafc;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:30px;
+    font-family:Inter,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+
+h1{
+    font-size:35px;
+}
+
+
+.controls{
+
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    background:var(--card);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 30px #0002;
+}
+
+
+input{
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+
+input[type="text"]{
+    width:240px;
+}
+
+
+input[type="color"]{
+    width:70px;
+    height:50px;
+}
+
+
+button{
+
+    background:var(--primary);
+    color:white;
+    border:0;
+
+    padding:13px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+
+.section{
+
+    margin-top:45px;
+
+}
+
+
+.section h2{
+
+    font-size:26px;
+
+}
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(210px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:var(--card);
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 25px #0002;
+
+animation:show .4s;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+.swatch{
+
+height:150px;
+
+}
+
+
+.info{
+
+padding:18px;
+
+}
+
+
+.info h3{
+
+margin:0 0 12px;
+
+}
+
+
+.code{
+
+font-size:14px;
+
+margin:8px 0;
+
+line-height:1.4;
+
+}
+
+
+.copy{
+
+width:100%;
+
+margin-top:10px;
+
+}
+
+
+.theme{
+
+background:#111827;
+
+}
+
+
+.small{
+
+font-size:13px;
+
+opacity:.7;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<header>
+
+<h1>
+🎨 Color Studio
+</h1>
+
+<button onclick="toggleTheme()">
+🌙 Theme
+</button>
+
+</header>
+
+
+
+<div class="controls">
+
+
+<input 
+id="colorText"
+type="text"
+value="#3498db"
+placeholder="Enter HEX, RGB, HSL">
+
+
+<input
+id="picker"
+type="color"
+value="#3498db">
+
+
+<button onclick="generate()">
+Generate
+</button>
+
+
+</div>
+
+
+<div id="output"></div>
+
+
+</div>
+
+
+
+<script>
+
+
+const cssColors={
+
+Red:"#ff0000",
+Orange:"#ffa500",
+Yellow:"#ffff00",
+Green:"#008000",
+Blue:"#0000ff",
+Purple:"#800080",
+Pink:"#ffc0cb",
+Brown:"#a52a2a",
+Black:"#000000",
+White:"#ffffff",
+Gray:"#808080",
+Cyan:"#00ffff",
+Gold:"#ffd700",
+Coral:"#ff7f50",
+Teal:"#008080",
+Navy:"#000080",
+Indigo:"#4b0082",
+Violet:"#ee82ee"
+
+};
+
+
+
+function toggleTheme(){
+
+document.body.classList.toggle("dark");
+
+}
+
+
+
+function nearestName(hex){
+
+let name="Custom";
+
+let min=Infinity;
+
+
+let rgb=chroma(hex).rgb();
+
+
+for(let c in cssColors){
+
+let x=chroma(cssColors[c]).rgb();
+
+
+let d=Math.hypot(
+
+rgb[0]-x[0],
+
+rgb[1]-x[1],
+
+rgb[2]-x[2]
+
+);
+
+
+if(d<min){
+
+min=d;
+
+name=c;
+
+}
+
+}
+
+
+return name;
+
+}
+
+
+
+
+
+function contrast(hex){
+
+let lum=chroma(hex).luminance();
+
+return lum>.5?"Black text":"White text";
+
+}
+
+
+
+
+
+function addSection(title,colors){
+
+
+let html=`
+
+<section class="section">
+
+<h2>${title}</h2>
+
+<div class="grid">
+
+`;
+
+
+colors.forEach(color=>{
+
+
+let hex=chroma(color).hex();
+
+let rgb=chroma(color).css();
+
+let hsl=chroma(color).hsl();
+
+
+html+=`
+
+<div class="card"
+onclick="copyColor('${hex}')">
+
+
+<div class="swatch"
+style="
+background:${hex}
+">
+</div>
+
+
+<div class="info">
+
+
+<h3>
+${nearestName(hex)}
+</h3>
+
+
+<div class="code">
+<b>HEX</b><br>
+${hex}
+</div>
+
+
+<div class="code">
+<b>RGB</b><br>
+${rgb}
+</div>
+
+
+
+<div class="code">
+
+<b>HSL</b><br>
+
+${Math.round(hsl[0])}°
+
+${Math.round(hsl[1]*100)}%
+
+${Math.round(hsl[2]*100)}%
+
+</div>
+
+
+<div class="small">
+Best contrast:
+${contrast(hex)}
+</div>
+
+
+
+<button class="copy">
+
+Copy HEX
+
+</button>
+
+
+</div>
+
+</div>
+
+
+`;
+
+});
+
+
+html+=`
+
+</div>
+
+</section>
+
+`;
+
+
+return html;
+
+
+}
+
+
+
+
+function copyColor(hex){
+
+navigator.clipboard.writeText(hex);
+
+
+}
+
+
+
+function generate(){
+
+
+let input=document.getElementById("colorText").value;
+
+
+try{
+
+
+let base=chroma(input);
+
+
+document.getElementById("picker").value=
+base.hex();
+
+
+
+let output="";
+
+
+
+let tints=[];
+
+let shades=[];
+
+let tones=[];
+
+
+
+for(let i=0;i<=10;i++){
+
+tints.push(
+chroma.mix(base,"white",i/10)
+);
+
+
+shades.push(
+chroma.mix(base,"black",i/10)
+);
+
+
+tones.push(
+chroma.mix(base,"gray",i/10)
+);
+
+}
+
+
+
+
+
+output+=addSection(
+"Tints",
+tints
+);
+
+
+
+output+=addSection(
+"Shades",
+shades
+);
+
+
+
+output+=addSection(
+"Tones",
+tones
+);
+
+
+
+output+=addSection(
+"Complementary",
+[
+base,
+base.set("hsl.h","+180")
+]
+);
+
+
+
+output+=addSection(
+"Analogous",
+[
+base.set("hsl.h","-30"),
+base,
+base.set("hsl.h","+30")
+]
+);
+
+
+
+output+=addSection(
+"Triadic",
+[
+base,
+base.set("hsl.h","+120"),
+base.set("hsl.h","+240")
+]
+);
+
+
+
+output+=addSection(
+"Split Complementary",
+[
+base,
+base.set("hsl.h","+150"),
+base.set("hsl.h","-150")
+]
+);
+
+
+
+let mono=[];
+
+
+for(let i=.2;i<=1;i+=.1){
+
+mono.push(
+base.alpha(i)
+);
+
+}
+
+
+
+output+=addSection(
+"Monochromatic",
+mono
+);
+
+
+
+document.getElementById("output").innerHTML=output;
+
+
+
+}
+
+catch{
+
+alert(
+"Invalid color value"
+);
+
+}
+
+
+}
+
+
+
+
+document
+.getElementById("picker")
+.oninput=function(){
+
+document
+.getElementById("colorText")
+.value=this.value;
+
+
+generate();
+
+};
+
+
+
+
+document
+.getElementById("colorText")
+.oninput=function(){
+
+generate();
+
+};
+
+
+
+generate();
+
+
+</script>
+
+
+</body>
+</html>
