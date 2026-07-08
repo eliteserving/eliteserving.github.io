@@ -1,403 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Elite Payment</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,Segoe UI,Arial,sans-serif;
-}
-
-body{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    background:
-    linear-gradient(135deg,#020617,#1e40af,#3b82f6);
-}
-
-.container{
-    width:100%;
-    height:100%;
-    overflow-y:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.card{
-    width:100%;
-    max-width:460px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.25);
-    border-radius:28px;
-    padding:35px;
-    color:#111827;
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
-    animation:show .5s ease;
-}
-
-@keyframes show{
-from{
-    opacity:0;
-    transform:translateY(30px);
-}
-to{
-    opacity:1;
-    transform:translateY(0);
-}
-}
-
-.logo{
-    width:75px;
-    height:75px;
-    margin:auto;
-    margin-bottom:20px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#22c55e,#15803d);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:35px;
-    font-weight:bold;
-    box-shadow:0 15px 30px rgba(34,197,94,.4);
-}
-
-h1{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#334155;
-    margin-bottom:25px;
-}
-
-.details{
-    background:rgba(255,255,255,.35);
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:25px;
-}
-
-.row{
-    display:flex;
-    justify-content:space-between;
-    margin:12px 0;
-    color:#1e293b;
-}
-
-.row span:last-child{
-    font-weight:bold;
-}
-
-.amount{
-    color:#16a34a;
-    font-size:22px;
-}
-
-.instructions{
-    color:#334155;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-label{
-    display:block;
-    margin-bottom:10px;
-    font-weight:600;
-}
-
-input{
-    width:100%;
-    padding:16px;
-    border:none;
-    outline:none;
-    border-radius:14px;
-    font-size:16px;
-    margin-bottom:20px;
-}
-
-input:focus{
-    box-shadow:0 0 0 4px rgba(37,99,235,.25);
-}
-
-button{
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:14px;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-button:disabled{
-    opacity:.6;
-}
-
-.footer{
-    text-align:center;
-    margin-top:25px;
-    color:#475569;
-    font-size:13px;
-}
-
-.Message{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:-300px;
-    background:white;
-    border-radius:30px 30px 0 0;
-    padding:35px;
-    text-align:center;
-    box-shadow:0 -15px 40px rgba(0,0,0,.25);
-    transition:.5s;
-    z-index:99;
-}
-
-.Message.show{
-    bottom:0;
-}
-
-.loader{
-    width:50px;
-    height:50px;
-    margin:auto;
-    margin-bottom:20px;
-    border-radius:50%;
-    border:5px solid #dbeafe;
-    border-top-color:#2563eb;
-    animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-100%{
-transform:rotate(360deg);
-}
-}
-
-.Message h2{
-    color:#1e293b;
-    font-size:20px;
-}
-
-.Message p{
-    color:#64748b;
-    margin-top:10px;
-}
-
-@media(max-width:480px){
-.card{
-    padding:25px;
-}
-
-h1{
-    font-size:25px;
-}
-
-.amount{
-    font-size:19px;
-}
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Robust Ontology Payment</title>
 </head>
-
+<link rel="stylesheet" href="./index.css">
 <body>
 
-<div class="container">
+    <div class="Holder">
 
-<div class="card">
+        <br>
 
-<div class="logo">
-E
-</div>
+        <h1>Elite Services Payment</h1>
 
-<h1>
-Elite Payment
-</h1>
+        <br>
 
-<p class="subtitle">
-Secure Mobile Money Payment
-</p>
+        <h1 class="Serviecs" >Please Choose Service</h1>
+        
+        <br>
 
-<div class="details">
+        <div class="OptionsHolder">
 
-<div class="row">
-<span>Customer</span>
-<span>Mr.Andrew </span>
-</div>
+            <div class="OptionOne">
 
-<div class="row">
-<span>Service</span>
-<span>Website Hosting </span>
-</div>
+                <header>
 
-<div class="row">
-<span>Amount</span>
-<span class="amount">
-UGX 180,000/=
-</span>
-</div>
+                    <h1 class="Names">Android Apps</h1>
 
-</div>
+                </header>
 
+                <img src="./android.png"/>
 
-<p class="instructions">
-Enter your phone number below.
-After clicking Pay Now, your payment profile will be created securely.
-</p>
+                <button class="Pay">Pay Now</button>
 
+            </div>
 
-<label>
-Phone Number
-</label>
+            <div class="OptionOne">
 
-<input 
-id="Number"
-type="tel"
-placeholder="07XXXXXXXX">
+                <header>
 
+                    <h1 class="Names">Desktop Apps </h1>
 
-<button id="payButton" onclick="PAYNOW()">
-Pay Now
-</button>
+                </header>
 
+                <img src="./Desktop.webp"/>
 
-<div class="footer">
-🔒 Secure Payment • Elite Robust Ontology © 2026
-</div>
+                <button class="Pay">Pay Now</button>
 
-</div>
+            </div>
 
-</div>
+            <div class="OptionOne">
 
+                <header>
 
-<div class="Message" id="Message">
+                    <h1 class="Names">Websites </h1>
 
-<div class="loader"></div>
+                </header>
 
-<h2 id="status">
-Creating payment profile...
-</h2>
+                <img src="./web.webp"/>
 
-<p>
-Please wait while your payment request is prepared.
-</p>
+                <button class="Pay">Pay Now</button>
 
-</div>
+            </div>
 
+            <div class="OptionOne">
 
-<script>
+                <header>
 
-const Numbers=document.getElementById("Number");
-const Message=document.getElementById("Message");
-const Button=document.getElementById("payButton");
-const Status=document.getElementById("status");
+                    <h1 class="Names">Other Services </h1>
 
+                </header>
 
-function PAYNOW(){
+                <img src="./others.webp"/>
 
-    const phone = Numbers.value.trim();
+                <button class="Pay">Pay Now</button>
 
+            </div>
 
-    const blockedNumbers = [
-        "256768058124",
-        "0768058124",
-        "+256768058124"
-    ];
+        </div>
 
+        <br>
 
-    if(phone === ""){
+        <br>
 
-        Numbers.style.boxShadow="0 0 0 3px #ef4444";
-        Numbers.focus();
-        return;
+        <h1>Pay With</h1>
 
-    }
+        <br>
 
+        <input type="text" placeholder="Enter Payment Id">
 
-    if(blockedNumbers.includes(phone)){
+        <br>
 
-        Numbers.style.boxShadow="0 0 0 3px #ef4444";
+        <br>
 
-        Numbers.focus();
+        <button>Pay Now</button>
 
-        return;
+        <br><br> <br><br>
 
-    }
+        <p>@Elite Robust Ontology,2026</p>
 
+        <br><br> <br><br>
 
-
-
-    Button.disabled=true;
-
-    Button.innerHTML="Processing...";
-
-
-    Message.classList.add("show");
-
-
-    fetch("https://script.google.com/macros/s/AKfycbwxIUwkkXgPoj6xng1SI1h420S63hLCZ3eSoBPIoGSeOuiAy-rm8AWVvdpVYAbYbqiY/exec",{
-
-        mode:"cors",
-        method:"POST",
-        body:JSON.stringify(DATA)
-
-    })
-
-    .then(res=>res.json())
-
-    .then(Data=>{
-
-
-        console.log(Data);
-
-
-        Status.innerHTML="Payment profile created successfully ✔";
-
-
-        setTimeout(()=>{
-
-            location.href=Data.checkout_url;
-
-        },1000);
-
-
-    })
-
-    .catch(Error=>{
-
-
-        console.log(Error);
-
-        Status.innerHTML="Payment failed. Try again.";
-
-        Button.disabled=false;
-
-        Button.innerHTML="Pay Now";
-
-
-    });
-
-    }
-
-</script>
-
+    </div>
+    
 </body>
 </html>
