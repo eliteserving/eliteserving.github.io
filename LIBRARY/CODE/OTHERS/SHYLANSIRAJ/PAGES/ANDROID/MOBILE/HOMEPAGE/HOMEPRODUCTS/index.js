@@ -1,25 +1,16 @@
 export const SHYRAJANDROIDHOMEPRODUCTS=()=>{
-
-    HEADERVIEWSPAGE((HOLDER)=>{
-
-        LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
-
-            CLICK(DATA,()=>{
-
-                ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,SHYLANSIRAJANDROIDHOMEPAGE);
-
+    DEJSONIFICATION(sessionStorage.getItem("StoredData"),(SDATA)=>{
+        HEADERVIEWSPAGE((HOLDER)=>{
+            LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
+                CLICK(DATA,()=>{
+                    ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,SHYLANSIRAJANDROIDHOMEPAGE);
+                });
             });
-
+            HEADER(HOLDER,SDATA.NAME,(DATA)=>{
+                MARGINRIGHT(DATA,"1%");
+            });
+        },(HOLDER)=>{
+    
         });
-
-        HEADER(HOLDER,"Profile",(DATA)=>{
-
-            MARGINRIGHT(DATA,"1%");
-
-        });
-
-    },(HOLDER)=>{
-
     });
-
 };
