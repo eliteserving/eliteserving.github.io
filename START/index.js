@@ -6,10 +6,8 @@ window.PAYMENTS=PAYMENTS;
 const PRO=localStorage.getItem("Project");
 
 switch (PRO) {
-    case "PAY":PAYMENTS();
+    case "PAYMENT":PAYMENTS();
         break;
-    default:
+    default:PAYMENTS();
         break;
 };
-
-
