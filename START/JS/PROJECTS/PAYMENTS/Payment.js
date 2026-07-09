@@ -24,7 +24,7 @@ export const PAYMENTS=()=>{
 
                     </header>
 
-                    <img src="./android.png"/>
+                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/android.png"/>
 
                     <button  id="Android" onclick="CLOSER()" class="Pay">Pay Now</button>
 
@@ -38,7 +38,7 @@ export const PAYMENTS=()=>{
 
                     </header>
 
-                    <img src="./Desktop.webp"/>
+                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/Desktop.webp"/>
 
                     <button id="Desktop" onclick="CLOSER()" class="Pay">Pay Now</button>
 
@@ -52,7 +52,7 @@ export const PAYMENTS=()=>{
 
                     </header>
 
-                    <img src="./web.webp"/>
+                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/web.webp"/>
 
                     <button onclick="CLOSER()" class="Pay">Pay Now</button>
 
@@ -66,7 +66,7 @@ export const PAYMENTS=()=>{
 
                     </header>
 
-                    <img src="./others.webp"/>
+                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/others.webp"/>
 
                     <button onclick="CLOSER()" class="Pay">Pay Now</button>
 
