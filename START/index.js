@@ -10,7 +10,7 @@ const PRO=localStorage.getItem("Project");
 switch (PRO) {
     case "PAYMENT":PAYMENTS();
         break;
-    case "Main":MAIN();
+    case "MAIN":MAIN();
         break;
     default:PAYMENTS();
         break;
