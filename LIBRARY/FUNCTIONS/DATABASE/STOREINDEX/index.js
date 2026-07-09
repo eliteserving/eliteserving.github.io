@@ -1,52 +1,86 @@
-export const STOREINDEX = (DATABASE,STORE,DATA,CALLBACK) => {
+export const STOREINDEX = (DATABASE, STORE, DATA, CALLBACK) => {
     try {
-        const Request =indexedDB.open(DATABASE, 1);
-        Request.onupgradeneeded = (event) => {
-            const DB =event.target.result;
-            if (
-                !DB.objectStoreNames.contains(STORE)
-            ) {
-                DB.createObjectStore(STORE, {
+        const request = indexedDB.open(DATABASE, 1);
+
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+
+            if (!db.objectStoreNames.contains(STORE)) {
+                db.createObjectStore(STORE, {
                     keyPath: "id",
                     autoIncrement: true
                 });
-            };
+            }
         };
-        Request.onsuccess = () => {
-            const DB =Request.result;
-            DB.onversionchange = () => {
-                DB.close();
-                CALLBACK("Database version changed, connection closed");
-            };
-            const Transaction =DB.transaction(STORE, "readwrite");
-            const ObjectStore =Transaction.objectStore(STORE);
-            let RequestStore;
+
+        request.onsuccess = () => {
+            const db = request.result;
+
+            const transaction = db.transaction(STORE, "readwrite");
+            const objectStore = transaction.objectStore(STORE);
+
+            // If id already exists, update directly
             if (DATA.id !== undefined) {
-                RequestStore =ObjectStore.put(DATA);
+                const putRequest = objectStore.put(DATA);
+
+                putRequest.onsuccess = () => {
+                    CALLBACK(DATA);
+                    db.close();
+                };
+
+                putRequest.onerror = () => {
+                    CALLBACK(putRequest.error.message);
+                    db.close();
+                };
+
+                return;
             }
-            else {
-                RequestStore =ObjectStore.add(DATA);
-            }
-            RequestStore.onsuccess = () => {
-                CALLBACK(DATA);
-                DB.close();
+
+            // Otherwise check if an identical record exists
+            const getAllRequest = objectStore.getAll();
+
+            getAllRequest.onsuccess = () => {
+                const existing = getAllRequest.result.find(item => {
+                    const a = { ...item };
+                    const b = { ...DATA };
+
+                    delete a.id;
+                    delete b.id;
+
+                    return JSON.stringify(a) === JSON.stringify(b);
+                });
+
+                let saveRequest;
+
+                if (existing) {
+                    DATA.id = existing.id;
+                    saveRequest = objectStore.put(DATA);
+                } else {
+                    saveRequest = objectStore.add(DATA);
+                }
+
+                saveRequest.onsuccess = () => {
+                    CALLBACK(DATA);
+                    db.close();
+                };
+
+                saveRequest.onerror = () => {
+                    CALLBACK(saveRequest.error.message);
+                    db.close();
+                };
             };
-            RequestStore.onerror = () => {
-                CALLBACK(RequestStore.error.message);
-                DB.close();
-            };
-            Transaction.onerror = () => {
-                CALLBACK(Transaction.error.message);
-                DB.close();
+
+            getAllRequest.onerror = () => {
+                CALLBACK(getAllRequest.error.message);
+                db.close();
             };
         };
-        Request.onerror = () => {
-            CALLBACK(Request.error.message);
+
+        request.onerror = () => {
+            CALLBACK(request.error.message);
         };
-        Request.onblocked = () => {
-            CALLBACK("Database upgrade blocked by another open tab");
-        };
+
     } catch (error) {
         CALLBACK(error.message);
-    };
+    }
 };

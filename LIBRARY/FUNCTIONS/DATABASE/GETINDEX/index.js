@@ -28,17 +28,28 @@ export const GETINDEX = (DATABASE, STORE, CALLBACK) => {
             const getRequest = objectStore.getAll();
 
             getRequest.onsuccess = () => {
-                const data = getRequest.result || [];
+                const records = getRequest.result || [];
+
                 db.close();
-                finish(data);
+
+                if (records.length > 0 && Array.isArray(records[0].Data)) {
+                    finish(records[0].Data);
+                } else {
+                    finish([]);
+                }
             };
 
             getRequest.onerror = () => {
                 db.close();
                 finish([]);
             };
+
+            transaction.onerror = () => {
+                db.close();
+                finish([]);
+            };
         };
-    } catch (err) {
+    } catch (error) {
         finish([]);
     }
 };
