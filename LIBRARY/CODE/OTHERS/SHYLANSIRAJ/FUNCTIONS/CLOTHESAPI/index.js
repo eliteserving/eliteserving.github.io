@@ -1,11 +1,10 @@
 export const SHYRAJCLOTHESAPI=()=>{
-    GETDATA(MAINCONNECTIONAPI,"COUNTRIES",(Data)=>{
+    GETDATA(SHYRAJDATABASEMAINAPI,"SHYLANSIRAJFASHIONHUB",(Data)=>{
         const DATA={
-            "name":"COUNTRIES",
+            "name":"CLOTHES",
             "Data":Data
         };
-        STOREINDEX ("COUNTRIES","COUNTRIES",DATA,()=>{
+        STOREINDEX ("CLOTHES","CLOTHES",DATA,()=>{
         });
     });
-
 };

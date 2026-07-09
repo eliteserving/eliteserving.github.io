@@ -2,13 +2,9 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     FOOTERVIEWSPAGE((HOLDER)=>{
 
-        HEADER(HOLDER,"PLease Wait",()=>{
+        /*
 
-            GETDATA(SHYRAJDATABASEMAINAPI,"SHYLANSIRAJFASHIONHUB",(DATA)=>{
-
-                CLEAR(HOLDER);
-    
-                REDUX(DATA,(Element)=>{
+                        REDUX(DATA,(Element)=>{
 
                     TABLEVIEW(HOLDER,(HOLDEE)=>{
 
@@ -41,10 +37,8 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
                     });
     
                 });
-    
-            });
 
-        });
+            */
 
     },(HOLDER)=>{
 
