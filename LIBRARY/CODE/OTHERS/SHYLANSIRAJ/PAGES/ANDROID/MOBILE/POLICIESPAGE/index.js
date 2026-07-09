@@ -1,0 +1,9 @@
+export const SHYLANSIRAJANDROIDMOBILEPOLICIESPAGE=()=>{
+
+    POLICIESDOWNLOAD("SHYLANSIRAJ/AppUser.txt","",(DATA)=>{
+
+        DISPLAY("",DATA);
+
+    });
+
+};

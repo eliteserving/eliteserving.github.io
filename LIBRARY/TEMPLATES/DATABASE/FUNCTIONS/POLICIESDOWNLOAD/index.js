@@ -1,4 +1,4 @@
-export const POLICIESDOWNLOAD=(NAME,CALLBACK)=>{
+export const POLICIESDOWNLOAD=(NAME,DATA,CALLBACK)=>{
 
     const TITLE = document.title;
 
@@ -6,9 +6,9 @@ export const POLICIESDOWNLOAD=(NAME,CALLBACK)=>{
 
         const LINK="../../LIBARAY/POLICIES/"+NAME;
 
-        TEXTFETCH(LINK,"",(DATA)=>{
+        TEXTFETCH(LINK,DATA,(Data)=>{
 
-            CALLBACK(DATA);
+            CALLBACK(Data);
             
         });
 
@@ -16,9 +16,9 @@ export const POLICIESDOWNLOAD=(NAME,CALLBACK)=>{
 
         const LINK="https://eliteserving.github.io/LIBARAY/POLICIES/"+NAME;
 
-        TEXTFETCH(LINK,"",(DATA)=>{
+        TEXTFETCH(LINK,DATA,(Data)=>{
 
-            CALLBACK(DATA);
+            CALLBACK(Data);
             
         });
 
