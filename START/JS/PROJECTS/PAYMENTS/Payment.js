@@ -1,0 +1,115 @@
+export const PAYMENTS=()=>{
+
+    document.querySelector("body").innerHTML=`
+        
+        <div class="Holder">
+
+            <br>
+
+            <h1>Elite Services Payment</h1>
+
+            <br>
+
+            <h1 class="Serviecs" >Please Choose Service</h1>
+            
+            <br>
+
+            <div class="OptionsHolder">
+
+                <div class="OptionOne">
+
+                    <header>
+
+                        <h1 class="Names">Android Apps</h1>
+
+                    </header>
+
+                    <img src="./android.png"/>
+
+                    <button  id="Android" onclick="CLOSER()" class="Pay">Pay Now</button>
+
+                </div>
+
+                <div class="OptionOne">
+
+                    <header>
+
+                        <h1 class="Names">Desktop Apps </h1>
+
+                    </header>
+
+                    <img src="./Desktop.webp"/>
+
+                    <button id="Desktop" onclick="CLOSER()" class="Pay">Pay Now</button>
+
+                </div>
+
+                <div class="OptionOne">
+
+                    <header>
+
+                        <h1 class="Names">Websites </h1>
+
+                    </header>
+
+                    <img src="./web.webp"/>
+
+                    <button onclick="CLOSER()" class="Pay">Pay Now</button>
+
+                </div>
+
+                <div class="OptionOne">
+
+                    <header>
+
+                        <h1 class="Names">Other Services </h1>
+
+                    </header>
+
+                    <img src="./others.webp"/>
+
+                    <button onclick="CLOSER()" class="Pay">Pay Now</button>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <br>
+
+            <h1>Pay With</h1>
+
+            <br>
+
+            <input type="text" placeholder="Enter Payment Id">
+
+            <br>
+
+            <br>
+
+            <button>Pay Now</button>
+
+            <br><br> <br><br>
+
+            <p>@Elite Robust Ontology,2026</p>
+
+            <br><br> <br><br>
+
+        </div>
+
+        <div class="SpecialPayments">
+
+            <header>
+
+                <h1 onclick="CLOSE()" class="Names">CLOSE</h1>
+
+            </header>
+
+            <div class="DataHolder"></div>
+
+        </div>
+    
+    `;
+
+}
