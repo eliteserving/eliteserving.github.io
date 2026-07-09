@@ -19,7 +19,7 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
                             LEFTTEXT(DATA,Element.NAME);
                         });
                         CLICK(HOLDEE,()=>{
-                            ROUTE(" ",HOMEPRODUCTS,SHYLANSIRAJANDROIDHOMEPAGE);
+                            ROUTE(" ",SHYRAJANDROIDHOMEPRODUCTS,SHYLANSIRAJANDROIDHOMEPAGE);
                         });
                     });
                 });
