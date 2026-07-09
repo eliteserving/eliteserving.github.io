@@ -1,6 +1,6 @@
 export const BODIED=()=>{
+    APPSTART();PROTECT();ZOOM();WEBKIT();INSPECTION();
     CHECK(localStorage.getItem("FEATURES"),()=>{ROUTED(localStorage.getItem("FEATURES"));});
-    PROTECT();ZOOM();WEBKIT();INSPECTION();
     CLICK(BODIER,()=>{
         SCREENWIDTH((Data)=>{
             CONDITION(Data === Number(localStorage.getItem("Screen")),()=>{
