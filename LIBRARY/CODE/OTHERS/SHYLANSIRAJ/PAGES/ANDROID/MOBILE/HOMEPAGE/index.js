@@ -2,6 +2,10 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     FOOTERVIEWSPAGE((HOLDER)=>{
 
+        LOADINGICON(HOLDER,(DATA)=>{
+
+        });
+
         /*
 
                         REDUX(DATA,(Element)=>{
