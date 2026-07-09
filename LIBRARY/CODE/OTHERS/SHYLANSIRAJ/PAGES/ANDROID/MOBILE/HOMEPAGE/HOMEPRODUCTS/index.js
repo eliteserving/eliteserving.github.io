@@ -1,4 +1,4 @@
-export const SHYLANSIRAJANDROIDPROFILEPAGE=()=>{
+export const HOMEPRODUCTS=()=>{
 
     HEADERVIEWSPAGE((HOLDER)=>{
 
@@ -21,5 +21,5 @@ export const SHYLANSIRAJANDROIDPROFILEPAGE=()=>{
     },(HOLDER)=>{
 
     });
-
+    
 };

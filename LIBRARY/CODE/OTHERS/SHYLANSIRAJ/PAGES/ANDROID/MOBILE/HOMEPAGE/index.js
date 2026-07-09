@@ -18,7 +18,9 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
                             HEIGHT(DATA,"50px");
                             LEFTTEXT(DATA,Element.NAME);
                         });
-
+                        CLICK(HOLDEE,()=>{
+                            ROUTE(" ",HOMEPRODUCTS,SHYLANSIRAJANDROIDHOMEPAGE);
+                        });
                     });
                 });
             });
