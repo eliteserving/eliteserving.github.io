@@ -1,21 +1,19 @@
 const MOBILEVIEW=()=>{
-
-    CLEAR("");
-
-    // DRIVER UPDATES
-
-   SHYLANSIRAJWEBHOMEPAGE();
-    
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    SHYRAJCLOTHESAPI();
+    SHYLANSIRAJANDROIDSTARTPAGE();
+  });
 };
-
 const DESKTOPVIEW=()=>{
-
-    CLEAR("");
-
-    HEADER("","NCOO",()=>{
-
-    });
-    
+  const LOADDATA={
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    SHYRAJCLOTHESAPI();
+    SHYLANSIRAJANDROIDSTARTPAGE();
+  }); 
 };
-
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
