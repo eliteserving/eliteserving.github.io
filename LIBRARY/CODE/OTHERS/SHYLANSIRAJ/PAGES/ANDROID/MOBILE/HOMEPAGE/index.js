@@ -2,7 +2,13 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
 
     FOOTERVIEWSPAGE((HOLDER)=>{
 
-        LOADINGICON(HOLDER,(DATA)=>{
+        LOADINGICON(HOLDER,(LOAD)=>{
+
+            GETINDEX("CLOTHES","CLOTHES",(SDATA)=>{
+
+                console.log(SDATA);
+
+            })
 
         });
 

@@ -1,31 +1,44 @@
-export const GETINDEX = (DATABASE,STORE,CALLBACK) => {
+export const GETINDEX = (DATABASE, STORE, CALLBACK) => {
+    let completed = false;
+
+    const finish = (data) => {
+        if (completed) return;
+        completed = true;
+        CALLBACK(data);
+    };
+
     try {
-        const Request =indexedDB.open(DATABASE);
-        Request.onsuccess = () => {
-            const DB =Request.result;
-            if (
-                !DB.objectStoreNames.contains(STORE)
-            ) {
-                CALLBACK(JSON.stringify([]));
-                DB.close();
+        const request = indexedDB.open(DATABASE);
+
+        request.onerror = () => {
+            finish([]);
+        };
+
+        request.onsuccess = () => {
+            const db = request.result;
+
+            if (!db.objectStoreNames.contains(STORE)) {
+                db.close();
+                finish([]);
                 return;
             }
-            const Transaction =DB.transaction(STORE, "readonly");
-            const ObjectStore =Transaction.objectStore(STORE);
-            const GetRequest =ObjectStore.getAll();
-            GetRequest.onsuccess = () => {
-                CALLBACK(JSON.stringify(GetRequest.result));
-                DB.close();
+
+            const transaction = db.transaction(STORE, "readonly");
+            const objectStore = transaction.objectStore(STORE);
+            const getRequest = objectStore.getAll();
+
+            getRequest.onsuccess = () => {
+                const data = getRequest.result || [];
+                db.close();
+                finish(data);
             };
-            GetRequest.onerror = () => {
-                CALLBACK(JSON.stringify([]));
-                DB.close();
+
+            getRequest.onerror = () => {
+                db.close();
+                finish([]);
             };
         };
-        Request.onerror = () => {
-            CALLBACK(JSON.stringify([]));
-        };
-    } catch {
-        CALLBACK(JSON.stringify([]));
-    };
+    } catch (err) {
+        finish([]);
+    }
 };
