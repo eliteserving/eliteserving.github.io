@@ -1,5 +1,6 @@
 export const SHYLANSIRAJWEBHOMEPAGE=()=>{
 
+    /*
     SESSIONDELETE("Name");
 
     SESSIONDELETE("Price");
@@ -253,5 +254,7 @@ export const SHYLANSIRAJWEBHOMEPAGE=()=>{
         });
 
     });
+    
+    */
 
 };
