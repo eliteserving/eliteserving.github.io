@@ -45,5 +45,4 @@ export const SHYLANSIRAJANDROIDHOMEPAGE=()=>{
             });
         });  
     });
-    SHYLANSIRAJANDROIDMOBILEPOLICIESPAGE();
 };

@@ -1,2 +1,6 @@
-<h1>Hello</h1>
+<br><br>
+<h1>PRIVACY POLICIES</h1>
+<br>
 <p>Welcome To Shylyan And Siraj Fashionz Hub.</p>
+<br><br>
+<button class="AgreeButton">I Agree</button>
