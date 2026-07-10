@@ -1,3 +1,5 @@
+import { ANDROIDPAY } from "./AndroidPay.js";
+
 export const PAYMENTS=()=>{
 
     document.querySelector("body").innerHTML=`
@@ -26,7 +28,7 @@ export const PAYMENTS=()=>{
 
                     <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/android.png"/>
 
-                    <button  id="Android" onclick="CLOSER()" class="Pay">Pay Now</button>
+                    <button  id="Android"  class="Pay">Pay Now</button>
 
                 </div>
 
@@ -102,7 +104,7 @@ export const PAYMENTS=()=>{
 
             <header>
 
-                <h1 onclick="CLOSE()" class="Names">CLOSE</h1>
+                <h1 id="Close" class="Names">CLOSE</h1>
 
             </header>
 
@@ -111,5 +113,8 @@ export const PAYMENTS=()=>{
         </div>
     
     `;
-
+    const DataHolder=document.querySelector(".DataHolder");
+    const SpecialPayments=document.querySelector(".SpecialPayments");
+    const Close=document.querySelector("#Close").addEventListener("click",()=>{SpecialPayments.style.display="none";});
+    const Android=document.querySelector("#Android").addEventListener("click",()=>{ANDROIDPAY(DataHolder);});
 };
