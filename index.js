@@ -72,7 +72,6 @@ async function INSTALLABLE() {
   if (localStorage.getItem("app-installed") === "true") {
     return true;
   }
-
   if (
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true
@@ -80,36 +79,54 @@ async function INSTALLABLE() {
     localStorage.setItem("app-installed", "true");
     return true;
   }
-
+  if (!document.querySelector('link[rel="manifest"]')) {
+    const title = document.title || "App";
+    const favicon =document.querySelector('link[rel="icon"]')?.href ||document.querySelector('link[rel="shortcut icon"]')?.href ||"/favicon.ico";
+    const manifest = {
+      name: title,
+      short_name: title,
+      start_url: "./",
+      scope: "./",
+      display: "standalone",
+      background_color: "#ffffff",
+      theme_color: "#ffffff",
+      icons: [
+        {
+          src: favicon,
+          sizes: "512x512",
+          type: "image/png"
+        }
+      ]
+    };
+    const blob = new Blob([JSON.stringify(manifest)],{ type: "application/manifest+json" });
+    const manifestURL = URL.createObjectURL(blob);
+    const link = document.createElement("link");
+    link.rel = "manifest";
+    link.href = manifestURL;
+    document.head.appendChild(link);
+  }
   if (!INSTALLABLE.initialized) {
     INSTALLABLE.initialized = true;
     INSTALLABLE.deferredPrompt = null;
-
     window.addEventListener("beforeinstallprompt", (e) => {
       e.preventDefault();
       INSTALLABLE.deferredPrompt = e;
     });
-
     window.addEventListener("appinstalled", () => {
       localStorage.setItem("app-installed", "true");
       INSTALLABLE.deferredPrompt = null;
     });
   }
-
   if (!INSTALLABLE.deferredPrompt) {
     return false;
   }
-
   INSTALLABLE.deferredPrompt.prompt();
-
   const { outcome } = await INSTALLABLE.deferredPrompt.userChoice;
-
   if (outcome === "accepted") {
     localStorage.setItem("app-installed", "true");
     INSTALLABLE.deferredPrompt = null;
     return true;
   }
-
   return false;
 }
 if (localStorage.getItem("ENV") === "WEB" ) {
