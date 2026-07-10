@@ -129,7 +129,7 @@ async function INSTALLABLE() {
     return true;
   }
   return false;
-}
+};
 if (localStorage.getItem("ENV") === "WEB" ) {
     await INSTALLABLE();
 }; 
