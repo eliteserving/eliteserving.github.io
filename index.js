@@ -130,7 +130,7 @@ async function INSTALLABLE() {
   }
   return false;
 }
-if (TITLE !== REJECTED||localStorage.getItem("ENV") === "WEB" ) {
+if (localStorage.getItem("ENV") === "WEB" ) {
     await INSTALLABLE();
 }; 
 if (TITLE === "EliteBuilder"||STATUS) {
