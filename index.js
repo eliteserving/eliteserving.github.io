@@ -68,6 +68,53 @@ const UPDATES=()=>{
         <br><br><br>
     `;
 };
+async function INSTALLABLE() {
+  if (localStorage.getItem("app-installed") === "true") {
+    return true;
+  }
+
+  if (
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true
+  ) {
+    localStorage.setItem("app-installed", "true");
+    return true;
+  }
+
+  if (!INSTALLABLE.initialized) {
+    INSTALLABLE.initialized = true;
+    INSTALLABLE.deferredPrompt = null;
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      INSTALLABLE.deferredPrompt = e;
+    });
+
+    window.addEventListener("appinstalled", () => {
+      localStorage.setItem("app-installed", "true");
+      INSTALLABLE.deferredPrompt = null;
+    });
+  }
+
+  if (!INSTALLABLE.deferredPrompt) {
+    return false;
+  }
+
+  INSTALLABLE.deferredPrompt.prompt();
+
+  const { outcome } = await INSTALLABLE.deferredPrompt.userChoice;
+
+  if (outcome === "accepted") {
+    localStorage.setItem("app-installed", "true");
+    INSTALLABLE.deferredPrompt = null;
+    return true;
+  }
+
+  return false;
+}
+if (localStorage.getItem("ENV") === "WEB" ) {
+    await INSTALLABLE();
+}; 
 if (TITLE === "EliteBuilder"||STATUS) {
     RUNNER();
 } else {
