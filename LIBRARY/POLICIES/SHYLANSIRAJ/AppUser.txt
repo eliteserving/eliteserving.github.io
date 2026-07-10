@@ -12,6 +12,9 @@
 <br>
 <h1>CONSENT</h1>
 <br>
-<p class="LeftText">By Clicking Agree Below <br> You Agree To The Fashion Terms And Conditions Of Shylan And Siraj Fashion Hub.</p>
+<p class="LeftText">By Clicking Agree Below. <br> You Agree To The Fashion Terms And Conditions Of Shylan And Siraj Fashion Hub.</p>
 <br><br>
+<h2>Click I Agree To Start Shopping Now.</h2>
+<br>
 <button class="AgreeButton">I Agree</button>
+<br><br><br><br>
