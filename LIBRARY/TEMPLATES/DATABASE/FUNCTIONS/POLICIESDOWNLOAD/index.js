@@ -14,7 +14,7 @@ export const POLICIESDOWNLOAD=(NAME,DATA,CALLBACK)=>{
 
     },()=>{
 
-        const LINK="https://eliteserving.github.io/LIBARAY/POLICIES/"+NAME;
+        const LINK="https://eliteserving.github.io/LIBRARY/POLICIES/"+NAME;
 
         TEXTFETCH(LINK,DATA,(Data)=>{
 
