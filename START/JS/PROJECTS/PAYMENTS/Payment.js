@@ -12,7 +12,7 @@ export const PAYMENTS=()=>{
 
             <br>
 
-            <h1>Elite Services Payment</h1>
+            <h1>ELITE ROBUST ONTOLOGY</h1>
 
             <br>
 
