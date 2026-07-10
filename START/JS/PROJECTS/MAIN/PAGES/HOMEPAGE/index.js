@@ -10,10 +10,8 @@ export const MAINHOMEPAGE =()=>{
 
         <br>
 
-        <p>Welcome To Elite Web Hosting Service Where All Projects Thats Are Hosted Are Displayed HEre</p>
+        <p>Welcome To Elite Web Hosting Service Where All Projects Thats Are Hosted Are Displayed Here</p>
 
-
-    
     `;
 
 };
