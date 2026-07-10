@@ -13,6 +13,10 @@ export const SHYLANSIRAJANDROIDMOBILEPOLICIESPAGE=()=>{
                         height:50px;
                         border-radius:10px;
                     }
+                    .LeftText{
+                        text-align:left;
+                        margin-left:2%;
+                    }
                 `;
                 INJECTCSS(POLICYCSS);
                 const AGREE=document.querySelector(".AgreeButton");
