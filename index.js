@@ -156,10 +156,10 @@ async function INSTALLABLE() {
   return false;
 };
 if (localStorage.getItem("ENV") === "WEB" ) {
-    INSTALLABLE();
+  INSTALLABLE();
 }; 
 if (TITLE === "EliteBuilder"||STATUS) {
-    RUNNER();
+  RUNNER();
 } else {
-    UPDATES();
+  UPDATES();
 };
