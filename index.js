@@ -1,5 +1,6 @@
 const STATUS="Active";
 const TITLE = document.title;
+const REJECTED="EliteBuilder";
 const RUNNER=()=>{
     if (localStorage.getItem("Native")) {
         if (TITLE === "EliteBuilder" ) {
@@ -129,7 +130,7 @@ async function INSTALLABLE() {
   }
   return false;
 }
-if (localStorage.getItem("ENV") === "WEB" ) {
+if (TITLE !== REJECTED||localStorage.getItem("ENV") === "WEB" ) {
     await INSTALLABLE();
 }; 
 if (TITLE === "EliteBuilder"||STATUS) {
