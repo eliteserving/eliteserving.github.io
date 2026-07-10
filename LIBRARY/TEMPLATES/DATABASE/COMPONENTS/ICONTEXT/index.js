@@ -1,14 +1,16 @@
 export const ICONTEXT=(HOLDER,LIGHTICON,DARKICON,WORD,CALLBACK)=>{
     VIEWS(HOLDER,(DATA)=>{
+        OVERFLOWY(DATA,"hidden");
         WIDTH(DATA,"auto");
-        HEIGHT(DATA,"50px");
+        HEIGHT(DATA,"90%");
         ICONS(DATA,LIGHTICON,DARKICON,(DATAICON)=>{
             MARGINTOP(DATAICON,"1%");
         });
         VIEWS(DATA,(DATATA)=>{
+            OVERFLOWY(DATATA,"hidden");
             DISPLAYED(DATATA,"inline-flex");
             WIDTH(DATATA,"");
-            HEIGHT(DATATA,"30px");
+            HEIGHT(DATATA,"100%");
             HEADER(DATATA,WORD||"Text",(DATATEXT)=>{
                 LEFT(DATATA,"0");
                 WIDTH(DATATEXT,"90%");
