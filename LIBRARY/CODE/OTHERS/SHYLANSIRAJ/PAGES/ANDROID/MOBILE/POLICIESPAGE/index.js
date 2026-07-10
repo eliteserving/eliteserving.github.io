@@ -12,6 +12,7 @@ export const SHYLANSIRAJANDROIDMOBILEPOLICIESPAGE=()=>{
                         width:90%;
                         height:50px;
                         border-radius:10px;
+                        color:white;
                     }
                     .LeftText{
                         text-align:left;
@@ -23,6 +24,12 @@ export const SHYLANSIRAJANDROIDMOBILEPOLICIESPAGE=()=>{
                 AGREE.addEventListener("click",()=>{
                     LOCALSTORE("Policies",true);
                     ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,SHYLANSIRAJANDROIDHOMEPAGE);
+                });
+                const LeftText=document.querySelector(".LeftText");
+                CONDITION(sessionStorage.getItem("theme") === "dark",()=>{
+                    COLOR(LeftText,"white");
+                },()=>{
+                    COLOR(LeftText,"black");
                 });
             });
         });
