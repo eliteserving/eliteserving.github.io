@@ -78,8 +78,7 @@ async function INSTALLABLE() {
     return true;
   };
   if (!document.querySelector('link[rel="manifest"]')) {
-    const appName = document.title || "My App";
-    const icon =document.querySelector('link[rel="icon"]')?.href ||"/favicon.ico";
+    const appName = document.title;
     const manifest = {
       name: appName,
       short_name: appName,
@@ -89,7 +88,7 @@ async function INSTALLABLE() {
       theme_color: "#ffffff",
       icons: [
         {
-          src: icon,
+          src: "./logo.png",
           sizes: "512x512",
           type: "image/png"
         }
