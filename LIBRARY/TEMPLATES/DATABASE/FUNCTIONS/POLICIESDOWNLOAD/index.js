@@ -4,7 +4,7 @@ export const POLICIESDOWNLOAD=(NAME,DATA,CALLBACK)=>{
 
     CONDITION(TITLE === "EliteBuilder",()=>{
 
-        const LINK="../../LIBARAY/POLICIES/"+NAME;
+        const LINK="../LIBRARY/POLICIES/"+NAME;
 
         TEXTFETCH(LINK,DATA,(Data)=>{
 
