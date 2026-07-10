@@ -1,4 +1,8 @@
 import { ANDROIDPAY } from "./AndroidPay.js";
+import { DESKTOPPAY } from "./DesktopPay.js";
+import { IDPAY } from "./IdPay.js";
+import { OTHERPAY } from "./OtherPay.js";
+import { WEBPAY } from "./WebPay.js";
 
 export const PAYMENTS=()=>{
 
@@ -42,7 +46,7 @@ export const PAYMENTS=()=>{
 
                     <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/Desktop.webp"/>
 
-                    <button id="Desktop" onclick="CLOSER()" class="Pay">Pay Now</button>
+                    <button id="Desktop"  class="Pay">Pay Now</button>
 
                 </div>
 
@@ -56,7 +60,7 @@ export const PAYMENTS=()=>{
 
                     <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/web.webp"/>
 
-                    <button onclick="CLOSER()" class="Pay">Pay Now</button>
+                    <button id="Web" class="Pay">Pay Now</button>
 
                 </div>
 
@@ -70,7 +74,7 @@ export const PAYMENTS=()=>{
 
                     <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/others.webp"/>
 
-                    <button onclick="CLOSER()" class="Pay">Pay Now</button>
+                    <button id="Others"  class="Pay">Pay Now</button>
 
                 </div>
 
@@ -80,7 +84,7 @@ export const PAYMENTS=()=>{
 
             <br>
 
-            <h1>Pay With</h1>
+            <h1>Direct Pay</h1>
 
             <br>
 
@@ -90,7 +94,7 @@ export const PAYMENTS=()=>{
 
             <br>
 
-            <button>Pay Now</button>
+            <button id="IdPay">Pay Now</button>
 
             <br><br> <br><br>
 
@@ -117,4 +121,8 @@ export const PAYMENTS=()=>{
     const SpecialPayments=document.querySelector(".SpecialPayments");
     const Close=document.querySelector("#Close").addEventListener("click",()=>{SpecialPayments.style.display="none";});
     const Android=document.querySelector("#Android").addEventListener("click",()=>{ANDROIDPAY(DataHolder);});
+    const Desktop=document.querySelector("#Desktop").addEventListener("click",()=>{DESKTOPPAY(DataHolder);});
+    const Web=document.querySelector("#Web").addEventListener("click",()=>{WEBPAY(DataHolder);});
+    const Others=document.querySelector("#Others").addEventListener("click",()=>{OTHERPAY(DataHolder);});
+    const IdPay=document.querySelector("#IdPay").addEventListener("click",()=>{IDPAY();});
 };
