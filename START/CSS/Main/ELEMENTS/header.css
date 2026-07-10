@@ -2,7 +2,7 @@ header{
     position: absolute;
     width: 100%;
     height: 50px;
-    background: #80008050;
+    background: black;
     border-radius: 10px 10px 0px 0px;
     display: inline-flex;
     left: 0;
