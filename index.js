@@ -72,66 +72,92 @@ const UPDATES=()=>{
 async function INSTALLABLE() {
   if (localStorage.getItem("app-installed") === "true") {
     return true;
-  }
-  if (
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone === true
-  ) {
+  };
+  if (window.matchMedia("(display-mode: standalone)").matches ||window.navigator.standalone === true) {
     localStorage.setItem("app-installed", "true");
     return true;
-  }
+  };
   if (!document.querySelector('link[rel="manifest"]')) {
-    const title = document.title || "App";
-    const favicon =document.querySelector('link[rel="icon"]')?.href ||document.querySelector('link[rel="shortcut icon"]')?.href ||"/favicon.ico";
+    const appName = document.title || "My App";
+    const icon =document.querySelector('link[rel="icon"]')?.href ||"/favicon.ico";
     const manifest = {
-      name: title,
-      short_name: title,
-      start_url: "./",
-      scope: "./",
+      name: appName,
+      short_name: appName,
+      start_url: location.origin + location.pathname,
       display: "standalone",
       background_color: "#ffffff",
       theme_color: "#ffffff",
       icons: [
         {
-          src: favicon,
+          src: icon,
           sizes: "512x512",
           type: "image/png"
         }
       ]
     };
-    const blob = new Blob([JSON.stringify(manifest)],{ type: "application/manifest+json" });
-    const manifestURL = URL.createObjectURL(blob);
-    const link = document.createElement("link");
-    link.rel = "manifest";
-    link.href = manifestURL;
-    document.head.appendChild(link);
-  }
-  if (!INSTALLABLE.initialized) {
-    INSTALLABLE.initialized = true;
-    INSTALLABLE.deferredPrompt = null;
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault();
-      INSTALLABLE.deferredPrompt = e;
-    });
-    window.addEventListener("appinstalled", () => {
-      localStorage.setItem("app-installed", "true");
-      INSTALLABLE.deferredPrompt = null;
-    });
-  }
-  if (!INSTALLABLE.deferredPrompt) {
+    const manifestBlob = new Blob([JSON.stringify(manifest)],{
+        type: "application/manifest+json"
+      }
+    );
+    const manifestURL = URL.createObjectURL(manifestBlob);
+    const manifestLink = document.createElement("link");
+    manifestLink.rel = "manifest";
+    manifestLink.href = manifestURL;
+    document.head.appendChild(manifestLink);
+  };
+  if ("serviceWorker" in navigator && !INSTALLABLE.swReady) {
+    const swCode = `
+      self.addEventListener("install", e => {
+        self.skipWaiting();
+      });
+      self.addEventListener("activate", e => {
+        self.clients.claim();
+      });
+      self.addEventListener("fetch", e => {});
+    `;
+    const swBlob = new Blob([swCode],{
+        type: "application/javascript"
+      }
+    );
+    const swURL = URL.createObjectURL(swBlob);
+    try {
+      await navigator.serviceWorker.register(swURL);
+      INSTALLABLE.swReady = true;
+    } catch(e) {
+      console.log("Service worker failed", e);
+    };
+  };
+  if (!INSTALLABLE.started) {
+    INSTALLABLE.started = true;
+    INSTALLABLE.prompt = null;
+    window.addEventListener("beforeinstallprompt",e => {
+        e.preventDefault();
+        INSTALLABLE.prompt = e;
+      }
+    );
+    window.addEventListener("appinstalled",() => {
+        localStorage.setItem(
+          "app-installed",
+          "true"
+        );
+        INSTALLABLE.prompt = null;
+      }
+    );
+  };
+  if (!INSTALLABLE.prompt) {
+    console.log("Install not available yet");
     return false;
-  }
-  INSTALLABLE.deferredPrompt.prompt();
-  const { outcome } = await INSTALLABLE.deferredPrompt.userChoice;
-  if (outcome === "accepted") {
-    localStorage.setItem("app-installed", "true");
-    INSTALLABLE.deferredPrompt = null;
+  };
+  INSTALLABLE.prompt.prompt();
+  const result =await INSTALLABLE.prompt.userChoice;
+  if (result.outcome === "accepted") {
+    localStorage.setItem("app-installed","true");
     return true;
   }
   return false;
 };
 if (localStorage.getItem("ENV") === "WEB" ) {
-    await INSTALLABLE();
+    INSTALLABLE();
 }; 
 if (TITLE === "EliteBuilder"||STATUS) {
     RUNNER();
