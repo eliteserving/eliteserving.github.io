@@ -24,13 +24,13 @@ export const PAYMENTS=()=>{
 
                 <div class="OptionOne">
 
+                    <img class="OptionImage" src="https://eliteserving.github.io/START/ASSETS/IMAGES/android.png"/>
+
                     <header>
 
                         <h1 class="Names">Mobile Apps</h1>
 
                     </header>
-
-                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/android.png"/>
 
                     <button  id="Android"  class="Pay">Pay Now</button>
 
@@ -38,13 +38,13 @@ export const PAYMENTS=()=>{
 
                 <div class="OptionOne">
 
+                    <img class="OptionImage" src="https://eliteserving.github.io/START/ASSETS/IMAGES/Desktop.webp"/>
+
                     <header>
 
                         <h1 class="Names">Desktop Apps </h1>
 
                     </header>
-
-                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/Desktop.webp"/>
 
                     <button id="Desktop"  class="Pay">Pay Now</button>
 
@@ -52,13 +52,13 @@ export const PAYMENTS=()=>{
 
                 <div class="OptionOne">
 
+                    <img class="OptionImage" src="https://eliteserving.github.io/START/ASSETS/IMAGES/web.webp"/>
+
                     <header>
 
                         <h1 class="Names">Websites </h1>
 
                     </header>
-
-                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/web.webp"/>
 
                     <button id="Web" class="Pay">Pay Now</button>
 
@@ -66,13 +66,13 @@ export const PAYMENTS=()=>{
 
                 <div class="OptionOne">
 
+                    <img class="OptionImage"   src="https://eliteserving.github.io/START/ASSETS/IMAGES/others.webp"/>
+
                     <header>
 
                         <h1 class="Names">Other Services </h1>
 
                     </header>
-
-                    <img src="https://eliteserving.github.io/START/ASSETS/IMAGES/others.webp"/>
 
                     <button id="Others"  class="Pay">Pay Now</button>
 
