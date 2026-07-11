@@ -4,6 +4,7 @@ export const ANDROIDPAY=(DataHolder)=>{
     SpecialPayments.style.display="block";
 
     DataHolder.innerHTML=`
+        <br>
         <h1>MOBILE APP PURCHASE</h1>
         <br>
         <p>Elite Robust Ontology ,We Provide Three Types Of Mobile Apps To The Client Basing On the Package Package Paid.</p>
