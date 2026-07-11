@@ -15,7 +15,7 @@ export const DESKTOPPAY=(DataHolder)=>{
         <br>
         <h2>Price:UGX 800,0000</h2>
         <br>
-        <p>Enter Phone Number Below to Purchase Open App.</p>
+        <p class="NameEnter">Enter Phone Number Below to Purchase Open App.</p>
         <br>
         <input type="tel" placeholder="Enter Payment Phone Number">
         <br><br>
@@ -27,7 +27,7 @@ export const DESKTOPPAY=(DataHolder)=>{
         <br>
         <h2>Price:UGX 1,000,0000</h2>
         <br>
-        <p>Enter Phone Number Below to Purchase Closed App.</p>
+        <p class="NameEnter">Enter Phone Number Below to Purchase Closed App.</p>
         <br>
         <input type="tel" placeholder="Enter Payment Phone Number">
         <br><br>
@@ -39,7 +39,7 @@ export const DESKTOPPAY=(DataHolder)=>{
         <br>
         <h2>Price:UGX 1,200,0000</h2>
         <br>
-        <p>Enter Phone Number Below to Purchase Hosted App.</p>
+        <p class="NameEnter">Enter Phone Number Below to Purchase Hosted App.</p>
         <br>
         <input type="tel" placeholder="Enter Payment Phone Number">
         <br><br>
