@@ -98,7 +98,7 @@ export const PAYMENTS=()=>{
 
             <br><br> <br><br>
 
-            <p>@Elite Robust Ontology,2026</p>
+            <p class="CompanyName">@Elite Robust Ontology,2026</p>
 
             <br><br> <br><br>
 
@@ -125,5 +125,5 @@ export const PAYMENTS=()=>{
     const Web=document.querySelector("#Web").addEventListener("click",()=>{WEBPAY(DataHolder);});
     const Others=document.querySelector("#Others").addEventListener("click",()=>{OTHERPAY(DataHolder);});
     const IdPay=document.querySelector("#IdPay").addEventListener("click",()=>{IDPAY();});
-    ANDROIDPAY(DataHolder);
+    //ANDROIDPAY(DataHolder);
 };
