@@ -44,7 +44,7 @@ export const ANDROIDPAY=(DataHolder)=>{
         <input type="tel" placeholder="Enter Payment Phone Number">
         <br><br>
         <button id="IdPay">Order Hosted App</button>
-        <br><br><br><br>
+        <br><br><br><br><br><br>
     `;
 
 };
