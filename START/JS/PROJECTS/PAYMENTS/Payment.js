@@ -80,9 +80,7 @@ export const PAYMENTS=()=>{
 
             </div>
 
-            <br>
-
-            <br>
+            <br><br><br>
 
             <h1>Direct Pay</h1>
 
