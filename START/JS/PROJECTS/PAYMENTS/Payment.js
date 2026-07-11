@@ -26,7 +26,7 @@ export const PAYMENTS=()=>{
 
                     <header>
 
-                        <h1 class="Names">Android Apps</h1>
+                        <h1 class="Names">Mobile Apps</h1>
 
                     </header>
 
@@ -125,4 +125,5 @@ export const PAYMENTS=()=>{
     const Web=document.querySelector("#Web").addEventListener("click",()=>{WEBPAY(DataHolder);});
     const Others=document.querySelector("#Others").addEventListener("click",()=>{OTHERPAY(DataHolder);});
     const IdPay=document.querySelector("#IdPay").addEventListener("click",()=>{IDPAY();});
+    ANDROIDPAY(DataHolder);
 };
