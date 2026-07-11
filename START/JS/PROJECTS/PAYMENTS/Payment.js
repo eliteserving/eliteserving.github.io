@@ -16,7 +16,7 @@ export const PAYMENTS=()=>{
 
             <br>
 
-            <h1 class="Serviecs" >Please Choose Service</h1>
+            <h1 class="Serviecs" >Services Provided</h1>
             
             <br>
 
