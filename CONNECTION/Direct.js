@@ -74,6 +74,8 @@ const PROJECTCONNECTOR=()=>{
             break;
         case "Doctor_Mjomba_Ali":PROJECTLOADER("MJOMBA");
             break; 
+        case "Elite_Monitoring":PROJECTLOADER("MONITORING");
+            break; 
         default:
             break;
     };
