@@ -1,5 +1,5 @@
 DISPLAY("",`
 
-    ${sessionStorage.getItem("theme")}
+    <h1>MONITORING ANDROID</h1>
     
-`)
+`);
