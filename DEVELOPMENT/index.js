@@ -1,17 +1,17 @@
 const MOBILEVIEW=()=>{
-
-  HEADERVIEWSPAGE((DATA)=>{
-
-    LEFTTEXT(DATA,"Doctor Mjomba Ali",()=>{
-
-    });
-
-  },()=>{
-
-  });
-
+  const LOADDATA={
+    home: () => {MJOMBALIWEBSTART();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    MJOMBALIWEBSTART();
+  }); 
 };
 const DESKTOPVIEW=()=>{
-
+  const LOADDATA={
+    home: () => {MJOMBALIWEBSTART();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    MJOMBALIWEBSTART();
+  }); 
 };
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});

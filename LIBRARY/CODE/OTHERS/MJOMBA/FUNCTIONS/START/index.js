@@ -1,3 +1,5 @@
-export const MJOMBALISTART=()=>{
+export const MJOMBALIWEBSTART=()=>{
+
+    VIEW(()=>{MJOMBALIWEBMOBILEHOMEPAGE();},()=>{MJOMBALIWEBMOBILEHOMEPAGE();});
 
 };
