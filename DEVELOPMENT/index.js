@@ -1,19 +1,17 @@
 const MOBILEVIEW=()=>{
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  };
-  LINKTRACKER(LOADDATA,()=>{
-    SHYRAJCLOTHESAPI();
-    SHYLANSIRAJANDROIDSTARTPAGE();
+
+  HEADERVIEWSPAGE((DATA)=>{
+
+    LEFTTEXT(DATA,"Doctor Mjomba Ali",()=>{
+
+    });
+
+  },()=>{
+
   });
+
 };
 const DESKTOPVIEW=()=>{
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  };
-  LINKTRACKER(LOADDATA,()=>{
-    SHYRAJCLOTHESAPI();
-    SHYLANSIRAJANDROIDSTARTPAGE();
-  }); 
+
 };
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
