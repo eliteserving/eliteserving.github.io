@@ -4,7 +4,7 @@ const MOBILEVIEW=()=>{
   };
   LINKTRACKER(LOADDATA,()=>{
     MJOMBALIWEBSTART();
-  }); 
+  });
 };
 const DESKTOPVIEW=()=>{
   const LOADDATA={
