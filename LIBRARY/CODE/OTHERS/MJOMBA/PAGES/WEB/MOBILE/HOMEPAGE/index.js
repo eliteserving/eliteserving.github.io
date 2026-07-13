@@ -1,9 +1,18 @@
 export const MJOMBALIWEBMOBILEHOMEPAGE=()=>{
 
-    DISPLAY("",`
+    HEADERVIEWSPAGE((DATA)=>{
 
-        <h1>HOME PAGE</h1>
+        LEFTTEXT(DATA,"Doctor Mjomba Ali",()=>{
 
-    `);
+        });
+
+        
+
+
+    },()=>{
+
+
+
+    });
 
 };
