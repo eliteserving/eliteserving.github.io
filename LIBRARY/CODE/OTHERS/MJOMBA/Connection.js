@@ -1,3 +1,5 @@
+import { MJOMBALISTART } from "./FUNCTIONS/START/index.js";
+
 export const MJOMBAALIPROJECT=()=>{
 const DATA=`
 `;
