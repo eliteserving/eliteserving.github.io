@@ -1,5 +1,6 @@
 import { CINEFYPROJECT } from "./OTHERS/CINEFY/Connection.js";
 import { MAINPROJECT } from "./OTHERS/MAIN/Connection.js";
+import { MJOMBAALIPROJECT } from "./OTHERS/MJOMBA/Connection.js";
 import { NAWERITENATPROJECT } from "./OTHERS/NAWERITENAT/Connection.js";
 import { NOORPROJECT } from "./OTHERS/NOOR/Connection.js";
 import { FEATURESPROJECT } from "./OTHERS/PROJECT/Connection.js";
@@ -20,6 +21,8 @@ export const FEATURES=()=>{
         case "ShyLanSirajFashionHub":SHYLANSIRAJPROJECT();
             break;
         case "NaweriTenat":NAWERITENATPROJECT();
+            break;
+        case "Doctor_Mjomba_Ali":MJOMBAALIPROJECT();
             break;
         default:FEATURESPROJECT();
             break;
