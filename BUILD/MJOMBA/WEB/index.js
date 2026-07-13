@@ -1,7 +1,17 @@
-DISPLAY("",`
-
-    <h1>DOCTOR MJOMBA ALI</h1>
-
-    <p>Ready To Serve You</p>
-    
-`);
+const MOBILEVIEW=()=>{
+  const LOADDATA={
+    home: () => {MJOMBALIWEBSTART();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    MJOMBALIWEBSTART();
+  }); 
+};
+const DESKTOPVIEW=()=>{
+  const LOADDATA={
+    home: () => {MJOMBALIWEBSTART();},
+  };
+  LINKTRACKER(LOADDATA,()=>{
+    MJOMBALIWEBSTART();
+  }); 
+};
+VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
