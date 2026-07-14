@@ -70,10 +70,6 @@ const PROJECTCONNECTOR=()=>{
             break; 
         case "EliteManager":PROJECTLOADER("MANAGER");
             break; 
-        case "Qel_Medistore_Limited":PROJECTLOADER("QEL");
-            break;
-        case "Doctor_Mjomba_Ali":PROJECTLOADER("MJOMBA");
-            break; 
         case "Elite_Monitoring":PROJECTLOADER("MONITORING");
             break; 
         default:
