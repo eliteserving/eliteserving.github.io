@@ -1,7 +1,0 @@
-let QELMEDISTOREDATABASELINK;
-if (localStorage.getItem("Native")) {
-    QELMEDISTOREDATABASELINK = "''";
-} else {
-    QELMEDISTOREDATABASELINK = "";
-};
-export { QELMEDISTOREDATABASELINK };
