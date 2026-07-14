@@ -1,17 +1,17 @@
 const MOBILEVIEW=()=>{
   const LOADDATA={
-    home: () => {MJOMBALIWEBSTART();},
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
   };
   LINKTRACKER(LOADDATA,()=>{
-    MJOMBALIWEBSTART();
+    WEBMAINSTARTPAGE();
   });
 };
 const DESKTOPVIEW=()=>{
   const LOADDATA={
-    home: () => {MJOMBALIWEBSTART();},
+    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
   };
   LINKTRACKER(LOADDATA,()=>{
-    MJOMBALIWEBSTART();
-  }); 
+    WEBMAINSTARTPAGE();
+  });
 };
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
