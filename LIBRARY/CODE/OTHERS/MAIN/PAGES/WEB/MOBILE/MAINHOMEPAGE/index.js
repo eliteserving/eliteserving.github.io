@@ -1,135 +1,24 @@
 export const WEBMOBILEMAINHOMEPAGE=()=>{
-
     HEADERVIEWSPAGE((HOLDER)=>{
-
-        LEFTICON(HOLDER,ELITEROBUSTONTOLOGYLOGO,ELITEROBUSTONTOLOGYLOGO,()=>{
-
-        });
-
-        HEADER(HOLDER,"Elite Robust Ontology",()=>{
-
-        });
-
-        RIGHTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,()=>{
-
-        });
-
+        WEBMAINMOBILEHEADERPAGE(HOLDER);
     },(HOLDER)=>{
-
+        VIEWS(HOLDER,(DATA)=>{WIDTH(DATA,"90%");HEIGHT(DATA,"auto");MARGIN(DATA,"5%");BORDERRADIUS(DATA,"10px");IMAGE(DATA,ELITEROBUSTONTOLOGYLOGO,()=>{});});
         BREAK(HOLDER,()=>{});
-
-        HEADER(HOLDER,"Welcome",()=>{
-
-        });
-
+        HEADER(HOLDER,"WELCOME",(DATA)=>{FONTSIZE(DATA,"20px");});
         BREAK(HOLDER,()=>{});
-
-        const EliteMessage="Elite Robust Ontology is a Software Development Located In Mbale,Uganda.";
-
-        LEFTTEXT(HOLDER,EliteMessage,()=>{
-
-        });
-
+        LEFTTEXT(HOLDER,"Elite Robust Ontology Is A Software Development Company Located In Mbale Uganda Thats Ventures In Development of Mobile Applications,Desktop Applications,Website Development And System Intergrations.",()=>{});
         BREAK(HOLDER,()=>{});
-
-        INLINEVIEW(HOLDER,(HOLDEES)=>{
-
-            HEIGHT(HOLDEES,"50px");
-
-            BUTTON(HOLDEES,"Imagine",(BTN)=>{
-
-                BACKGROUND(BTN,"green");  
-                WIDTH(BTN,"30%");
-
-            });
-
-            BUTTON(HOLDEES,"Innovate",(BTN)=>{
-
-                BACKGROUND(BTN,"teal");
-                WIDTH(BTN,"35%");
-
-            });
-
-            BUTTON(HOLDEES,"Inspire",(BTN)=>{
-
-                BACKGROUND(BTN,"green");
-                WIDTH(BTN,"30%");
-
-            });
-            
-        });
-
+        HEADER(HOLDER,"IMAGINE",(DATA)=>{FONTSIZE(DATA,"20px");});
         BREAK(HOLDER,()=>{});
-
+        LEFTTEXT(HOLDER,"Most Clients Imagine and Only End There With Future Ideas That Can Change Or Better the Lives Of A Community Or An Individual,So Don't Just Imagine and Sit Back,Let Elite Robust Ontology Get Your Idea From Imagination to Innovations.",()=>{});
         BREAK(HOLDER,()=>{});
-
-        HEADER(HOLDER,"VENTURES",()=>{
-
-        });
-
-        const EliteMessageTwo="We Venture In The Following Sectors Of Software Development As Stated Below.";
-
-        LEFTTEXT(HOLDER,EliteMessageTwo,()=>{
-
-        });
-
+        HEADER(HOLDER,"INNOVATE",(DATA)=>{FONTSIZE(DATA,"20px");});
         BREAK(HOLDER,()=>{});
-
-        LEFTTEXT(HOLDER,"Website Development.",()=>{
-
-        });
-
-        LEFTTEXT(HOLDER,"Mobile App Development.",()=>{
-
-        });
-
-        LEFTTEXT(HOLDER,"System Development.",()=>{
-
-        });
-
-        LEFTTEXT(HOLDER,"Desktop Software  Development.",()=>{
-
-        });
-
-        BREAK(HOLDER,()=>{
-
-        });
-
-        HEADER(HOLDER,"Contact Us",()=>{
-
-        });
-
-        BREAK(HOLDER,()=>{
-
-        });
-
-        INLINEVIEW(HOLDER,(HOLDEES)=>{
-
-            HEIGHT(HOLDEES,"50px");
-
-            BUTTON(HOLDEES,"Facebook",(BTN)=>{
-
-                BACKGROUND(BTN,BLUE);  
-                WIDTH(BTN,"30%");
-
-            });
-
-            BUTTON(HOLDEES,"Instagram",(BTN)=>{
-
-                BACKGROUND(BTN,BROWN);
-                WIDTH(BTN,"35%");
-
-            });
-
-            BUTTON(HOLDEES,"X",(BTN)=>{
-
-                BACKGROUND(BTN,BLACK);
-                WIDTH(BTN,"20%");
-
-            });
-            
-        });
-
+        LEFTTEXT(HOLDER,"Elite Robust Ontology Can Enable You To See Your Dream From the Mind Become A Reality With Our Cloud Native Technology That We Use To Build The Most Influencial Softwares In The World,Lets Innovate The Best Solutions To Problems Using Technology So as We can Change A Person Or Community and Set A Phase Of Inspiration.",()=>{});
+        BREAK(HOLDER,()=>{});
+        HEADER(HOLDER,"INSPIRE",(DATA)=>{FONTSIZE(DATA,"20px");});
+        BREAK(HOLDER,()=>{});
+        LEFTTEXT(HOLDER,"Elite Robust Ontology Will Set The Pase For The Rest to Follow After They Seee Our Innovations Because They Are World Changing Revolutionary Types Of Softwares.",()=>{});
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
     });
-    
 };
