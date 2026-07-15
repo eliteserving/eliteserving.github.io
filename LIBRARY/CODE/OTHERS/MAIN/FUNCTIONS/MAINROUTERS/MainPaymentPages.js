@@ -1,0 +1,3 @@
+export const MAINPAYMENT=()=>{
+    VIEW(()=>{WEBMOBILEMAINPAYEMNT();},()=>{WEBDESKTOPMAINHOMEPAGE();});
+};

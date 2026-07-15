@@ -1,6 +1,6 @@
 const MOBILEVIEW=()=>{
   const LOADDATA={
-    home: () => {WEBMAINSTARTPAGE();}
+    payment: () => {MAINPAYMENT();}
   }
   LINKTRACKER(LOADDATA,()=>{
     WEBMAINSTARTPAGE();
