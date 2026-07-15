@@ -1,27 +1,10 @@
 export const LINKTRACKER = (PAGES, CALLBACK) => {
-  const query = window.location.search.slice(1);
-
-  if (query && PAGES[query]) {
-    PAGES[query]();
+  const query = window.location.search.slice(1).trim();
+  const path = window.location.pathname.replace(/^\/+/, "").trim();
+  const route = (query || path || "home").toLowerCase();
+  if (PAGES[route]) {
+    PAGES[route]();
   } else {
     CALLBACK();
-  }
+  };
 };
-
-/*
-
-  const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    contactus: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    profile: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    saved: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-    catergories: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  }
-
-  LINKTRACKER(LOADDATA,()=>{
-
-    SHYLANSIRAJANDROIDSTARTPAGE();
-
-  });
-
-*/
