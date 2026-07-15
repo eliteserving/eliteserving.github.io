@@ -1,17 +1,18 @@
 const MOBILEVIEW=()=>{
   const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  };
+    home: () => {WEBMAINSTARTPAGE();}
+  }
   LINKTRACKER(LOADDATA,()=>{
     WEBMAINSTARTPAGE();
   });
 };
+
 const DESKTOPVIEW=()=>{
   const LOADDATA={
-    home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
-  };
+    home: () => {WEBMAINSTARTPAGE();}
+  }
   LINKTRACKER(LOADDATA,()=>{
     WEBMAINSTARTPAGE();
-  });
+  }); 
 };
 VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
