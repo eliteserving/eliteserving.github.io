@@ -3,7 +3,9 @@ export const WEBMAINHOMEMOBILESOCIALMEDIAPAGES=(HOLDER)=>{
     BREAK(HOLDER,()=>{});
     INLINEVIEW(HOLDER,(DATA)=>{
         ICONTEXT(DATA,COLOREDFACEBOOKICON,COLOREDFACEBOOKICON,"FaceBook",(DATATA)=>{
-            
+            CLICK(DATATA,()=>{
+                WEBSITE("https://www.facebook.com/share/18zEbMD4o4/");
+            });
         });
         ICONTEXT(DATA,COLOREDINSTAGRAM,COLOREDINSTAGRAM,"Instagram",(DATATA)=>{
             CLICK(DATATA,()=>{
