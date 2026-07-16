@@ -40,17 +40,13 @@ const PROJECTCONNECTOR=()=>{
         case "Cinefy":PROJECTLOADER("CINEFY");
             break;
         case "Noor_Charity_And_Orphanage_Organisation":PROJECTLOADER("NOOR");
-            break;
-        case "Tafyz_Craft_Limited":PROJECTLOADER("TAFYZ");
-            break;   
+            break; 
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
             break;  
         case "NaweriTenat":PROJECTLOADER("NAWERITENAT");
             break; 
         case "EliteManager":PROJECTLOADER("MANAGER");
-            break; 
-        case "Elite_Monitoring":PROJECTLOADER("MONITORING");
-            break; 
+            break;  
         default:
             break;
     };
