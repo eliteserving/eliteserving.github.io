@@ -1,3 +1,39 @@
 export const WEBMAINMOBILESERVICESPAGE=(HOLDER)=>{
-    
+    HEADER(HOLDER,"SERVICES OFFERED",(DATA)=>{FONTSIZE(DATA,"20px");});
+    BREAK(HOLDER,()=>{});
+    VIEWS(HOLDER,(DATA)=>{
+        WIDTH(DATA,"90%");
+        HEIGHT(DATA,"400px");
+        BACKGROUND(DATA,"transparent");
+        BORDERRADIUS(DATA,"10px");
+        OVERFLOW(DATA,"hidden");
+        TABLEVIEW(DATA,(DATATA)=>{
+            WIDTH(DATATA,"45%");
+            HEIGHT(DATATA,"200px");
+            BACKGROUND(DATATA,"transparent");
+            BORDERRADIUS(DATATA,"10px");
+            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        });
+        TABLEVIEW(DATA,(DATATA)=>{
+            WIDTH(DATATA,"45%");
+            HEIGHT(DATATA,"200px");
+            BACKGROUND(DATATA,"transparent");
+            BORDERRADIUS(DATATA,"10px");
+            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        });
+        TABLEVIEW(DATA,(DATATA)=>{
+            WIDTH(DATATA,"45%");
+            HEIGHT(DATATA,"150px");
+            BACKGROUND(DATATA,"transparent");
+            BORDERRADIUS(DATATA,"10px");
+            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        });
+        TABLEVIEW(DATA,(DATATA)=>{
+            WIDTH(DATATA,"45%");
+            HEIGHT(DATATA,"150px");
+            BACKGROUND(DATATA,"transparent");
+            BORDERRADIUS(DATATA,"10px");
+            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        });
+    });
 };
