@@ -4,10 +4,8 @@ export const WEBMOBILEMAINHOMEPAGE=()=>{
     },(HOLDER)=>{
         VIEWS(HOLDER,(DATA)=>{WIDTH(DATA,"90%");HEIGHT(DATA,"auto");MARGIN(DATA,"5%");BORDERRADIUS(DATA,"10px");IMAGE(DATA,ELITEROBUSTONTOLOGYLOGO,()=>{});});
         MAINWEBMOBILEHOMEWELCOMEPAGE(HOLDER);
-        
-        BREAK(HOLDER,()=>{});
         HEADER(HOLDER,"IMAGINE",(DATA)=>{FONTSIZE(DATA,"20px");});
-        BREAK(HOLDER,()=>{});
+      
         LEFTTEXT(HOLDER,"Most Clients Imagine and Only End There With Future Ideas That Can Change Or Better the Lives Of A Community Or An Individual,So Don't Just Imagine and Sit Back,Let Elite Robust Ontology Get Your Idea From Imagination to Innovations.",()=>{});
         BREAK(HOLDER,()=>{});
         HEADER(HOLDER,"INNOVATE",(DATA)=>{FONTSIZE(DATA,"20px");});
