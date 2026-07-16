@@ -2,13 +2,16 @@ export const WEBMAINHOMEMOBILESOCIALMEDIAPAGES=(HOLDER)=>{
     HEADER(HOLDER,"CONTACT US VIA",(DATA)=>{FONTSIZE(DATA,"20px");});
     BREAK(HOLDER,()=>{});
     INLINEVIEW(HOLDER,(DATA)=>{
-        ICONTEXT(DATA,COLOREDFACEBOOKICON,COLOREDFACEBOOKICON,"FaceBook",()=>{
+        ICONTEXT(DATA,COLOREDFACEBOOKICON,COLOREDFACEBOOKICON,"FaceBook",(DATATA)=>{
             
         });
-        ICONTEXT(DATA,COLOREDINSTAGRAM,COLOREDINSTAGRAM,"Instagram",()=>{
+        ICONTEXT(DATA,COLOREDINSTAGRAM,COLOREDINSTAGRAM,"Instagram",(DATATA)=>{
 
         });
-        ICONTEXT(DATA,WHITEYOUTUBEICON,BLACKYOUTUBEICON,"YouTube",()=>{
+        ICONTEXT(DATA,WHITEYOUTUBEICON,BLACKYOUTUBEICON,"YouTube",(DATATA)=>{
+            CLICK(DATATA,()=>{
+                WEBSITE("https://www.youtube.com/@eliterobustontology")
+            })
             
         });
     });
