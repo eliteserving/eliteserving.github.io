@@ -6,9 +6,7 @@ export const WEBMOBILEMAINHOMEPAGE=()=>{
         MAINWEBMOBILEHOMEWELCOMEPAGE(HOLDER);
         MAINWEBMOBILEHOMEIMAGINEPAGE(HOLDER);
         MAINWEBMOBILEHOMEINNOVATEPAGE(HOLDER);
-        HEADER(HOLDER,"INSPIRE",(DATA)=>{FONTSIZE(DATA,"20px");});
+        MAINWEBMOBILEHOMEINSPIREPAGE(HOLDER);
         BREAK(HOLDER,()=>{});
-        LEFTTEXT(HOLDER,"Elite Robust Ontology Will Set The Pase For The Rest to Follow After They Seee Our Innovations Because They Are World Changing Revolutionary Types Of Softwares.",()=>{});
-        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
     });
 };
