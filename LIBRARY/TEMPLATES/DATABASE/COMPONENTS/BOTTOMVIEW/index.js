@@ -1,3 +1,28 @@
-export const BOTTOMVIEW=()=>{
-
+export const BOTTOMVIEW=(WORD,CALLBACK)=>{
+    VIEWS("",(DATA)=>{
+        CLEAR(DATA);
+        ABSOLUTE(DATA);
+        OVERFLOW(DATA,"hidden");
+        WIDTH(DATA,"100%");
+        HEIGHT(DATA,"");
+        COMPONENTMODE(DATA);
+        HEAD(DATA,(DATATA)=>{
+            RIGHT(DATA,"0");
+            LEFTTEXT(DATATA,WORD||"Index",()=>{});
+            RIGHTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
+                TRANSFORM(DATATE,"270deg");
+                CLICK(DATATE,()=>{
+                    DISPLAYED(DATA,"none");
+                });
+            });
+        });
+        VIEWS(DATA,(DATATA)=>{
+            ABSOLUTE(DATATA);
+            BACKGROUND(DATATA,"transparent");
+            HEIGHT(DATATA,"auto");
+            TOP(DATATA,"50px");
+            BOTTOM(DATATA,"0px");
+            CALLBACK(DATATA);
+        });
+    });
 };

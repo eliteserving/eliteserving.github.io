@@ -3,37 +3,49 @@ export const WEBMAINMOBILESERVICESPAGE=(HOLDER)=>{
     BREAK(HOLDER,()=>{});
     VIEWS(HOLDER,(DATA)=>{
         WIDTH(DATA,"90%");
-        HEIGHT(DATA,"400px");
+        HEIGHT(DATA,"450px");
         BACKGROUND(DATA,"transparent");
         BORDERRADIUS(DATA,"10px");
         OVERFLOW(DATA,"hidden");
-        TABLEVIEW(DATA,(DATATA)=>{
-            WIDTH(DATATA,"45%");
-            HEIGHT(DATATA,"200px");
-            BACKGROUND(DATATA,"transparent");
-            BORDERRADIUS(DATATA,"10px");
-            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        VIEWBOTTOMHOLDER(DATA,MAINMOBILEDEVELOPMENT,"Mobile Apps",(DATA)=>{ 
+            WIDTH(DATA,"45%");
+            HEIGHT(DATA,"200px");
+            INLINETABLE(DATA);
+            CLICK(DATA,()=>{
+                BOTTOMVIEW("Mobile Apps",(DATATA)=>{
+                    LEFTTEXT(DATATA,"Elite Robust Ontology Uses Cloud Native State Of the Art in Technology to Power Your Mobile App ,Wether Its For IOS Operating System Or Android Operating System.",()=>{});
+                });
+            });
         });
-        TABLEVIEW(DATA,(DATATA)=>{
-            WIDTH(DATATA,"45%");
-            HEIGHT(DATATA,"200px");
-            BACKGROUND(DATATA,"transparent");
-            BORDERRADIUS(DATATA,"10px");
-            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        VIEWBOTTOMHOLDER(DATA,MAINWEBSITEDEVELOPMENTIMAGE,"Web Sites",(DATA)=>{ 
+            WIDTH(DATA,"45%");
+            HEIGHT(DATA,"200px");
+            INLINETABLE(DATA);
+            CLICK(DATA,()=>{
+                BOTTOMVIEW("Web Sites",(DATATA)=>{
+                    
+                });
+            });
         });
-        TABLEVIEW(DATA,(DATATA)=>{
-            WIDTH(DATATA,"45%");
-            HEIGHT(DATATA,"150px");
-            BACKGROUND(DATATA,"transparent");
-            BORDERRADIUS(DATATA,"10px");
-            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        VIEWBOTTOMHOLDER(DATA,MAINDESKTOPDEVELOPMENTIMAGE,"Desktop Apps",(DATA)=>{ 
+            WIDTH(DATA,"45%");
+            HEIGHT(DATA,"200px");
+            INLINETABLE(DATA);
+            CLICK(DATA,()=>{
+                BOTTOMVIEW("Desktop Apps",(DATATA)=>{
+
+                });
+            });
         });
-        TABLEVIEW(DATA,(DATATA)=>{
-            WIDTH(DATATA,"45%");
-            HEIGHT(DATATA,"150px");
-            BACKGROUND(DATATA,"transparent");
-            BORDERRADIUS(DATATA,"10px");
-            IMAGE(DATATA,ELITEROBUSTONTOLOGYLOGO,()=>{});
+        VIEWBOTTOMHOLDER(DATA,MAINSYSTEMDEVELOPMENTIMAGE,"Systems Apps",(DATA)=>{ 
+            WIDTH(DATA,"45%");
+            HEIGHT(DATA,"200px");
+            INLINETABLE(DATA);
+            CLICK(DATA,()=>{
+                BOTTOMVIEW("Systems Intergrations",(DATATA)=>{
+                    
+                });
+            });
         });
     });
 };

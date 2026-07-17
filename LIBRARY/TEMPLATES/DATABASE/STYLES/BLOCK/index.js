@@ -1,3 +1,3 @@
-export const BLOCK=()=>{
-
+export const BLOCK=(HOLDER)=>{
+    DISPLAYED(HOLDER,"block");
 };

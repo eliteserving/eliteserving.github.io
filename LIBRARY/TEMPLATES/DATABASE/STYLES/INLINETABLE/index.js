@@ -1,3 +1,3 @@
-export const INLINETABLE=()=>{
-
+export const INLINETABLE=(HOLDER)=>{
+    DISPLAYED(HOLDER,"inline-table");
 };

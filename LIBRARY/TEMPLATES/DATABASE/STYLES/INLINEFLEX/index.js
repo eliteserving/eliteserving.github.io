@@ -1,3 +1,3 @@
-export const INLINEFLEX=()=>{
-
+export const INLINEFLEX=(HOLDER)=>{
+    DISPLAYED(HOLDER,"inline-flex");
 };

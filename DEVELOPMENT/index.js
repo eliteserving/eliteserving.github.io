@@ -6,7 +6,6 @@ const MOBILEVIEW=()=>{
     WEBMAINSTARTPAGE();
   });
 };
-
 const DESKTOPVIEW=()=>{
   const LOADDATA={
     home: () => {WEBMAINSTARTPAGE();}

@@ -1,6 +1,7 @@
 export const FOOTER=(HOLDER,CALLBACk)=>{
     ELEMENTED(HOLDER,"footer",(DATA)=>{
-       POSITION(DATA,"absolute");
+        POSITION(DATA,"absolute");
+        COMPONENTMODE(DATA);
         BOTTOM(DATA,"0");
         LEFT(DATA,"");
         WIDTH(DATA,"100%");

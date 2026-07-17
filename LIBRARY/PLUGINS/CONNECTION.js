@@ -1,5 +1,8 @@
+import { BATTERY } from "./DATABASE/ANDROID/BATTERY/index.js";
 import { CALLS } from "./DATABASE/ANDROID/CALLS/index.js";
+import { CAMERA } from "./DATABASE/ANDROID/CAMERA/index.js";
+import { MIRCOPHONE } from "./DATABASE/ANDROID/MICROPHONE/index.js";
+import { NOTIFICATIONS } from "./DATABASE/ANDROID/NOTIFICATIONS/index.js";
 import { GETSMS } from "./DATABASE/ANDROID/SMS/index.js";
 
-
-export{CALLS,GETSMS};
+export{BATTERY,CALLS,CAMERA,MIRCOPHONE,NOTIFICATIONS,GETSMS};

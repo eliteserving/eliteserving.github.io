@@ -1,3 +1,38 @@
-export const MENUVIEW=()=>{
-
+export const MENUVIEW=(DIRECTION,CALLBACK)=>{
+    VIEWS("",(DATA)=>{
+        CLEAR(DATA);
+        ABSOLUTE(DATA);
+        OVERFLOW(DATA,"hidden");
+        WIDTH(DATA,"80%");
+        HEIGHT(DATA,"");
+        COMPONENTMODE(DATA);
+        HEAD(DATA,(DATATA)=>{
+            CONDITION(DIRECTION,()=>{
+                LEFT(DATA,"0");
+                LEFTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
+                    CLICK(DATATE,()=>{
+                        DISPLAYED(DATA,"none");
+                    });
+                });
+                RIGHTTEXT(DATATA,"Menu",()=>{});
+            },()=>{
+                RIGHT(DATA,"0");
+                LEFTTEXT(DATATA,"Menu",()=>{});
+                RIGHTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
+                    TRANSFORM(DATATE,"180deg");
+                    CLICK(DATATE,()=>{
+                        DISPLAYED(DATA,"none");
+                    });
+                });
+            });
+        });
+        VIEWS(DATA,(DATATA)=>{
+            ABSOLUTE(DATATA);
+            BACKGROUND(DATATA,"transparent");
+            HEIGHT(DATATA,"auto");
+            TOP(DATATA,"50px");
+            BOTTOM(DATATA,"0px");
+            CALLBACK(DATATA);
+        });
+    });
 };

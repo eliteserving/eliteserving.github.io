@@ -1,5 +1,6 @@
 export const HEAD=(HOLDER,CALLBACk)=>{
     ELEMENTED(HOLDER,"header",(DATA)=>{
+        COMPONENTMODE(DATA);
         POSITION(DATA,"absolute");
         TOP(DATA,"0");
         LEFT(DATA,"");
