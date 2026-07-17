@@ -8,10 +8,6 @@ export const BUTTON=(HOLDER,TEXT,CALLBACk)=>{
         DISPLAY(DATA,TEXT||"Click");
         FONTSIZE(DATA,"80%");
         CALLBACk(DATA);
-        CONDITION(sessionStorage.getItem("theme") === "dark",()=>{
-            COLOR(DATA,"white");
-        },()=>{
-            COLOR(DATA,"black");
-        });
+        TEXTCOMPOMODE(DATA);
     });
 };

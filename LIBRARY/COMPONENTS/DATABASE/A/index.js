@@ -1,5 +1,6 @@
 export const ANCHOR=(HOLDER,SOURCE,CALLBACk)=>{
     ELEMENTED(HOLDER,"a",(DATA)=>{
+        TEXTCOMPOMODE(DATA);
         SOURCEREF=(DATA,SOURCE);
         CALLBACk(DATA);
     });
