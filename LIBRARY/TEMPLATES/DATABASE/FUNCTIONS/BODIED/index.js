@@ -1,5 +1,5 @@
 export const BODIED=()=>{
-    APPSTART();PROTECT();ZOOM();WEBKIT();INSPECTION();
+    COMPONENTMODE(BODIER);APPSTART();PROTECT();ZOOM();WEBKIT();INSPECTION();
     CHECK(localStorage.getItem("FEATURES"),()=>{ROUTED(localStorage.getItem("FEATURES"));});
     CLICK(BODIER,()=>{
         SCREENWIDTH((Data)=>{
