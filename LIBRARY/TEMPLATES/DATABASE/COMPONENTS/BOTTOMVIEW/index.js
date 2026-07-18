@@ -9,7 +9,7 @@ export const BOTTOMVIEW=(WORD,CALLBACK)=>{
         HEAD(DATA,(DATATA)=>{
             RIGHT(DATA,"0");
             LEFTTEXT(DATATA,WORD||"Index",()=>{});
-            RIGHTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
+            RIGHTICON(DATATA,WHITECLOSEICON,BLACKCLOSEICON,(DATATE)=>{
                 TRANSFORM(DATATE,"270deg");
                 CLICK(DATATE,()=>{
                     DISPLAYED(DATA,"none");
