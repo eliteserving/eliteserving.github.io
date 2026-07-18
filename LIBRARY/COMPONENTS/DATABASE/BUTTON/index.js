@@ -1,7 +1,7 @@
 export const BUTTON=(HOLDER,TEXT,CALLBACk)=>{
     ELEMENTED(HOLDER,"button",(DATA)=>{
         MARGIN(DATA,"");
-        WIDTH(DATA,"auto");
+        WIDTH(DATA,"90%");
         HEIGHT(DATA,"50px");
         BORDERRADIUS(DATA,"5px");
         OUTLINE(DATA);

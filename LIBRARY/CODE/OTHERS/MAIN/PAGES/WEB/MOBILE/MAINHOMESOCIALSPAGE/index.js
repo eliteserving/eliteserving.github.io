@@ -18,5 +18,4 @@ export const WEBMAINHOMEMOBILESOCIALMEDIAPAGES=(HOLDER)=>{
             });
         });
     });
-    HEADER(HOLDER,"ELITE ROBUST ONTOLOGY-2026",(DATA)=>{FONTSIZE(DATA,"20px");});
 };

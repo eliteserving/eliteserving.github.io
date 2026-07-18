@@ -1,4 +1,4 @@
-export const WEBMAINHOMEMOBILECONTACTUSPAGE=(HOLDER)=>{
+export const WEBMAINHOMEMOBILECOMPLAINTPAGE=(HOLDER)=>{
     HEADER(HOLDER,"Fill The Form Below",()=>{});
     BREAK(HOLDER,()=>{});
     INPUT(HOLDER,"text","Enter Your Name",()=>{});
@@ -12,11 +12,11 @@ export const WEBMAINHOMEMOBILECONTACTUSPAGE=(HOLDER)=>{
         HEIGHT(DATA,"200px");
     });
     BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
-    BUTTON(HOLDER,"Send Message",(DATA)=>{
+    BUTTON(HOLDER,"FIle Complaint",(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"50px");
         BACKGROUND(DATA,"forestgreen");
     });
     BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
-    HEADER(HOLDER,"ELITE ROBUST ONTOLOGY - 2026",(DATA)=>{FONTSIZE(DATA,"20px");});
+    HEADER(HOLDER,"ELITE ROBUST ONTOLOGY-2026",(DATA)=>{FONTSIZE(DATA,"20px");});
 };

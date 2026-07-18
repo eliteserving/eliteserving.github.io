@@ -2,35 +2,35 @@ const STATUS="Active";
 const TITLE = document.title;
 const REJECTED="EliteBuilder";
 const RUNNER=()=>{
-    if (localStorage.getItem("Native")) {
-        if (TITLE === "EliteBuilder" ) {
-            const script = document.createElement("script");
-            script.type = "module";
-            script.defer=true;
-            script.src = "./CONNECTION/Direct.js";
-            document.head.appendChild(script);
-        } else {
-            const script = document.createElement("script");
-            script.type = "module";
-            script.defer=true;
-            script.src = "https://eliteserving.github.io/CONNECTION/Direct.js";
-            document.head.appendChild(script);
-        };
+  if (localStorage.getItem("Native")) {
+    if (TITLE === "EliteBuilder" ) {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.defer=true;
+      script.src = "./CONNECTION/Direct.js";
+      document.head.appendChild(script);
     } else {
-        if (TITLE === "EliteBuilder" ) {
-            const script = document.createElement("script");
-            script.type = "module";
-            script.defer=true;
-            script.src = "./CONNECTION/Live.js";
-            document.head.appendChild(script);
-        } else {
-            const script = document.createElement("script");
-            script.type = "module";
-            script.defer=true;
-            script.src = "https://eliteserving.github.io/CONNECTION/Live.js";
-            document.head.appendChild(script);
-        };
+      const script = document.createElement("script");
+      script.type = "module";
+      script.defer=true;
+      script.src = "https://eliteserving.github.io/CONNECTION/Direct.js";
+      document.head.appendChild(script);
     };
+  } else {
+    if (TITLE === "EliteBuilder" ) {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.defer=true;
+      script.src = "./CONNECTION/Live.js";
+      document.head.appendChild(script);
+    } else {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.defer=true;
+      script.src = "https://eliteserving.github.io/CONNECTION/Live.js";
+      document.head.appendChild(script);
+    };
+  };
 };
 const UPDATES=()=>{
   let Env;
@@ -46,120 +46,35 @@ const UPDATES=()=>{
   let Date="08th July Of 2026";
   const Body=document.querySelector("body");
   Body.innerHTML=`
-    <br>
-    <h1 style="color:brown">ATTENTION</h1>
-    <br>
-    <h2>${TITLE} Users:</h2>
-    <br>
-    <p>This is a Public Announcement That The Services of This ${Env||"Website"} are Temporarily Off Line Undergoing Maintaince and Updates.</p>
-    <br>
-    <h1 style="color:teal" >APOLOGIES</h1>
-    <br>
-    <p>We are Sorry For Any Inconviences Caused.</p>
-    <br>
-    <h1 style="color:orange" >EXPECTATIONS</h1>
-    <br>
-    <p>The ${Env},Will Be Back Online On <br> <br> <b style="color:forestgreen">${Date}.</b></p>
-    <br>
-    <h1>Elite Robust Ontology</h1>
-    <h2>Development Team </h2>
-    <p>All Rights Reserved.</p>
-    <br>
-    <a href="mailto:elitehosting09@gmail.com">Contact Us</a>
-    <br><br><br>
+    <div style="position:absolute;width:100%;height:100%;background:transparent;overflow:hidden;overflowY:auto;">
+      <br>
+      <h1 style="color:red;font-size:25px;">ATTENTION</h1>
+      <br>
+      <hr style="border:1px solid brown;">
+      <br>
+      <p style="width:90%;text-align:left;margin-left:5%;">This is a Public Announcement That The Services of This ${Env||"Website"} are Temporarily Off line Undergoing Maintaince and Updates.</p>
+      <br>
+      <h1 style="color:teal;font-size:20px;" >APOLOGIES</h1>
+      <br>
+      <p style="width:90%;text-align:left;margin-left:5%;">Sorry For Any Inconviences Caused.</p>
+      <br>
+      <h1 style="color:orange;font-size:20px;">EXPECTATIONS</h1>
+      <br>
+      <p style="width:90%;text-align:left;margin-left:5%;">The ${Env},Will Be Back Online On</p>
+      <br> 
+      <p><b style="color:forestgreen;font-size:23px;text-align:center;">${Date}.</b></p>
+      <br>
+      <h1>ELITE ROBUST ONTOLOGY</h1>
+      <br>
+      <p>All Rights Reserved.</p>
+      <br>
+      <hr style="border:1px solid brown;">
+      <br>
+      <a style="color:white;" href="mailto:elitehosting09@gmail.com">Contact Us</a><br><br><br><br>
+    <div>
   `;
-};
-async function INSTALLABLE() {
-  if (localStorage.getItem("app-installed") === "true") {
-    return true;
-  };
-  if (window.matchMedia("(display-mode: standalone)").matches ||window.navigator.standalone === true) {
-    localStorage.setItem("app-installed", "true");
-    return true;
-  };
-  if (!document.querySelector('link[rel="manifest"]')) {
-    const appName = document.title;
-    const manifest = {
-      name: appName,
-      short_name: appName,
-      start_url: location.origin + location.pathname,
-      display: "standalone",
-      background_color: "#ffffff",
-      theme_color: "#ffffff",
-      icons: [
-        {
-          src: "./logo.png",
-          sizes: "512x512",
-          type: "image/png"
-        }
-      ]
-    };
-    const manifestBlob = new Blob([JSON.stringify(manifest)],{
-        type: "application/manifest+json"
-      }
-    );
-    const manifestURL = URL.createObjectURL(manifestBlob);
-    const manifestLink = document.createElement("link");
-    manifestLink.rel = "manifest";
-    manifestLink.href = manifestURL;
-    document.head.appendChild(manifestLink);
-  };
-  if ("serviceWorker" in navigator && !INSTALLABLE.swReady) {
-    const swCode = `
-      self.addEventListener("install", e => {
-        self.skipWaiting();
-      });
-      self.addEventListener("activate", e => {
-        self.clients.claim();
-      });
-      self.addEventListener("fetch", e => {});
-    `;
-    const swBlob = new Blob([swCode],{
-        type: "application/javascript"
-      }
-    );
-    const swURL = URL.createObjectURL(swBlob);
-    try {
-      await navigator.serviceWorker.register(swURL);
-      INSTALLABLE.swReady = true;
-    } catch(e) {
-      console.log("Service worker failed", e);
-    };
-  };
-  if (!INSTALLABLE.started) {
-    INSTALLABLE.started = true;
-    INSTALLABLE.prompt = null;
-    window.addEventListener("beforeinstallprompt",e => {
-        e.preventDefault();
-        INSTALLABLE.prompt = e;
-      }
-    );
-    window.addEventListener("appinstalled",() => {
-      localStorage.setItem(
-        "app-installed",
-        "true"
-      );
-        INSTALLABLE.prompt = null;
-      }
-    );
-  };
-  if (!INSTALLABLE.prompt) {
-    console.log("Install not available yet");
-    return false;
-  };
-  INSTALLABLE.prompt.prompt();
-  const result =await INSTALLABLE.prompt.userChoice;
-  if (result.outcome === "accepted") {
-    localStorage.setItem("app-installed","true");
-    return true;
-  }
-  return false;
-};
-if (localStorage.getItem("ENV") === "WEB" ) {
-  INSTALLABLE();
 }; 
-if (TITLE === "EliteBuilder"||STATUS) {
-  RUNNER();
-} else {
+if (STATUS === "Active" ||TITLE === "EliteBuilder") {
+  RUNNER();}else{
   UPDATES();
 };

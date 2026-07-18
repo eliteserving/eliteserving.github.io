@@ -1,9 +1,4 @@
-export const WEBMOBILEMAINPAYEMNT=()=>{
+export const WEBMOBILEMAINPAYEMNT=(HOLDER)=>{
 
-    DISPLAY("",`
-
-        <h1>PAYMENTS</h1>
-        
-    `);
 
 };
