@@ -11,7 +11,7 @@ export const WEBMAINMOBILESERVICESPAGE=(HOLDER)=>{
             WIDTH(DATA,"45%");
             HEIGHT(DATA,"200px");
             INLINETABLE(DATA);
-            CLICK(DATA,()=>{BOTTOMVIEW("Mobile Apps",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/policies.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
+            CLICK(DATA,()=>{BOTTOMVIEW("Mobile Apps",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/Android.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
         });
         VIEWBOTTOMHOLDER(DATA,MAINWEBSITEDEVELOPMENTIMAGE,"Web Sites",(DATA)=>{ 
             WIDTH(DATA,"45%");
