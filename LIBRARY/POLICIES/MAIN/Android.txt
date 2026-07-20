@@ -1,1 +1,14 @@
-<h1>Android</h1>
+<h1>INTRODUCTION</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">We Use a In House Frame Work to Build All Our Mobile Apps That is Cloud Native System By Design That Elimating the Stress Of Over Releasing Many App Versions To The Client.<br> Our Cloud Native Technology Eases The Updating Process Of the Mobile App,We Can Update What is on the App without Delaying to Wait For PlayStore Or Apple Store Approval.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">Elite Robust Ontology Develops About Two Types Of Mobile Apps that are Mainly Below.</p>
+<br>
+<h1>Android Apps</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Android Apps These Are The Mostly Used Apps On Our Phone and These are Installed On the Following Types of Devices <br> <b style="margin-left:10%;">Samsung</b> <br> <b style="margin-left:10%;" >Tecno</b> <br> <b style="margin-left:10%;">Infinix</b> <br> <b style="margin-left:10%;">Itel</b> <br> <b style="margin-left:10%;">Idroid</b> <br> <b style="margin-left:10%;">Nokia</b> <br> <b style="margin-left:10%;">Xiamo</b> <br> <b style="margin-left:10%;">Oppo</b> <br> <b style="margin-left:10%;">Others Too</b>  </p>
+<br>
+<h1>IOS Apps </h1>
+<br>
+<p style="text-align:left;margin-left:5%;">These Are Mobile Apps That Are Only Installed On Iphones.</p>
+<br>
