@@ -1,6 +1,6 @@
 <h1>INTRODUCTION</h1>
 <br>
-<p style="text-align:left;margin-left:5%;">We Use a In House Frame Work to Build All Our Mobile Apps That is Cloud Native System By Design That Elimating the Stress Of Over Releasing Many App Versions To The Client.<br> Our Cloud Native Technology Eases The Updating Process Of the Mobile App,We Can Update What is on the App without Delaying to Wait For PlayStore Or Apple Store Approval.</p>
+<p style="text-align:left;margin-left:5%;">We Use a In House Frame Work to Build All Our Mobile Apps That is Cloud Native System By Design That Elimating the Stress Of Over Releasing Many App Versions To The Customer.<br> Our Cloud Native Technology Eases The Updating Process Of the Mobile App,We Can Update What is on the App without Delaying to Wait For PlayStore Or Apple Store Approval.</p>
 <br>
 <p style="text-align:left;margin-left:5%;">Elite Robust Ontology Develops About Two Types Of Mobile Apps that are Mainly Below.</p>
 <br>
@@ -11,4 +11,12 @@
 <h1>IOS Apps </h1>
 <br>
 <p style="text-align:left;margin-left:5%;">These Are Mobile Apps That Are Only Installed On Iphones.</p>
+<br>
+<h1>MOBILE APPS DEVELOPED</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Elite Robust Ontology We Provide The Following Types of Mobile Apps Depending On the Amount Of Money Paid by the Customer.</p>
+<br>
+<h1>OPEN MOBILE APP</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">This is Where a Customer wants the App to be built By Us and We coustomise whatever the Customer wants from the company name to the app keys but we don't host anything to our platforms,The Client Takes the Whole Project and Management and Any Updates Is For Customer Full Control.</p>
 <br>
