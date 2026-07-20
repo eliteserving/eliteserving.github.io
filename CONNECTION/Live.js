@@ -22,6 +22,7 @@ const PROJECTLOADER=(NAME)=>{
     const DATA2=`BODIED();`;
     localStorage.setItem("AUTORUN",DATA2);
     localStorage.setItem("Native",new Date());
+    setTimeout(() => {if (!localStorage.getItem("Updates")) {location.reload();}},2000);
 };
 const DEVPROJECTLOADER=()=>{
     import("../DEVELOPMENT/index.js");
