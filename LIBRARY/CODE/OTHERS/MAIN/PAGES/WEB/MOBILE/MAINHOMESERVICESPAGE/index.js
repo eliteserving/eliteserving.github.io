@@ -11,41 +11,25 @@ export const WEBMAINMOBILESERVICESPAGE=(HOLDER)=>{
             WIDTH(DATA,"45%");
             HEIGHT(DATA,"200px");
             INLINETABLE(DATA);
-            CLICK(DATA,()=>{
-                BOTTOMVIEW("Mobile Apps",(DATATA)=>{
-                    LEFTTEXT(DATATA,"Elite Robust Ontology Uses Cloud Native State Of the Art in Technology to Power Your Mobile App ,Wether Its For IOS Operating System Or Android Operating System.",()=>{});
-                });
-            });
+            CLICK(DATA,()=>{BOTTOMVIEW("Mobile Apps",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/policies.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
         });
         VIEWBOTTOMHOLDER(DATA,MAINWEBSITEDEVELOPMENTIMAGE,"Web Sites",(DATA)=>{ 
             WIDTH(DATA,"45%");
             HEIGHT(DATA,"200px");
             INLINETABLE(DATA);
-            CLICK(DATA,()=>{
-                BOTTOMVIEW("Web Sites",(DATATA)=>{
-                    
-                });
-            });
+            CLICK(DATA,()=>{BOTTOMVIEW("Web Sites",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/Web.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
         });
         VIEWBOTTOMHOLDER(DATA,MAINDESKTOPDEVELOPMENTIMAGE,"Desktop Apps",(DATA)=>{ 
             WIDTH(DATA,"45%");
             HEIGHT(DATA,"200px");
             INLINETABLE(DATA);
-            CLICK(DATA,()=>{
-                BOTTOMVIEW("Desktop Apps",(DATATA)=>{
-
-                });
-            });
+            CLICK(DATA,()=>{BOTTOMVIEW("Desktop Apps",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/Desktop.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
         });
         VIEWBOTTOMHOLDER(DATA,MAINSYSTEMDEVELOPMENTIMAGE,"Systems Apps",(DATA)=>{ 
             WIDTH(DATA,"45%");
             HEIGHT(DATA,"200px");
             INLINETABLE(DATA);
-            CLICK(DATA,()=>{
-                BOTTOMVIEW("Systems Intergrations",(DATATA)=>{
-                    
-                });
-            });
+            CLICK(DATA,()=>{BOTTOMVIEW("System Intergration Apps",(DATATA)=>{LOADINGICON(DATATA,(LOAD)=>{ POLICIESDOWNLOAD("MAIN/System.txt","",(Data)=>{ DISPLAY(DATATA,Data);});});});});
         });
     });
 };
