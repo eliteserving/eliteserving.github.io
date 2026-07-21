@@ -1,12 +1,11 @@
 const MOBILEVIEW=()=>{
   const LOADDATA={
-    home: () => {WEBMAINSTARTPAGE();}
+    payment: () => {MAINPAYMENT();}
   }
   LINKTRACKER(LOADDATA,()=>{
     WEBMAINSTARTPAGE();
   });
 };
-
 const DESKTOPVIEW=()=>{
   const LOADDATA={
     home: () => {WEBMAINSTARTPAGE();}
