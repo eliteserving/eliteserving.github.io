@@ -9,7 +9,7 @@ export const MENUVIEW=(DIRECTION,CALLBACK)=>{
         HEAD(DATA,(DATATA)=>{
             CONDITION(DIRECTION,()=>{
                 LEFT(DATA,"0");
-                LEFTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
+                LEFTICON(DATATA,WHITECLOSEICON,BLACKCLOSEICON,(DATATE)=>{
                     CLICK(DATATE,()=>{
                         DISPLAYED(DATA,"none");
                     });
@@ -18,8 +18,7 @@ export const MENUVIEW=(DIRECTION,CALLBACK)=>{
             },()=>{
                 RIGHT(DATA,"0");
                 LEFTTEXT(DATATA,"Menu",()=>{});
-                RIGHTICON(DATATA,WHITEBACKICON,BLACKBACKICON,(DATATE)=>{
-                    TRANSFORM(DATATE,"180deg");
+                RIGHTICON(DATATA,WHITECLOSEICON,BLACKCLOSEICON,(DATATE)=>{
                     CLICK(DATATE,()=>{
                         DISPLAYED(DATA,"none");
                     });
