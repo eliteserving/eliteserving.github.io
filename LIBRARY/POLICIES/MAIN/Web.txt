@@ -1,1 +1,17 @@
-<h1>Web</h1>
+<h1>INTRODUCTION</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Cloud Native Powered Websites Are Very Unique From Regular Websites,These are Websites That Can Be Converted To WebApps And Can Do Morethan Just What Your Imagination Knows.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">We Don't Just Power Your Website,We Provide You With a Set Of Tools to Make It Run More Smooth And Elite Robust Ontology Also Does Build All Types Of Websites As Required By the Customer.</p>
+<br>
+<h1>NORMAL WEBSITE</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">These Are The Normal Websites That Uou Usually Use On A Daily Base But The Difference Is When Its Elite Robust Ontology Built,It Has Cloud Native Power To Record Beyond But Won't Support Offline But Comes With Over The Air Updates And Instant Hot Reload Incase Of Server DownTime.</p>
+<br>
+<h1>HYBRID WEBSITE</h1>
+<p style="text-align:left;margin-left:5%;">These Are A Special Type Of Websites That Can Support Partial Offline And Online Mode And These Are Very Built And Complex But At Elite Robust Ontology,With Our Dedicated Systems We Can Build It In a Short Time And Provide You With Max Sercuity,And The Best Type Of Hybrid Website Is Very One Of The Company Its Doesnot Have DownTime Lag and Other Issues Like a Normal WebSite.</p>
+<br>
+<h1>WEB APP WEBSITE</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">These are the Most Advanced Websites and Complicated to Build But Are Very Efficient And These are Installable Websites To Devices,They Work Full Offline and Have Cloud Native Sync,Elite Robust Ontology Can Build This For Your Business So as You Merge The Power Of Cloud Native.</p>
+<br><br><br>
