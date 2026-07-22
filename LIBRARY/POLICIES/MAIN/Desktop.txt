@@ -1,1 +1,7 @@
-<h1>Desktop</h1>
+<h1>INTRODUCTION</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Build a Desktop Application For All Platforms is Complex But Elite Robust Ontology,We Simplify the Process and Even Get You Cloud Native Built Software That Can Run WithOut Internet Connection.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">The Population Of People Who Use Desktop Applications Is Minor But Those Desktop Applications Are Very Valid And Have Helped To Shape THe Daily Economy.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">Let Elite Robust Ontology Build Your Business A Profitable Desktop Software That Is Granted To Serve You To Make Profits.</p>
