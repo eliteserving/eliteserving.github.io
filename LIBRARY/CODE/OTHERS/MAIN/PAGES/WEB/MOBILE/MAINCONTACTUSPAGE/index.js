@@ -18,7 +18,7 @@ export const WEBMAINHOMEMOBILECONTACTUSPAGE=(HOLDER)=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("Email"),"Enter Your Email",()=>{
                     TOASTEDMESSAGE(sessionStorage.getItem("Subject"),"Enter Your Subject",()=>{
                         TOASTEDMESSAGE(sessionStorage.getItem("Message"),"Enter Your Message",()=>{
-                            ELITEINQUIRIES();
+                            ELITEINQUIRIES("INQUIRIES");
                         });
                     });
                 });
