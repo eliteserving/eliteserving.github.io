@@ -14,9 +14,11 @@ export const WEBMAINHOMEMOBILECONTACTUSPAGE=(HOLDER)=>{
         HEIGHT(DATA,"50px");
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
-            CONDITION(sessionStorage.getItem("Name"),()=>{
+           TOASTEDMESSAGE(sessionStorage.getItem("Name"),"Enter Your Name",()=>{
 
-            });
+            alert("")
+
+           })
         });
     });
     BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
