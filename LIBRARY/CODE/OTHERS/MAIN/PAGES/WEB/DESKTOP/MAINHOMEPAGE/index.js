@@ -1,9 +1,7 @@
 export const WEBDESKTOPMAINHOMEPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        WEBMAINDESKTOPPAGE(HOLDER);
+    },()=>{
 
-    DISPLAY("",`
-
-        <h1> Desktop Home Page</h1>
-        
-    `);
-
+    });
 };
