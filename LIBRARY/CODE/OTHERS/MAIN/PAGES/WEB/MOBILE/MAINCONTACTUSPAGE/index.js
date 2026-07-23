@@ -14,11 +14,15 @@ export const WEBMAINHOMEMOBILECONTACTUSPAGE=(HOLDER)=>{
         HEIGHT(DATA,"50px");
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
-           TOASTEDMESSAGE(sessionStorage.getItem("Name"),"Enter Your Name",()=>{
-
-            alert("")
-
-           })
+            TOASTEDMESSAGE(sessionStorage.getItem("Name"),"Enter Your Name",()=>{
+                TOASTEDMESSAGE(sessionStorage.getItem("Email"),"Enter Your Email",()=>{
+                    TOASTEDMESSAGE(sessionStorage.getItem("Subject"),"Enter Your Subject",()=>{
+                        TOASTEDMESSAGE(sessionStorage.getItem("Message"),"Enter Your Message",()=>{
+                            ELITEINQUIRIES();
+                        });
+                    });
+                });
+            });
         });
     });
     BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
