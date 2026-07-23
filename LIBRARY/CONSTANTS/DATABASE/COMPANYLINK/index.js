@@ -1,7 +1,7 @@
 let COMPANYDATABASELINK;
 if (localStorage.getItem("Native")) {
-    COMPANYDATABASELINK = "''";
+    COMPANYDATABASELINK = "'htps://eliterobustontology.github.io'";
 } else {
-    COMPANYDATABASELINK = "";
+    COMPANYDATABASELINK = "htps://eliterobustontology.github.io";
 };
 export { COMPANYDATABASELINK };
