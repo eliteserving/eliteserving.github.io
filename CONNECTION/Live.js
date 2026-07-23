@@ -36,7 +36,7 @@ const PROJECTCONNECTOR=()=>{
     switch (TITLE) {
         case "EliteBuilder":DEVPROJECTLOADER();
             break;
-        case "Elite_Robust_Ontology":PROJECTLOADER("MAIN");
+        case "Elite Robust Ontology":PROJECTLOADER("MAIN");
             break;
         case "Cinefy":PROJECTLOADER("CINEFY");
             break;
