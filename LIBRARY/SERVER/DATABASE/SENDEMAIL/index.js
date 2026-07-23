@@ -1,10 +1,12 @@
 export const SENDEMAIL=(LINK,EMAIL,SUBJECT,MESSAGE,CALLBACK)=>{
-    const DATA=[{
+    const DATA={
         "recipientEmail":EMAIL,
         "subject":SUBJECT,
         "body":MESSAGE        
-    }];
+    };
     FETCH(LINK,DATA,(Data)=>{
-        CALLBACK(Data);
+        TOASTEDMESSAGE(Data.status === "success","Something Went Wrong Try Again",()=>{
+           CALLBACK();
+        });
     });
 };
