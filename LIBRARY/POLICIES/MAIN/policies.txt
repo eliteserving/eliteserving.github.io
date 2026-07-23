@@ -1,2 +1,8 @@
-<h1>WELCOME</h1>
-<p>Here Are The Terms And Conditions Of Elite Robust Ontology To Its Customers Regarding Any Services Provided.</p>
+<h1>INTRODUCTION</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Elite Robust Ontology As A Company Has Terms And Conditions Thats Ease And Govern Our Daily Running Activities From Non Tech Concerns To Tech Related Matters,Our Policies Are Designed To Create A Favourable Working Environment For The Customer And The Company From Development Up To Payments.</p>
+<br>
+<h1>CUSTOMER POLICY</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Elite Robust Ontology Is Not Just A Money Minded Milking Machine But A Human Driven Company Thats Understands The Needs Of Its Clients And Is Aimed To Serve You Best.</p>
+<br>
