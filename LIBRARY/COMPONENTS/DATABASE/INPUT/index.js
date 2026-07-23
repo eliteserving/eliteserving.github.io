@@ -1,4 +1,4 @@
-export const INPUT=(HOLDER,TYPES,TEXT,CALLBACk)=>{
+export const INPUT=(HOLDER,TYPES,TEXT,NAME,CALLBACk)=>{
     ELEMENTED(HOLDER,"input",(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"32px");
@@ -8,6 +8,7 @@ export const INPUT=(HOLDER,TYPES,TEXT,CALLBACk)=>{
         COMPOMODE(DATA);
         TEXTCOMPOMODE(DATA);
         PLACEHOLDER(DATA,TEXT||"Enter Your Text");
+        FUNCTIONED(DATA,"input",()=>{CONDITION(DATA.value,()=>{SESSIONSTORE(NAME,DATA.value);},()=>{SESSIONDELETE(NAME);});});
         CALLBACk(DATA);
     });
 };
