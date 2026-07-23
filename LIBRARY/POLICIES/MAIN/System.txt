@@ -1,1 +1,8 @@
-<h1>System</h1>
+<h1>INTRODUCTIONS</h1>
+<br>
+<p style="text-align:left;margin-left:5%;">Systems Are The Driving Engines Of The Tech World,This Is What Makes The World Connect.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">Elite Robust Ontology Builds PowerFul Systems Thats Use Cloud Native Development At The Back Of The Engineering And Functioning,Elite Robust Ontology Has The Systems Thats Can Reboot A Product While In Live Mode Thus Solving The Issue Of DownTime And Recompilation Then Redelivery Of Services To Customers.</p>
+<br>
+<p style="text-align:left;margin-left:5%;">We Intergrate All Types Of Systems To The Customers To Power Up Your Desktop Apps,Mobile Apps,Websites And Cloud Native Driven Products So As You Can Make Profits With A Less Out Put.</p>
+<br><br>
