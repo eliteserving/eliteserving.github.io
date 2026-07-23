@@ -1,3 +1,3 @@
 export const WEBMAINSTARTPAGE=()=>{
-    VIEW(()=>{WEBMOBILEMAINHOMEPAGE();},()=>{WEBDESKTOPMAINHOMEPAGE();});
+    VIEW(()=>{WEBROUTES();},()=>{WEBROUTES();});
 };
